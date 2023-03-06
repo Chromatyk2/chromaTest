@@ -18,7 +18,7 @@ function AuthService() {
     const params = {
         client_id: CLIENT_ID,
         redirect_uri: REDIRECT_URI,
-        response_type: "id_token",
+        response_type: "code",
         scope: SCOPES,
     };
       const queryString = encodeQueryString(params);
@@ -34,12 +34,13 @@ function AuthService() {
       return params;
   };
   const getUrlParams = () => {
-      return decodeQueryString(window.location.hash.slice(1));
+      const queryParameters = new URLSearchParams(window.location.search);
+      return decodeQueryString(queryParameters);
   };
 
   const isAuthenticated = () => {
       const params = getUrlParams();
-      console.log(Object.keys(params).length);
+      console.log(params);
       if(Object.keys(params).length > 0){
         setCookie('oauth', { params });
       }
