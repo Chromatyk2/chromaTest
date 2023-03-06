@@ -42,6 +42,7 @@ function AuthService() {
       const params = getUrlParams();
       console.log(params);
       if(Object.keys(params).length > 0){
+        setCookie('oauth', { params });
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
         {
@@ -55,7 +56,7 @@ function AuthService() {
       .then(res => res.json())
       .then(
         (result) => {
-          setCookie('oauth', { result });
+          setCookie('token', { result });
         }
       );
       }
