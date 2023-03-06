@@ -11,7 +11,7 @@ function Items(props) {
   const shinys = pkmList.filter(item => item.shiny == 1);
   const nbShiny = shinys.length;
   const nbTotal = pkmList.length;
-  const token = cookies.oauth.params.id_token;
+  const token = JSON.stringify(cookies.oauth.params.id_token);
   const bodyParameters = {
      key: "value"
   };
