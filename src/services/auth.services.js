@@ -42,6 +42,7 @@ function AuthService() {
       const params = getUrlParams();
       if(Object.keys(params).length > 0){
         setCookie('oauth', { params });
+      useEffect(() => {
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
         {
@@ -56,7 +57,8 @@ function AuthService() {
         (result) => {
           setCookie('oauth', result.data );
         }
-      );
+      )
+    }, [])
       }
       return params["access_token"] !== undefined;
   }
