@@ -18,14 +18,8 @@ const userName = pseudo.user.data[0].login;
     }, [])
     return (
       <>
-        <div className="CreatePost">
-          <div className="uploadPost">
-              <input className="inputPseudo" type="text" placeholder="Pseudo" placeh onChange={(e)=> {setPseudo(e.target.value)}} onKeyDown={submitPost}/>
-              <button className="buttonPseudo" onClick={submitPost}><i class="fa-solid fa-magnifying-glass"></i></button>
-          </div>
-        </div>
         <div>
-        <PkmList list={list}/>
+          <PkmList list={list}/>
         </div>
       </>
     )
