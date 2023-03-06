@@ -43,7 +43,7 @@ function AuthService() {
   }
 
   return(
-    <button onClick={authentication}>connexion</button>
+    <button onClick={isAuthenticated}>connexion</button>
   )
 }
 export default AuthService;
