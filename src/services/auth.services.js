@@ -1,6 +1,8 @@
 import Axios from 'axios'
+import { useCookies } from 'react-cookie';
 
 function AuthService() {
+  const [cookies, setCookie, removeCookie] = useCookies(['oauth']);
   const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
   const REDIRECT_URI = "https://chromatest.netlify.app/";
   const SCOPES = [];
@@ -36,6 +38,7 @@ function AuthService() {
 
   const isAuthenticated = () => {
       const params = this.getUrlParams();
+      setCookie('oauth', 'oauth', { params });
       return params["access_token"] !== undefined;
   }
 
