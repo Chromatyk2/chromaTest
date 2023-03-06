@@ -22,8 +22,9 @@ console.log(token);
   };
   Axios.get(
   'https://api.twitch.tv/helix/users',
-  bodyParameters,
-  config
+  {headers:{
+    Authorization: "Bearer "+{token}
+  }}
 ).then(console.log).catch(console.log);
   return (
     <>
