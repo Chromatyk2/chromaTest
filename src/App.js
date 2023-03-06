@@ -81,7 +81,7 @@ function App() {
   return (
     <>// On lance l'authentification si l'utilisateur n'est pas authentifié
       {!twitch.isAuthenticated() ?
-        <button onClick={twitch.authentication()}>Connexion !</button>
+        <button>Connexion !</button>
       :
         <>
           <NavBar />
