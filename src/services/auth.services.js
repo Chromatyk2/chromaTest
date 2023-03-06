@@ -18,7 +18,7 @@ function AuthService() {
     const params = {
         client_id: CLIENT_ID,
         redirect_uri: REDIRECT_URI,
-        response_type: "id_token",
+        response_type: "code",
         scope: SCOPES,
     };
       const queryString = encodeQueryString(params);
