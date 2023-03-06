@@ -23,6 +23,7 @@ class App extends React.Component {
           token: cookies.get('oauth')
         };
       }
+      console.log(this.state.token);
      render() {
         return (
           <>
