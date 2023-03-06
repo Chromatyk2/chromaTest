@@ -42,9 +42,6 @@ function AuthService() {
       setCookie('oauth', { params });
       return params["access_token"] !== undefined;
   }
-  useEffect(() => {
-    isAuthenticated();
-  }, [authentication]);
   return(
     <button onClick={authentication}>connexion</button>
   )
