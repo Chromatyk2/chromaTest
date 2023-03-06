@@ -12,7 +12,7 @@ function Items(props) {
   const nbShiny = shinys.length;
   const nbTotal = pkmList.length;
   console.log(cookies.result.data.access_token);
-  const token = cookies.result.data.access_token;
+  const token = cookies;
   Axios.get(
   'https://id.twitch.tv/oauth2/userinfo',
   {
