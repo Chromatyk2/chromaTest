@@ -12,6 +12,7 @@ function Items(props) {
   const nbShiny = shinys.length;
   const nbTotal = pkmList.length;
   const token = cookies.oauth.params.id_token;
+console.log(token);
   const config = {
       headers: { Authorization: `Bearer ${token}` }
   };
