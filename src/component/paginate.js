@@ -13,7 +13,7 @@ function Items(props) {
   const shinys = pkmList.filter(item => item.shiny == 1);
   const nbShiny = shinys.length;
   const nbTotal = pkmList.length;
-  const accessToken = token.result.data.access_token;
+  const accessToken = token.result;
   console.log(accessToken);
   Axios.get(
   'https://id.twitch.tv/oauth2/userinfo',
