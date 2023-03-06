@@ -1,7 +1,7 @@
 import Axios from 'axios'
 
 class AuthService {
-  async encodeQueryString(params) {
+  encodeQueryString(params) {
       const queryString = new URLSearchParams();
       for (let paramName in params) {
           queryString.append(paramName, params[paramName]);
@@ -9,7 +9,7 @@ class AuthService {
       return queryString.toString();
   }
 
-  async decodeQueryString(string) {
+  decodeQueryString(string) {
       const params = {};
       const queryString = new URLSearchParams(string);
       for (let [paramName, value] of queryString) {
@@ -18,7 +18,7 @@ class AuthService {
       return params;
   }
 
-  async getUrlParams() {
+  getUrlParams() {
       return this.decodeQueryString(window.location.hash.slice(1));
   }
 
