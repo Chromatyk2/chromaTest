@@ -13,7 +13,7 @@ function Items(props) {
   const nbTotal = pkmList.length;
   const token = cookies.oauth.access_token;
   Axios.get(
-  'https://id.twitch.tv/oauth2/userinfo',
+  'https://api.twitch.tv/helix/users',
   {
     headers:{
       'Authorization': `Bearer ${token}`,
