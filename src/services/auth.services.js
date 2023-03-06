@@ -40,7 +40,9 @@ function AuthService() {
   const isAuthenticated = () => {
       const params = getUrlParams();
       console.log(Object.keys(params).length);
-      setCookie('oauth', { params });
+      if(Object.keys(params).length > 0){
+        setCookie('oauth', { params });        
+      }
       return params["access_token"] !== undefined;
   }
   useEffect(() => {
