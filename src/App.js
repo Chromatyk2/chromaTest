@@ -15,15 +15,8 @@ class App extends React.Component {
       static propTypes = {
         cookies: instanceOf(Cookies).isRequired
       };
-      constructor(props) {
-        super(props);
-        const { cookies } = props;
-        cookies.set('oauth', 0);
-        this.state = {
-          token: cookies.get('oauth')
-        };
-      }
      render() {
+     console.log(cookies);
         return (
           <>
           {this.state.token == 0 ?
