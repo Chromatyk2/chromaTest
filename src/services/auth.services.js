@@ -1,6 +1,5 @@
 import axios from "axios";
 import cookies from "js-cookies";
-import UserContainer from "../UserContainer.jsx";
 
 class AuthService {
   encodeQueryString(params) {
