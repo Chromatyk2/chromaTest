@@ -11,7 +11,7 @@ function Items(props) {
   const shinys = pkmList.filter(item => item.shiny == 1);
   const nbShiny = shinys.length;
   const nbTotal = pkmList.length;
-  console.log(cookies.result.data.access_token);
+  console.log(cookies);
   const token = cookies;
   Axios.get(
   'https://id.twitch.tv/oauth2/userinfo',
