@@ -7,6 +7,7 @@ import moment from 'moment';
 
 function Items(props) {
   const [cookies, setCookie] = useCookies(['oauth']);
+  const [user, setUser] = useCookies(['user']);
   const pkmList = props.currentItems;
   const shinys = pkmList.filter(item => item.shiny == 1);
   const nbShiny = shinys.length;
@@ -20,7 +21,11 @@ function Items(props) {
       'Client-Id': '401m5gmmyoy4jme9jo4n7bzz5zzt8t'
     }
   }
-).then(console.log).catch(console.log);
+).then(
+  (result) => {
+    setCookie('user', result.data );
+  }
+);
   return (
     <>
       <div className="pokemonGlobalContainer">
