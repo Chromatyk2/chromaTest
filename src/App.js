@@ -19,11 +19,10 @@ class App extends React.Component {
         super(props);
         const { cookies } = props;
         this.state = {
-          token: cookies.get('oauth')
+          token: cookies.set('oauth')
         };
       }
      render() {
-        console.log(this.state.name)
         let homePage = (!this.state.token) ? <Login/> : <HomePage/>
         return (
           <>
