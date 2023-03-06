@@ -7,7 +7,7 @@ import Pokedex from './component/pokedex.js';
 import BasicExample from './component/nav.js';
 import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
-import NavBar from './component/navbar.js';
+import Login from './services/naauth.services.js';
 function App() {
   if(!token) {
     return <Login />
