@@ -33,11 +33,11 @@ function AuthService() {
       return params;
   };
   const getUrlParams = () => {
-      return this.decodeQueryString(window.location.hash.slice(1));
+      return decodeQueryString(window.location.hash.slice(1));
   };
 
   const isAuthenticated = () => {
-      const params = this.getUrlParams();
+      const params = getUrlParams();
       setCookie('oauth', 'oauth', { params });
       return params["access_token"] !== undefined;
   }
