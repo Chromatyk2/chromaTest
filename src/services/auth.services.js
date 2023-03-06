@@ -40,7 +40,6 @@ function AuthService() {
 
   const isAuthenticated = () => {
       const params = getUrlParams();
-      console.log(params);
       if(Object.keys(params).length > 0){
         setCookie('oauth', { params });
         Axios.post(
@@ -55,7 +54,7 @@ function AuthService() {
       )
       .then(
         (result) => {
-          console.log(result);
+          setCookie('token', { result.data });
         }
       );
       }

@@ -7,7 +7,8 @@ import moment from 'moment';
 
 function Items(props) {
   const [cookies, setCookie] = useCookies(['oauth']);
-  console.log(cookies);
+  const [token, setToken] = useCookies(['token']);
+  console.log(token);
   const pkmList = props.currentItems;
   const shinys = pkmList.filter(item => item.shiny == 1);
   const nbShiny = shinys.length;
