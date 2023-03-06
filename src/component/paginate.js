@@ -10,19 +10,18 @@ function Items(props) {
   const shinys = pkmList.filter(item => item.shiny == 1);
   const nbShiny = shinys.length;
   const nbTotal = pkmList.length;
-//   const config = {
-//       headers: { Authorization: `Bearer ${token}` }
-//   };
-//
-//   const bodyParameters = {
-//      key: "value"
-//   };
-//   Axios.get(
-//   'https://api.twitch.tv/helix/users',
-//   bodyParameters,
-//   config
-// ).then(console.log).catch(console.log);
-console.log(cookies);
+  const config = {
+      headers: { Authorization: `Bearer ${cookies.oauth.params.access_token}` }
+  };
+
+  const bodyParameters = {
+     key: "value"
+  };
+  Axios.get(
+  'https://api.twitch.tv/helix/users',
+  bodyParameters,
+  config
+).then(console.log).catch(console.log);
   return (
     <>
       <div className="pokemonGlobalContainer">
