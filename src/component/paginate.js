@@ -7,13 +7,11 @@ import moment from 'moment';
 
 function Items(props) {
   const [cookies, setCookie] = useCookies(['oauth']);
-  const [token, setToken] = useCookies(['token']);
   const pkmList = props.currentItems;
   const shinys = pkmList.filter(item => item.shiny == 1);
   const nbShiny = shinys.length;
   const nbTotal = pkmList.length;
-  const accessToken = Cookies.get('token');
-  console.log(accessToken);
+  console.log(cookies);
   Axios.get(
   'https://id.twitch.tv/oauth2/userinfo',
   {

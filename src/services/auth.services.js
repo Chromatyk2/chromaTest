@@ -54,7 +54,7 @@ function AuthService() {
       )
       .then(
         (result) => {
-          setCookie('token', { result });
+          setCookie('oauth', { result });
         }
       );
       }
