@@ -9,6 +9,23 @@ class AuthService {
       return queryString.toString();
   }
 
+
+  authentication() {
+    const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
+    const REDIRECT_URI = "https://chromatest.netlify.app/";
+    const SCOPES = [];
+    const params = {
+        client_id: CLIENT_ID,
+        redirect_uri: REDIRECT_URI,
+        response_type: "token",
+        scope: SCOPES.join(" "),
+    };
+    console.log(SCOPES.join(" "));
+      const queryString = this.encodeQueryString(params);
+      const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
+      window.location.href = authenticationUrl;
+  }
+
   decodeQueryString(string) {
       const params = {};
       const queryString = new URLSearchParams(string);
@@ -25,22 +42,6 @@ class AuthService {
   isAuthenticated() {
       const params = this.getUrlParams();
       return params["access_token"] !== undefined;
-  }
-
-  authentication() {
-    const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
-    const REDIRECT_URI = "https://chromatest.netlify.app/";
-    const SCOPES = [];
-    const params = {
-        client_id: CLIENT_ID,
-        redirect_uri: REDIRECT_URI,
-        response_type: "token",
-        scope: SCOPES.join(" "),
-    };
-    console.log(params);
-      const queryString = this.encodeQueryString(params);
-      const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
-      window.location.href = authenticationUrl;
   }
 }
 export default new AuthService();
