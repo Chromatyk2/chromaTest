@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import { instanceOf } from 'prop-types';
-import { Cookies } from 'react-cookie';
+import { withCookies, Cookies } from 'react-cookie';
 import $ from "jquery";
 import './App.css';
 import 'react-tooltip/dist/react-tooltip.css'
@@ -18,12 +18,13 @@ class App extends React.Component {
       constructor(props) {
         super(props);
         const { cookies } = props;
+        cookies.set('oauth', 0);
         this.state = {
-          token: cookies.set('oauth')
+          token: cookies.get('oauth')
         };
       }
      render() {
-        let homePage = (!this.state.token) ? <Login/> : <HomePage/>
+        let homePage = (!this.state.token == 0) ? <Login/> : <HomePage/>
         return (
           <>
             <NavBar />
@@ -39,4 +40,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default withCookies(App);
