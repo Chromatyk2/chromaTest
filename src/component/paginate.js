@@ -14,11 +14,11 @@ function Items(props) {
   const token = cookies.oauth.params.id_token;
   console.log(token);
   Axios.get(
-  'https://api.twitch.tv/helix/users',
+  'https://id.twitch.tv/oauth2/userinfo',
   {
     headers:{
       'Authorization': `Bearer ${token}`,
-      'Client-Id': `mdbes44v9p9576ltwyed2041xwtnw4`
+      'Content-Type': 'application/json'
     }
   }
 ).then(console.log).catch(console.log);
