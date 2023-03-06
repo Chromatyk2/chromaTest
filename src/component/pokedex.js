@@ -5,15 +5,16 @@ import PkmList from './pkmList.js'
 
 function Pokedex() {
 
-const [pseudo,setPseudo] = useState("");
+const [pseudo,setPseudo] = useCookies(['user']);
 const [list,setList] = useState([]);
+console.log(pseudo);
 const submitPost = () => {
     Axios
       .get(`https://chromatyk-pokemon.herokuapp.com/api/getByUser/${pseudo}`)
       .then(function(response){
           setList(response.data);
-    })
-}
+      })
+    }
     return (
       <>
         <div className="CreatePost">

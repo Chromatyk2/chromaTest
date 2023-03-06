@@ -14,15 +14,15 @@ function Items(props) {
   const nbTotal = pkmList.length;
   const token = cookies.oauth.access_token;
     useEffect(() => {
-  Axios.get(
-    'https://api.twitch.tv/helix/users',
-    {
-      headers:{
-        'Authorization': `Bearer ${token}`,
-        'Client-Id': '401m5gmmyoy4jme9jo4n7bzz5zzt8t'
-      }
-    }
-    ).then(
+      Axios.get(
+        'https://api.twitch.tv/helix/users',
+        {
+          headers:{
+            'Authorization': `Bearer ${token}`,
+            'Client-Id': '401m5gmmyoy4jme9jo4n7bzz5zzt8t'
+          }
+        }
+        ).then(
       (result) => {
         setCookie('user', result.data );
       }
