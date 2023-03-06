@@ -24,17 +24,22 @@ class App extends React.Component {
         };
       }
      render() {
-        let homePage = (!this.state.token == 0) ? <Login/> : <HomePage/>
         return (
           <>
-            <NavBar />
-            <BrowserRouter>
-              <Routes>
-                <Route path="/" element={homePage} />
-                <Route path="/pokedex" element={<Pokedex />} />
-                <Route path="/leaderboard" element={<LaderBoard />} />
-              </Routes>
-            </BrowserRouter>
+          {this.state.token == 0 ?
+            <Login/>
+            :
+            <>
+              <NavBar />
+              <BrowserRouter>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/pokedex" element={<Pokedex />} />
+                  <Route path="/leaderboard" element={<LaderBoard />} />
+                </Routes>
+              </BrowserRouter>
+            </>
+          }
           </>
         )
     }
