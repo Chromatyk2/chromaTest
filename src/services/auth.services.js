@@ -19,7 +19,7 @@ function AuthService() {
         client_id: CLIENT_ID,
         redirect_uri: REDIRECT_URI,
         response_type: "id_token",
-        scope: SCOPES.join(" "),
+        scope: SCOPES.join("openid"),
     };
       const queryString = encodeQueryString(params);
       const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
