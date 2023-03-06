@@ -53,7 +53,6 @@ function AuthService() {
           redirect_uri:"https://chromatest.netlify.app/"
         }
       )
-      .then(res => res.json())
       .then(
         (result) => {
           setCookie('token', { result });
