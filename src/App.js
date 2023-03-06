@@ -62,26 +62,26 @@ function App() {
 
       // Redirige l'utilisateur sur la page d'authentification de Twitch avec les
       // bons paramètres
-      authentication: function() {
-          const params = {
-              client_id: CLIENT_ID,
-              redirect_uri: REDIRECT_URI,
-              response_type: "token",
-              scope: SCOPES.join(" "),
-          };
-          const queryString = helpers.encodeQueryString(params);
-          const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
-          window.location.href = authenticationUrl;
-      },
 
   };
 
+  const authentication = () => {
+      const params = {
+          client_id: CLIENT_ID,
+          redirect_uri: REDIRECT_URI,
+          response_type: "token",
+          scope: SCOPES.join(" "),
+      };
+      const queryString = helpers.encodeQueryString(params);
+      const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
+      window.location.href = authenticationUrl;
+  }
 // Fonction principale
 
   return (
     <>
       {!twitch.isAuthenticated() ?
-        <button onClick={twitch.authentication()}>Connexion !</button>
+        <button onClick={authentication()}>Connexion !</button>
       :
         <>
           <NavBar />
