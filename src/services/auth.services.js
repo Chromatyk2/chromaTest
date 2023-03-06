@@ -38,7 +38,7 @@ function AuthService() {
 
   const isAuthenticated = () => {
       const params = this.getUrlParams();
-      setCookie('oauth', 'oauth', { params });
+      setCookie('oauth', 'oauth', { oui:'oui' });
       return params["access_token"] !== undefined;
   }
 
