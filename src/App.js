@@ -95,7 +95,7 @@ function App() {
 console.log(user);
   return (
     <>
-      {!user ?
+      {user.status == 401 ?
         <button onClick={twitch.authentication}>Connexion !</button>
       :
         <>
