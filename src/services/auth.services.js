@@ -28,12 +28,15 @@ class AuthService {
   }
 
   authentication() {
-      const params = {
-          client_id: "401m5gmmyoy4jme9jo4n7bzz5zzt8t",
-          redirect_uri: "https://chromatest.netlify.app/",
-          response_type: "token",
-          scope: [" "],
-      };
+    const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
+    const REDIRECT_URI = "https://chromatest.netlify.app/";
+    const SCOPES = [];
+    const params = {
+        client_id: CLIENT_ID,
+        redirect_uri: REDIRECT_URI,
+        response_type: "token",
+        scope: SCOPES.join(" "),
+    };
       const queryString = this.encodeQueryString(params);
       const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
       window.location.href = authenticationUrl;
