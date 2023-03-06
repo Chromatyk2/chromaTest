@@ -1,7 +1,8 @@
 import Axios from 'axios'
 
 class AuthService {
-  function encodeQueryString(params) {
+
+  encodeQueryString(params) {
       const queryString = new URLSearchParams();
       for (let paramName in params) {
           queryString.append(paramName, params[paramName]);
@@ -20,7 +21,6 @@ class AuthService {
         response_type: "token",
         scope: SCOPES.join(" "),
     };
-    console.log(this);
       const queryString = encodeQueryString(params);
       const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
       window.location.href = authenticationUrl;
