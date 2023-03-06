@@ -3,71 +3,42 @@ import cookies from "js-cookies";
 import UserContainer from "../UserContainer.jsx";
 
 class AuthService {
-  const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
+  encodeQueryString(params) {
+      const queryString = new URLSearchParams();
+      for (let paramName in params) {
+          queryString.append(paramName, params[paramName]);
+      }
+      return queryString.toString();
+  }
 
-  // Adresse où l'on veut que l'utilisateur soit redirigé après avoir autorisé
-  // l'application. Cette adresse DOIT être l'une de celles déclarées dans
-  // l'application sur dev.twitch.tv !!
-  const REDIRECT_URI = "https://chromatest.netlify.app/";
+  decodeQueryString(string) {
+      const params = {};
+      const queryString = new URLSearchParams(string);
+      for (let [paramName, value] of queryString) {
+          params[paramName] = value;
+      }
+      return params;
+  }
 
-  // Liste des éléments auxquels on souhaite accéder...  On reparlera de ça un
-  // peu plus tard ;)
-  const SCOPES = [];
+  getUrlParams() {
+      return decodeQueryString(window.location.hash.slice(1));
+  }
 
-  // Diverses fonctions utilitaires
-  const helpers = {
+  isAuthenticated() {
+      const params = getUrlParams();
+      return params["access_token"] !== undefined;
+  }
 
-      // Encode un objet sous forme d'une querystring utilisable dans une URL :
-      // {"name": "Truc Muche", "foo": "bar"}  ->  "name=Truc+Muche&foo=bar"
-      encodeQueryString: function(params) {
-          const queryString = new URLSearchParams();
-          for (let paramName in params) {
-              queryString.append(paramName, params[paramName]);
-          }
-          return queryString.toString();
-      },
-
-      // Décode une querystring sous la forme d'un objet :
-      // "name=Truc+Muche&foo=bar"  ->  {"name": "Truc Muche", "foo": "bar"}
-      decodeQueryString: function(string) {
-          const params = {};
-          const queryString = new URLSearchParams(string);
-          for (let [paramName, value] of queryString) {
-              params[paramName] = value;
-          }
-          return params;
-      },
-
-      // Récupère et décode les paramètres de l'URL
-      getUrlParams: function() {
-          return helpers.decodeQueryString(window.location.hash.slice(1));
-      },
-
-  };
-
-  // Fonctions liées à Twitch
-  const twitch = {
-
-      // Vérifie si l'utilisateur est authentifié ou non
-      isAuthenticated: function() {
-          const params = helpers.getUrlParams();
-          return params["access_token"] !== undefined;
-      },
-
-      // Redirige l'utilisateur sur la page d'authentification de Twitch avec les
-      // bons paramètres
-      authentication: function() {
-          const params = {
-              client_id: CLIENT_ID,
-              redirect_uri: REDIRECT_URI,
-              response_type: "token",
-              scope: SCOPES.join(" "),
-          };
-          const queryString = helpers.encodeQueryString(params);
-          const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
-          window.location.href = authenticationUrl;
-      },
-
-  };
+  authentication() {
+      const params = {
+          client_id: "401m5gmmyoy4jme9jo4n7bzz5zzt8t",
+          redirect_uri: "https://chromatest.netlify.app/",
+          response_type: "token",
+          scope: SCOPES.join(" "),
+      };
+      const queryString = encodeQueryString(params);
+      const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
+      window.location.href = authenticationUrl;
+  }
 }
 export default new AuthService();

@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       {!twitch.isAuthenticated() ?
-        <button onClick={AuthService.twitch.authentication}>Connexion !</button>
+        <button onClick={AuthService.authentication}>Connexion !</button>
       :
         <>
           <NavBar />
