@@ -37,7 +37,7 @@ class AuthService {
         response_type: "token",
         scope: SCOPES.join(" "),
     };
-      const queryString = encodeQueryString(params);
+      const queryString = this.encodeQueryString(params);
       const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
       window.location.href = authenticationUrl;
   }
