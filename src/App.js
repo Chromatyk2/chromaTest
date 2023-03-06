@@ -9,6 +9,7 @@ import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
 import Login from './services/auth.services.js';
 function App() {
+const [token,setToken] = useState();
   if(!token) {
     return <Login />
   }
