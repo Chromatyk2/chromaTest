@@ -17,8 +17,8 @@ function Items(props) {
   'https://api.twitch.tv/helix/users',
   {
     headers:{
-      Authorization: `Bearer ${token}`,
-      Client-Id: `wbmytr93xzw8zbg0p1izqyzzc5mbiz`
+      'Authorization': `Bearer ${token}`,
+      'Client-ID': `wbmytr93xzw8zbg0p1izqyzzc5mbiz`
     }
   }
 ).then(console.log).catch(console.log);
