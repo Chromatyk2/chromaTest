@@ -7,6 +7,7 @@ import Pokedex from './component/pokedex.js';
 import BasicExample from './component/nav.js';
 import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
+import Main from './component/login.js';
 function App() {
   return(
     <>
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<Main />} />
           <Route path="/pokedex" element={<Pokedex />} />
           <Route path="/leaderboard" element={<LaderBoard />} />
         </Routes>
