@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
-import { useCookies, getCookie } from 'react-cookie';
+import { instanceOf } from 'prop-types';
+import { Cookies } from 'react-cookie';
 import $ from "jquery";
 import './App.css';
 import 'react-tooltip/dist/react-tooltip.css'
