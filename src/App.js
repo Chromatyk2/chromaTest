@@ -12,7 +12,7 @@ import NavBar from './component/navbar.js';
 import Login from './services/auth.services.js';
 function App() {
   const [cookies, setCookie] = useCookies(['oauth']);
-  if(!cookies.oauth) {
+  if(cookies.oauth.params.access_token) {
     return <Login />
   }
   return(
