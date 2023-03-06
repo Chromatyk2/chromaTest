@@ -55,7 +55,7 @@ function AuthService() {
       )
       .then(
         (result) => {
-          setCookie('token', { result });
+          console.log(result);
         }
       );
       }
