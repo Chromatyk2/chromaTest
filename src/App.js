@@ -88,9 +88,11 @@ function App() {
       },
 
   };
-  console.log(user);
+  useEffect(() => {
+   twitch.getUser();
+ }, [])
 // Fonction principale
-
+console.log(user);
   return (
     <>
       {!user ?
