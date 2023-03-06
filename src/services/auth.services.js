@@ -1,6 +1,9 @@
 import Axios from 'axios'
 
-class AuthService {
+function AuthService() {
+  const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
+  const REDIRECT_URI = "https://chromatest.netlify.app/";
+  const SCOPES = [];
 
   encodeQueryString(params) {
       const queryString = new URLSearchParams();
@@ -12,9 +15,6 @@ class AuthService {
 
 
   authentication() {
-    const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
-    const REDIRECT_URI = "https://chromatest.netlify.app/";
-    const SCOPES = [];
     const params = {
         client_id: CLIENT_ID,
         redirect_uri: REDIRECT_URI,
@@ -43,5 +43,9 @@ class AuthService {
       const params = this.getUrlParams();
       return params["access_token"] !== undefined;
   }
+
+  return(
+    <button onClick={authentication}>connexion</button>
+  )
 }
-export default new AuthService();
+export default AuthService;
