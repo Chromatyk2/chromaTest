@@ -39,7 +39,7 @@ function AuthService() {
 
   const isAuthenticated = () => {
       const params = getUrlParams();
-      console.log(params.length);
+      console.log(Object.keys(params).length);
       setCookie('oauth', { params });
       return params["access_token"] !== undefined;
   }
