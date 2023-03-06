@@ -8,7 +8,7 @@ function Pokedex() {
 
 const [pseudo,setPseudo] = useCookies(['user']);
 const [list,setList] = useState([]);
-console.log(pseudo);
+console.log(pseudo.user);
 const submitPost = () => {
     Axios
       .get(`https://chromatyk-pokemon.herokuapp.com/api/getByUser/${pseudo}`)
