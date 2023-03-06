@@ -41,7 +41,6 @@ function AuthService() {
       setCookie('oauth', { params });
       return params["access_token"] !== undefined;
   }
-  console.log(cookies.oauth.params.access_token);
   return(
     <button onClick={isAuthenticated}>connexion</button>
   )
