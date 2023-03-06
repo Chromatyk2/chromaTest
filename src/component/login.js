@@ -73,7 +73,7 @@ function Main() {
   return (
     <>// On lance l'authentification si l'utilisateur n'est pas authentifié
       {!twitch.isAuthenticated() ?
-        twitch.authentication();
+        twitch.authentication()
       :
         alert("L'utilisateur a bien autorisé l'application !")
       }
