@@ -13,7 +13,7 @@ import Login from './services/auth.services.js';
 function App() {
   const [cookies, setCookie] = useCookies(['oauth']);
   console.log(Object.keys(cookies.oauth).length > 0)
-  if(cookies.oauth ) {
+  if(Object.keys(cookies.oauth).length == 0 ) {
     return <Login />
   }
   return(
