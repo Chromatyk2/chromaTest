@@ -7,8 +7,7 @@ import Pokedex from './component/pokedex.js';
 import BasicExample from './component/nav.js';
 import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
-import Main from './component/login.js';
-function Main() {
+function App() {
   // ID de l'application récupéré après l'avoir enregistrée
   const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
 
@@ -98,21 +97,6 @@ function Main() {
       }
     </>
   )
-}
-function App() {
-  return(
-    <>
-      <NavBar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<Main />} />
-          <Route path="/pokedex" element={<Pokedex />} />
-          <Route path="/leaderboard" element={<LaderBoard />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
 }
 
 export default App;
