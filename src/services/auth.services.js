@@ -18,7 +18,7 @@ function AuthService() {
     const params = {
         client_id: CLIENT_ID,
         redirect_uri: REDIRECT_URI,
-        response_type: "code",
+        response_type: "id_token",
         scope: SCOPES,
     };
       const queryString = encodeQueryString(params);
@@ -39,7 +39,7 @@ function AuthService() {
 
   const isAuthenticated = () => {
       const params = getUrlParams();
-      console.log(params);
+      console.log(Object.keys(params).length);
       if(Object.keys(params).length > 0){
         setCookie('oauth', { params });
       }
