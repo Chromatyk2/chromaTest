@@ -11,7 +11,7 @@ import NavBar from './component/navbar.js';
 function App() {
   return (
     <>
-      {!twitch.isAuthenticated() ?
+      {!AuthService.isAuthenticated() ?
         <button onClick={AuthService.authentication}>Connexion !</button>
       :
         <>
