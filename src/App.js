@@ -9,7 +9,7 @@ import BasicExample from './component/nav.js';
 import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
 function App() {
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState(null);
   // ID de l'application récupéré après l'avoir enregistrée
   const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
 
