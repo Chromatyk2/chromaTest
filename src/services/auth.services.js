@@ -44,7 +44,7 @@ function AuthService() {
   }
   useEffect(() => {
     isAuthenticated();
-  }, [params["access_token"]]);
+  }, [params["access_token"] !== undefined]);
   return(
     <button onClick={authentication}>connexion</button>
   )
