@@ -10,23 +10,33 @@ import BasicExample from './component/nav.js';
 import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
 import Login from './services/auth.services.js';
-function App() {
-  console.log(getCookie("oauth"));
-  if(cookies.oauth) {
-    return <Login />
-  }
-  return(
-    <>
-      <NavBar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/pokedex" element={<Pokedex />} />
-          <Route path="/leaderboard" element={<LaderBoard />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+class App extends React.Component {
+      static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
+      };
+      constructor(props) {
+        super(props);
+        const { cookies } = props;
+        this.state = {
+          token: cookies.get('oauth')
+        };
+      }
+     render() {
+        console.log(this.state.name)
+        let homePage = (!this.state.token) ? <Login/> : <HomePage/>
+        return (
+          <>
+            <NavBar />
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={homePage} />
+                <Route path="/pokedex" element={<Pokedex />} />
+                <Route path="/leaderboard" element={<LaderBoard />} />
+              </Routes>
+            </BrowserRouter>
+          </>
+        )
+    }
 }
 
 export default App;
