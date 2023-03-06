@@ -8,14 +8,14 @@ function Pokedex() {
 
 const [pseudo,setPseudo] = useCookies(['user']);
 const [list,setList] = useState([]);
-console.log(pseudo.user);
-const submitPost = () => {
+const userName = pseudo.user.data[0].login;
+  useEffect(() => {
     Axios
-      .get(`https://chromatyk-pokemon.herokuapp.com/api/getByUser/${pseudo}`)
+      .get(`https://chromatyk-pokemon.herokuapp.com/api/getByUser/${userName}`)
       .then(function(response){
           setList(response.data);
       })
-    }
+    }, [])
     return (
       <>
         <div className="CreatePost">
