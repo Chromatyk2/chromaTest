@@ -1,5 +1,4 @@
-import axios from "axios";
-import cookies from "js-cookies";
+import Axios from 'axios'
 
 class AuthService {
   encodeQueryString(params) {
