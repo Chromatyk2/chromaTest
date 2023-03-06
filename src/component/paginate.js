@@ -11,8 +11,9 @@ function Items(props) {
   const shinys = pkmList.filter(item => item.shiny == 1);
   const nbShiny = shinys.length;
   const nbTotal = pkmList.length;
+  const token = cookies.oauth.params.access_token;
   const config = {
-      headers: { Authorization: `Bearer ${cookies.oauth.params.access_token}` }
+      headers: { Authorization: `Bearer ${token}` }
   };
 
   const bodyParameters = {
