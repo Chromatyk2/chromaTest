@@ -52,7 +52,13 @@ function AuthService() {
           grant_type:"authorization_code",
           redirect_uri:"https://chromatest.netlify.app/"
         }
-      ).then(console.log).catch(console.log);
+      )
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setCookie('oauth', { result });
+        }
+      );
       }
       return params["access_token"] !== undefined;
   }
