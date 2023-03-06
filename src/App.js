@@ -12,7 +12,8 @@ import NavBar from './component/navbar.js';
 import Login from './services/auth.services.js';
 function App() {
   const [cookies, setCookie] = useCookies(['oauth']);
-  if(!cookies.oauth) {
+  console.log(cookies.oauth == null)
+  if(cookies.oauth ) {
     return <Login />
   }
   return(
