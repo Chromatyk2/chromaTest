@@ -45,6 +45,20 @@ function AuthService() {
   useEffect(() => {
     isAuthenticated();
   }, [authentication]);
+  if(cookies){
+    return(
+      <>
+        <NavBar />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/pokedex" element={<Pokedex />} />
+            <Route path="/leaderboard" element={<LaderBoard />} />
+          </Routes>
+        </BrowserRouter>
+      </>
+    );
+  }
   return(
     <button onClick={authentication}>connexion</button>
   )

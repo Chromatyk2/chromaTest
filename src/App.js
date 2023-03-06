@@ -11,22 +11,7 @@ import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
 import Login from './services/auth.services.js';
 function App() {
-  const [cookies, setCookie] = useCookies(['oauth']);
-  if(!cookies.oauth.params.access_token) {
-    return <Login />
-  }
-  return(
-    <>
-      <NavBar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/pokedex" element={<Pokedex />} />
-          <Route path="/leaderboard" element={<LaderBoard />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+  return <Login />
 }
 
 export default App;
