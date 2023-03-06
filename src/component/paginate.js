@@ -12,14 +12,14 @@ function Items(props) {
   const nbShiny = shinys.length;
   const nbTotal = pkmList.length;
   const token = JSON.stringify(cookies.oauth.params.id_token);
-  const bodyParameters = {
-     key: "value"
-  };
+  console.log(token);
   Axios.get(
   'https://api.twitch.tv/helix/users',
-  {headers:{
-    Authorization: "Bearer "+{token}
-  }}
+  {
+    headers:{
+      Authorization: "Bearer "+{token}
+    }
+  }
 ).then(console.log).catch(console.log);
   return (
     <>
