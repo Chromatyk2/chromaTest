@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import $ from "jquery";
 import './App.css';
 import 'react-tooltip/dist/react-tooltip.css'
-import AuthService from "./Services/auth.service.js";
+import AuthService from "./services/auth.service.js";
 import HomePage from './component/home.js';
 import Pokedex from './component/pokedex.js';
 import BasicExample from './component/nav.js';
