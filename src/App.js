@@ -93,7 +93,7 @@ function App() {
 
   return (
     <>
-      {!twitch.isAuthenticated() ?
+      {!user ?
         <button onClick={twitch.authentication}>Connexion !</button>
       :
         <>
