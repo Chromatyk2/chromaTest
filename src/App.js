@@ -8,6 +8,7 @@ import BasicExample from './component/nav.js';
 import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
 function App() {
+  const [user, setUser] = useState([]);
   // ID de l'application récupéré après l'avoir enregistrée
   const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
 
@@ -55,9 +56,17 @@ function App() {
   const twitch = {
 
       // Vérifie si l'utilisateur est authentifié ou non
-      isAuthenticated: function() {
+      getUser: function() {
           const params = helpers.getUrlParams();
-          return params["access_token"] !== undefined;
+          fetch("https://api.twitch.tv/helix/users",
+            {
+              header: {
+                  Authorization: 'Bearer ' + params["access_token"]
+              }
+            }
+          ).then(function(c){
+              return c.json()
+          })
       },
       // Redirige l'utilisateur sur la page d'authentification de Twitch avec les
       // bons paramètres
@@ -74,7 +83,7 @@ function App() {
       },
 
   };
-
+  console.log(twitch.getUSer());
 // Fonction principale
 
   return (
