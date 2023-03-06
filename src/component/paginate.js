@@ -18,7 +18,7 @@ function Items(props) {
   {
     headers:{
       'Authorization': `Bearer ${token}`,
-      'Client-Id': `wbmytr93xzw8zbg0p1izqyzzc5mbiz`
+      'Client-Id': `401m5gmmyoy4jme9jo4n7bzz5zzt8t`
     }
   }
 ).then(console.log).catch(console.log);
