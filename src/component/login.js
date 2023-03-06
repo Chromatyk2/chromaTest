@@ -1,12 +1,12 @@
 import React,{useState, useEffect} from 'react';
 function Main() {
   // ID de l'application récupéré après l'avoir enregistrée
-  const CLIENT_ID = "0123456789abcdefghijklmnopqrstuvwxyz";
+  const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
 
   // Adresse où l'on veut que l'utilisateur soit redirigé après avoir autorisé
   // l'application. Cette adresse DOIT être l'une de celles déclarées dans
   // l'application sur dev.twitch.tv !!
-  const REDIRECT_URI = "http://localhost:8000/";
+  const REDIRECT_URI = "https://chromatest.netlify.app/";
 
   // Liste des éléments auxquels on souhaite accéder...  On reparlera de ça un
   // peu plus tard ;)
@@ -38,7 +38,7 @@ function Main() {
 
       // Récupère et décode les paramètres de l'URL
       getUrlParams: function() {
-          return helpers.decodeQueryString(location.hash.slice(1));
+          return helpers.decodeQueryString(window.location.hash.slice(1));
       },
 
   };
@@ -63,7 +63,7 @@ function Main() {
           };
           const queryString = helpers.encodeQueryString(params);
           const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
-          location.href = authenticationUrl;
+          window.location.href = authenticationUrl;
       },
 
   };
