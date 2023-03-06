@@ -65,9 +65,13 @@ function App() {
                   Authorization: 'Bearer ' + params["access_token"]
               }
             }
-          ).then(function(c){
-              return c.json()
-          })
+          )
+          .then(res => res.json())
+          .then(
+            (result) => {
+              setUser(result);
+            }
+          )
       },
       // Redirige l'utilisateur sur la page d'authentification de Twitch avec les
       // bons paramètres
@@ -84,7 +88,7 @@ function App() {
       },
 
   };
-  console.log(twitch.getUSer());
+  console.log(user);
 // Fonction principale
 
   return (
