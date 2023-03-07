@@ -78,13 +78,14 @@ function LaderBoard() {
             //   </div>
             // </div>
             <div className="top3Mobile">
-            <div class="item">
-              <div class="pic picOne"></div>
-              <div class="name">
-                {topThree[0].pseudo}
-              </div>
-              <div class="score">
-                {topThree[0].nbCapture}
+              <div class="item">
+                <div class="pic picOne"></div>
+                <div class="name">
+                  {topThree[0].pseudo}
+                </div>
+                <div class="score">
+                  {topThree[0].nbCapture}
+                </div>
               </div>
             </div>
           </>
