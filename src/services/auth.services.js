@@ -47,7 +47,6 @@ function AuthService() {
       const params = getUrlParams();
       if(Object.keys(params).length > 0){
         setCookie('oauth', params.code);
-        console.log(params);
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
         {
@@ -57,23 +56,26 @@ function AuthService() {
           grant_type:"authorization_code",
           redirect_uri:"https://chromatest.netlify.app/"
         }
-      )      .then(
+      )
+      .then(
         (result) => {
+            setCookie('token', result.data);          
             Axios.get(
               'https://api.twitch.tv/helix/users',
               {
                 headers:{
-                  'Authorization': `Bearer ${result.data.acces_token}`,
+                  'Authorization': `Bearer ${result.data.access_token}`,
                   'Client-Id': '401m5gmmyoy4jme9jo4n7bzz5zzt8t'
                 }
               }
-              ).then(
+            )
+            .then(
               (result) => {
                 setCookie('user', result.data );
               }
-          )
-        }
-      );
+            )
+          }
+        );
       }
       return params["access_token"] !== undefined;
   }
