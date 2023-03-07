@@ -746,9 +746,9 @@ p.filterTitle {
       position: absolute;
     }
 }
-.myItem{
+.list .myItem{
   background: #700d0f;
 }
-.myItem .pic{
+.list .myItem .pic{
   background: #570a0c;
 }
