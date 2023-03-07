@@ -2,6 +2,15 @@
 font-family: 'AldotheApache';
 src: url('../public/AldotheApache.ttf') format('truetype');
 }
+.me-auto.navbar-nav {
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+.me-auto.navbar-nav a{
+    text-decoration: none;
+    font-size: 20px;
+}
 iframe{
   display: block;
   margin: auto;

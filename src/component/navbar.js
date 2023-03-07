@@ -11,9 +11,9 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/">Accueil</Link>
-            <Link to="/pokedex">Pokedex</Link>
-            <Link to="/leaderboard">Classement</Link>
+            <Link className="navLink" to="/">Accueil</Link>
+            <Link className="navLink" to="/pokedex">Pokedex</Link>
+            <Link className="navLink" to="/leaderboard">Classement</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
