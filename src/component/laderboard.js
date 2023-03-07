@@ -35,7 +35,7 @@ function LaderBoard() {
         </div>
         <div className="center">
         {topThree.length > 0 &&
-            <div className="top3">
+            <div className="top3Desktop">
               <div className="two item">
                 <div className="pos">
                   2
