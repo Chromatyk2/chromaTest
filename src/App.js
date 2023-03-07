@@ -6,7 +6,6 @@ import './App.css';
 import 'react-tooltip/dist/react-tooltip.css'
 import HomePage from './component/home.js';
 import Pokedex from './component/pokedex.js';
-import BasicExample from './component/nav.js';
 import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
 import Login from './services/auth.services.js';
