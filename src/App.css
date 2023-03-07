@@ -71,7 +71,7 @@ a.socialLink {
   padding: 10px;
   text-align: center;
   text-decoration: none;
-  width: 350px;
+  width: 320px;
 }
 p.myNetworks {
     color: #255748;
@@ -627,7 +627,7 @@ p.filterTitle {
     width: 88%;
   }
 }
-@media screen and (max-width: 943px) {
+@media screen and (min-width: 380px) and (max-width: 943px) {
   .pokemonGlobalContainer {
     display: flex;
     flex-wrap: wrap;
@@ -669,5 +669,61 @@ p.filterTitle {
     }
     .list .item .name {
       flex-grow: 0;
+    }
+}
+@media screen and (max-width: 379px) {
+  .pokemonGlobalContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+    .top3Mobile{
+      display: block;
+      padding:0;
+    }
+    .top3Desktop{
+      display: none;
+    }
+    .top3Mobile .itemOne{
+      width: 320px;
+    }
+    .top3Mobile .itemTwo{
+      width: 320px;
+    }
+    .top3Mobile .itemThree{
+      width: 320px;
+    }
+    .list .item{
+      width: 320px;
+    }
+    .list{
+      padding:0;
+    }
+    .top3Mobile .itemOne .name {
+      flex-grow: 0;
+    }
+    .top3Mobile .itemTwo .name {
+      flex-grow: 0;
+    }
+    .top3Mobile .itemThree .name {
+      flex-grow: 0;
+    }
+    .list .item .name {
+      flex-grow: 0;
+    }
+    .top3Mobile .itemOne .picOne {
+      width: 5rem;
+    }
+    .top3Mobile .itemTwo .picTwo {
+      width: 5rem;
+    }
+    .top3Mobile .itemThree .picThree {
+      width: 5rem;
+    }
+    .top3Mobile .item .pic {
+      width: 5rem;
     }
 }
