@@ -376,11 +376,10 @@ p.filterTitle {
     background-color: white;
     border-radius: 50%;
 }
-.stats{
+.stats {
     display: flex;
     gap: 30px;
-    position: absolute;
-    left: 4%;
+    justify-content: center;
 }
 .uniquePokemonContainer {
     background-position: 50%;

@@ -12,8 +12,8 @@ function PkmList(props) {
     return (
       <>
         <div className="stats">
-          <p className="labelStats">Shiny : <span className="valueStats">{nbShiny}</span></p>
-          <p className="labelStats">Total : <span className="valueStats">{nbTotal}</span></p>
+          <p className="labelStats">Shiny<br/><span className="valueStats">{nbShiny}</span></p>
+          <p className="labelStats">Total<br/><span className="valueStats">{nbTotal}</span></p>
         </div>
           <Pagination
             itemsPerPage={30}
