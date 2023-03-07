@@ -614,6 +614,17 @@ p.filterTitle {
   position: absolute;
   right: 2%;
 }
+.top3Mobile{
+  display: none;
+}
+@media screen (max-width: 760px) {
+  .top3Mobile{
+    display: block;
+  }
+  .top3Desktop{
+    display: none;
+  }
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
