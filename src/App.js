@@ -20,9 +20,9 @@ function App() {
       <NavBar />
       <HashRouter>
         <Routes>
-          <Route exact path="/" element={<HomePage cookies={cookies} />} />
-          <Route exact path="/pokedex" element={<Pokedex cookies={cookies} />} />
-          <Route exact path="/leaderboard" element={<LaderBoard cookies={cookies} />} />
+          <Route path="/" element={<HomePage cookies={cookies} />} />
+          <Route path="/pokedex" element={<Pokedex cookies={cookies} />} />
+          <Route path="/leaderboard" element={<LaderBoard cookies={cookies} />} />
         </Routes>
       </HashRouter>
     </>
