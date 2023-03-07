@@ -624,9 +624,6 @@ p.filterTitle {
     width: 88%;
   }
 }
-.top3Desktop{
-  display: none;
-}
 @media screen and (max-width: 943px) {
   .pokemonGlobalContainer {
     display: flex;
