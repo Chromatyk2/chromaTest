@@ -28,7 +28,6 @@ function LaderBoard(props) {
               setOthers(response.data.slice(3));
         })
     }
-    console.log(pseudo == "chromatest59")
     return (
       <>
         <div className="leaderBoardSwitch">
@@ -113,17 +112,16 @@ function LaderBoard(props) {
         <div class="list">
         {others.length > 0 &&
           others.map((val, key) => {
-            {val.pseudo != pseudo &&
-              <div className="item">
-                <div className="pic"><p>#{key + 4}</p></div>
-                <div className="name">
-                  {val.pseudo}
-                </div>
-                <div className="score">
-                  {val.nbCapture}
-                </div>
+          return pseudo == val.pseudo
+            <div className="item myItem">
+              <div className="pic"><p>#{key + 4}</p></div>
+              <div className="name">
+                {val.pseudo}
               </div>
-            }
+              <div className="score">
+                {val.nbCapture}
+              </div>
+            </div>
          })
         }
           </div>
