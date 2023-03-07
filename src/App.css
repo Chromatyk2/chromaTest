@@ -27,11 +27,28 @@ iframe{
 }
 .social{
   display: flex;
+  flex-flow: column;
   gap: 20px;
   justify-content: center;
-  flex-flow: column;
-  width: 50%;
   margin: auto;
+  width: 25%;
+}
+a.socialLink {
+    border: solid 4px #255748;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+p.myNetworks {
+    color: #255748;
+    font-family: "AldotheApache";
+    font-size: 100px;
+    text-align: center;
 }
 a{
   font-size: 50px;
