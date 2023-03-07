@@ -16,8 +16,8 @@ function App() {
   }
   return(
     <>
-      <NavBar />
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/" element={<HomePage cookies={cookies} />} />
           <Route path="/pokedex" element={<Pokedex cookies={cookies} />} />
