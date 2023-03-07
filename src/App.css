@@ -617,26 +617,6 @@ p.filterTitle {
 .top3Mobile{
   display: none;
 }
-@media screen (max-width: 760px) {
-  .top3Mobile{
-    display: block;
-  }
-  .top3Desktop{
-    display: none;
-  }
-  .itemOne{
-    width: 400px;
-  }
-  .itemTwo{
-    width: 390px;
-  }
-  .itemThree{
-    width: 380px;
-  }
-  .item{
-    width: 370px;
-  }
-}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
@@ -655,5 +635,26 @@ p.filterTitle {
     justify-content: center;
     margin: auto;
     width: 100%;
+  }
+}
+
+@media screen (max-width: 760px) {
+  .top3Mobile{
+    display: block;
+  }
+  .top3Desktop{
+    display: none;
+  }
+  .itemOne{
+    width: 400px;
+  }
+  .itemTwo{
+    width: 390px;
+  }
+  .itemThree{
+    width: 380px;
+  }
+  .item{
+    width: 370px;
   }
 }
