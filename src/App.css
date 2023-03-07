@@ -714,19 +714,19 @@ p.filterTitle {
     .list .item .name {
       flex-grow: 0;
     }
-    .top3Mobile .itemOne .picOne {
-      width: 5rem;
-    }
-    .top3Mobile .itemTwo .picTwo {
-      width: 5rem;
-    }
-    .top3Mobile .itemThree .picThree {
-      width: 5rem;
-    }
-    .list .item .pic {
-      width: 5rem;
-    }
     .top3Mobile .itemOne .score:after {
+      margin-right: 1rem;
+      content: "";
+    }
+    .top3Mobile .itemTwo .score:after {
+      margin-right: 1rem;
+      content: "";
+    }
+    .top3Mobile .itemThree .score:after {
+      margin-right: 1rem;
+      content: "";
+    }
+    .list .item .score:after {
       margin-right: 1rem;
       content: "";
     }
