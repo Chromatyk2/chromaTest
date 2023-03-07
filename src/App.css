@@ -157,23 +157,21 @@ a:hover{
   margin: 0 auto;
 }
 .top3Mobile .itemOne {
-  align-items: center;
-  background: #3c6654;
-  border-radius: 4rem;
-  box-shadow: 0 0 4rem 0 rgb(0 0 0 / 10%), 0 1rem 2rem -1rem rgb(0 0 0 / 30%);
-  cursor: pointer;
-  display: flex;
-  height: 3rem;
-  position: relative;
-  -webkit-transform-origin: left;
-  transform-origin: left;
-  transition: -webkit-transform .2s ease-in-out;
-  transition: transform .2s ease-in-out;
-  transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
-  color: white;
-  width: 40%;
-  margin: auto;
-  margin-top: 30px;
+    align-items: center;
+    background: transparent;
+    border-radius: 4rem;
+    box-shadow: 0 0 4rem 0 rgb(0 0 0 / 10%), 0 1rem 2rem -1rem rgb(0 0 0 / 30%);
+    color: #255748;
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    margin: 30px auto auto;
+    position: relative;
+    transform-origin: left;
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    width: 40%;
+    font-family: 'AldotheApache';
+    border: solid gold 4px;
 }
 .top3Mobile .itemOne .pos {
   font-weight: 900;
@@ -187,17 +185,17 @@ a:hover{
   transition: opacity 200ms ease-in-out;
 }
 .top3Mobile .itemOne .picOne {
-  background-position: 50%;
-  background-size: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%), 0 1rem 1rem -0.5rem rgb(0 0 0 / 30%);
-  height: 4rem;
-  margin-right: 1rem;
-  width: 4rem;
-  background-color: #3C6537;
-  display: flex;
-  align-items: self-end;
-  justify-content: center;
+    align-items: self-end;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%), 0 1rem 1rem -0.5rem rgb(0 0 0 / 30%);
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    margin-right: 1rem;
+    width: 4rem;
+    background-image: url(https://pokemon.gameinfo.io/images/tools/badge_lv3.png);
+    background-size: contain;
+    background-color: gold;
 }
 .top3Mobile .itemOne .name {
   flex-grow: 2;
@@ -209,7 +207,7 @@ a:hover{
 }
 .top3Mobile .itemOne .score:after {
   margin-right: 1rem;
-  content: "pokemons";
+  content: " pokemons";
 }
 .top3Mobile .item:hover {
   transform: scale(1.05);
@@ -274,7 +272,7 @@ a:hover{
 }
 .list .item .score:after {
   margin-right: 1rem;
-  content: "pokemons";
+  content: " pokemons";
 }
 .list .item:hover {
   transform: scale(1.05);
