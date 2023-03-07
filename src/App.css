@@ -723,7 +723,11 @@ p.filterTitle {
     .top3Mobile .itemThree .picThree {
       width: 5rem;
     }
-    .top3Mobile .item .pic {
+    .list .item .pic {
       width: 5rem;
+    }
+    .top3Mobile .itemOne .score:after {
+      margin-right: 1rem;
+      content: "";
     }
 }
