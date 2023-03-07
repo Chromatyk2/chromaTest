@@ -658,4 +658,16 @@ p.filterTitle {
     .list{
       padding:0;
     }
+    .top3Mobile .itemOne .name {
+      flex-grow: 0;
+    }
+    .top3Mobile .itemTwo .name {
+      flex-grow: 0;
+    }
+    .top3Mobile .itemThree .name {
+      flex-grow: 0;
+    }
+    .list .item .name {
+      flex-grow: 0;
+    }
 }
