@@ -3,10 +3,12 @@ import { useCookies } from 'react-cookie';
 import Axios from 'axios'
 
 function AuthService() {
+
   const [cookies, setCookie, removeCookie] = useCookies(['oauth']);
   const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
   const REDIRECT_URI = "https://chromatest.netlify.app/";
   const SCOPES = ['openid'];
+
   const encodeQueryString = (params) => {
       const queryString = new URLSearchParams();
       for (let paramName in params) {
@@ -14,6 +16,7 @@ function AuthService() {
       }
       return queryString.toString();
   };
+
   const authentication = () => {
     const params = {
         client_id: CLIENT_ID,
@@ -25,6 +28,7 @@ function AuthService() {
       const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
       window.location.href = authenticationUrl;
   };
+
   const decodeQueryString = (string) => {
       const params = {};
       const queryString = new URLSearchParams(string);
@@ -33,6 +37,7 @@ function AuthService() {
       }
       return params;
   };
+
   const getUrlParams = () => {
       const queryParameters = new URLSearchParams(window.location.search);
       return decodeQueryString(queryParameters);
@@ -42,6 +47,7 @@ function AuthService() {
       const params = getUrlParams();
       if(Object.keys(params).length > 0){
         setCookie('oauth', { params });
+        console.log(oauth);
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
         {
@@ -51,8 +57,7 @@ function AuthService() {
           grant_type:"authorization_code",
           redirect_uri:"https://chromatest.netlify.app/"
         }
-      )
-      .then(
+      )      .then(
         (result) => {
             Axios.get(
               'https://api.twitch.tv/helix/users',
@@ -72,9 +77,11 @@ function AuthService() {
       }
       return params["access_token"] !== undefined;
   }
+
   useEffect(() => {
     isAuthenticated();
   }, []);
+
   return(
     <button onClick={authentication}>connexion</button>
   )
