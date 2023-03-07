@@ -246,7 +246,7 @@ a:hover{
   opacity: 0.6;
   transition: opacity 200ms ease-in-out;
 }
-.top3Mobile .itemTwo .picT {
+.top3Mobile .itemTwo .picTwo {
     align-items: self-end;
     background-color: silver;
     background-image: url(https://pokemon.gameinfo.io/images/tools/badge_lv2.png);
@@ -294,7 +294,7 @@ a:hover{
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
     font-family: 'AldotheApache';
-    border: solid gold 4px;
+    border : solid #F1AB70 4px;
 }
 .top3Mobile .itemThree .pos {
   font-weight: 900;
@@ -309,8 +309,9 @@ a:hover{
 }
 .top3Mobile .itemThree .picThree {
     align-items: self-end;
-    background-color: gold;
-    background-image: url(https://pokemon.gameinfo.io/images/tools/badge_lv3.png);
+    background-color: sandybrown;
+    border : solid #F1AB70 4px;
+    background-image: url(https://pokemon.gameinfo.io/images/tools/badge_lv1.png);
     background-size: contain;
     border-radius: 50%;
     box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%), 0 1rem 1rem -0.5rem rgb(0 0 0 / 30%);
