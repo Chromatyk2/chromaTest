@@ -6,7 +6,7 @@ import PkmList from './pkmList.js'
 
 function Pokedex(props) {
 const [list,setList] = useState([]);
-console.log(props.cookies);
+console.log(props.cookies.user.data[0].login);
 const psuedo = props.cookies;
   useEffect(() => {
     Axios
