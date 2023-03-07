@@ -246,7 +246,7 @@ a:hover{
   opacity: 0.6;
   transition: opacity 200ms ease-in-out;
 }
-.top3Mobile .itemTwo .picOne {
+.top3Mobile .itemTwo .picT {
     align-items: self-end;
     background-color: silver;
     background-image: url(https://pokemon.gameinfo.io/images/tools/badge_lv2.png);
