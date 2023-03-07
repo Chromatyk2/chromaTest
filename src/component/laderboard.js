@@ -28,6 +28,7 @@ function LaderBoard(props) {
               setOthers(response.data.slice(3));
         })
     }
+    console.log(pseudo == "chromatest59")
     return (
       <>
         <div className="leaderBoardSwitch">
