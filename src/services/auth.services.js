@@ -46,14 +46,13 @@ function AuthService() {
   const isAuthenticated = () => {
       const params = getUrlParams();
       if(Object.keys(params).length > 0){
-        setCookie('oauth', { params });
-        console.log(cookies);
+        setCookie('oauth', params.code);
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
         {
           client_id:"401m5gmmyoy4jme9jo4n7bzz5zzt8t",
           client_secret:"mdbes44v9p9576ltwyed2041xwtnw4",
-          code:params.code,
+          code:cookies.oauth,
           grant_type:"authorization_code",
           redirect_uri:"https://chromatest.netlify.app/"
         }
