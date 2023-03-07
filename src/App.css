@@ -90,7 +90,6 @@ a:hover{
 .top3 {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   color: #4b4168;
 }
 .top3 .item {
@@ -126,7 +125,6 @@ a:hover{
 }
 .top3 .item .pos {
   font-weight: 900;
-  margin-bottom: 0.5rem;
 }
 .top3 .item .name {
   font-size: 1.1rem;
@@ -137,10 +135,10 @@ a:hover{
   content: "pokemons";
 }
 .top3 .item.one {
-  height: 21rem;
+  border: 4px solid gold;
+  height: 17rem;
   padding-top: 3.5rem;
   width: 15rem;
-  border: solid 4px #ffD700;
 }
 .top3 .item.one .picOne {
   background-image: url(https://pokemon.gameinfo.io/images/tools/badge_lv3.png);
@@ -220,7 +218,6 @@ a:hover{
   opacity: 0.8;
 }
 .one .pos {
-    margin-top: 15px;
     font-size: 3.5rem;
 }
 .two .pos {
@@ -246,9 +243,6 @@ a:hover{
 }
 .three{
   border : solid #F1AB70 4px;
-}
-.one .score{
-  margin-top:35px;
 }
 .pic p{
   font-weight: bold;
