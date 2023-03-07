@@ -28,9 +28,6 @@ function LaderBoard(props) {
               setOthers(response.data.slice(3));
         })
     }
-    var firstDivContent = document.getElementById('myFirstItem');
-    var secondDivContent = document.getElementById('mySecondItem');
-    secondDivContent.innerHTML = firstDivContent.innerHTML;
     return (
       <>
         <div className="leaderBoardSwitch">
