@@ -636,29 +636,26 @@ p.filterTitle {
     margin: auto;
     width: 100%;
   }
-}
-
-@media (min-width: 200px) and (max-width: 744px) {
-  .top3Mobile{
-    display: block;
-    padding:none;
-  }
-  .top3Desktop{
-    display: none;
-  }
-  .top3Mobile .itemOne{
-    width: 400px;
-  }
-  .top3Mobile .itemTwo{
-    width: 390px;
-  }
-  .top3Mobile .itemThree{
-    width: 380px;
-  }
-  .list .item{
-    width: 370px;
-  }
-  .list{
-    padding:none;
-  }
+    .top3Mobile{
+      display: block;
+      padding:none;
+    }
+    .top3Desktop{
+      display: none;
+    }
+    .top3Mobile .itemOne{
+      width: 400px;
+    }
+    .top3Mobile .itemTwo{
+      width: 390px;
+    }
+    .top3Mobile .itemThree{
+      width: 380px;
+    }
+    .list .item{
+      width: 370px;
+    }
+    .list{
+      padding:none;
+    }
 }
