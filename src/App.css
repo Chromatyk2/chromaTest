@@ -641,20 +641,24 @@ p.filterTitle {
 @media (min-width: 200px) and (max-width: 744px) {
   .top3Mobile{
     display: block;
+    padding:none;
   }
   .top3Desktop{
     display: none;
   }
-  .itemOne{
+  .top3Mobile .itemOne{
     width: 400px;
   }
-  .itemTwo{
+  .top3Mobile .itemTwo{
     width: 390px;
   }
-  .itemThree{
+  .top3Mobile .itemThree{
     width: 380px;
   }
-  .item{
+  .list .item{
     width: 370px;
+  }
+  .list{
+    padding:none;
   }
 }
