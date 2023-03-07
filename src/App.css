@@ -624,6 +624,18 @@ p.filterTitle {
   .top3Desktop{
     display: none;
   }
+  .itemOne{
+    width: 400px;
+  }
+  .itemTwo{
+    width: 390px;
+  }
+  .itemThree{
+    width: 380px;
+  }
+  .item{
+    width: 370px;
+  }
 }
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
