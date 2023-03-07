@@ -638,7 +638,7 @@ p.filterTitle {
   }
 }
 
-@media screen (max-width: 760px) {
+@media (min-width: 200px) and (max-width: 744px) {
   .top3Mobile{
     display: block;
   }
