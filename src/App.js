@@ -11,7 +11,8 @@ import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
 import Login from './services/auth.services.js';
 function App() {
-  const [cookies, setCookie] = useCookies(['oauth']);
+  const [cookies, setCookie] = useCookies();
+  console.log(cookies);
   if(Object.keys(cookies).length == 0) {
     return <Login />
   }
