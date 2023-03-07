@@ -11,7 +11,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/pokedex">Pokédex</Nav.Link>
+            <Nav.Link href="/pokedex">Pokedex</Nav.Link>
             <Nav.Link href="/leaderboard">Classement</Nav.Link>
           </Nav>
         </Navbar.Collapse>
