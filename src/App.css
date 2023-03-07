@@ -441,3 +441,13 @@ p.filterTitle {
     width: 88%;
   }
 }
+@media screen and (max-width: 943px) {
+  .pokemonGlobalContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+}
