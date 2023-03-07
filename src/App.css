@@ -638,7 +638,7 @@ p.filterTitle {
   }
     .top3Mobile{
       display: block;
-      padding:none;
+      padding:0;
     }
     .top3Desktop{
       display: none;
@@ -656,6 +656,6 @@ p.filterTitle {
       width: 370px;
     }
     .list{
-      padding:none;
+      padding:0;
     }
 }
