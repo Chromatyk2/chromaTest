@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <Navbar expand="lg">
       <Container>
-        <Navbar.Brand as={Link} to="/">Accueil</Navbar.Brand>
+        <Navbar.Brand to="/">Accueil</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
