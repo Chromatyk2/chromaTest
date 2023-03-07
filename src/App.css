@@ -2,9 +2,13 @@
 font-family: 'AldotheApache';
 src: url('../public/AldotheApache.ttf') format('truetype');
 }
+nav.navbar.navbar-expand-lg.navbar-light {
+    background-color: #90E5B5;
+    margin-bottom: 20px;
+}
 .me-auto.navbar-nav {
     gap: 30px;
-    justify-content: center;
+    justify-content: start;
     width: 100%;
 }
 .me-auto.navbar-nav a{
