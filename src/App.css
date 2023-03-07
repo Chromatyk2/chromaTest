@@ -730,4 +730,20 @@ p.filterTitle {
       margin-right: 1rem;
       content: "";
     }
+    .top3Mobile .itemOne .score {
+      right: 10px;
+      position: absolute;
+    }
+    .top3Mobile .itemTwo .score {
+      right: 10px;
+      position: absolute;
+    }
+    .top3Mobile .itemThree .score {
+      right: 10px;
+      position: absolute;
+    }
+    .list .item .score {
+      right: 10px;
+      position: absolute;
+    }
 }
