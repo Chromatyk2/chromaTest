@@ -4,7 +4,7 @@ import Axios from 'axios'
 
 function AuthService() {
 
-  const [cookies, setCookie, removeCookie] = useCookies(['oauth']);
+  const [cookies, setCookie, removeCookie] = useCookies();
   const CLIENT_ID = "401m5gmmyoy4jme9jo4n7bzz5zzt8t";
   const REDIRECT_URI = "https://chromatest.netlify.app/";
   const SCOPES = ['openid'];
@@ -47,7 +47,7 @@ function AuthService() {
       const params = getUrlParams();
       if(Object.keys(params).length > 0){
         setCookie('oauth', params.code);
-        console.log(cookies.oauth)
+        console.log(cookies)
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
         {
