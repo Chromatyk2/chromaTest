@@ -28,6 +28,9 @@ function LaderBoard(props) {
               setOthers(response.data.slice(3));
         })
     }
+    var firstDivContent = document.getElementById('myFirstItem');
+    var secondDivContent = document.getElementById('mySecondItem');
+    secondDivContent.innerHTML = firstDivContent.innerHTML;
     return (
       <>
         <div className="leaderBoardSwitch">
@@ -110,10 +113,11 @@ function LaderBoard(props) {
           </>
         }
         <div class="list">
+        <div id="myFirstItem"></div>
         {others.length > 0 &&
           others.map((val, key) => {
           return pseudo == val.pseudo ?
-            <div className="item myItem">
+            <div id="mySecondItem" className="item">
               <div className="pic"><p>#{key + 4}</p></div>
               <div className="name">
                 {val.pseudo}
