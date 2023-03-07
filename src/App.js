@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { HashRouter, Route, Routes} from "react-router-dom";
 import { useCookies } from 'react-cookie';
 import $ from "jquery";
 import './App.css';
@@ -18,13 +18,19 @@ function App() {
   return(
     <>
       <NavBar />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<HomePage cookies={cookies} />} />
-          <Route path="/pokedex" element={<Pokedex cookies={cookies} />} />
-          <Route path="/leaderboard" element={<LaderBoard cookies={cookies} />} />
+          <Route exact path="/">
+            <HomePage cookies={cookies} />
+          </Route>
+          <Route exact path="/pokedex">
+            <Pokedex cookies={cookies} />
+          </Route>
+          <Route exact path="/leaderboard">
+            <LaderBoard cookies={cookies} />
+          </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
