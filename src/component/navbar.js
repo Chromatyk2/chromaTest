@@ -8,10 +8,10 @@ function NavBar() {
   return (
     <Navbar expand="lg">
       <Container>
-        <Navbar.Brand to="/">Accueil</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+            <Nav.Link as={Link} to="/">Accueil</Navbar.Brand>
             <Nav.Link as={Link} to="/pokedex">Pokedex</Nav.Link>
             <Nav.Link as={Link} to="/leaderboard">Classement</Nav.Link>
           </Nav>
