@@ -113,7 +113,7 @@ function LaderBoard(props) {
         <div class="list">
         {others.length > 0 &&
           others.map((val, key) => {
-            pseudo = val.pseudo &&
+            pseudo === val.pseudo &&
               <div className="item">
                 <div className="pic"><p>#{key + 4}</p></div>
                 <div className="name">
