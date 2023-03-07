@@ -47,7 +47,7 @@ function AuthService() {
       const params = getUrlParams();
       if(Object.keys(params).length > 0){
         setCookie('oauth', { params });
-        console.log(oauth);
+        console.log(cookies);
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
         {
