@@ -3,10 +3,11 @@ import Axios from 'axios'
 import '../App.css'
 import PkmList from './pkmList.js'
 
-function LaderBoard() {
+function LaderBoard(props) {
     const [laderBoard,setLaderboard] = useState([]);
     const [topThree,setTopThree] = useState([]);
     const [others,setOthers] = useState([]);
+    const pseudo = props.cookies.user.data[0].login;
     function displayNormalLaderboard(e) {
       let shiny = e.target.value;
         Axios
@@ -111,17 +112,26 @@ function LaderBoard() {
         <div class="list">
         {others.length > 0 &&
           others.map((val, key) => {
-          return (
-            <div class="item">
-              <div class="pic"><p>#{key + 4}</p></div>
-              <div class="name">
+            pseudo == val.pseudo ?
+            <div className="item myItem">
+              <div className="pic"><p>#{key + 4}</p></div>
+              <div className="name">
                 {val.pseudo}
               </div>
-              <div class="score">
+              <div className="score">
                 {val.nbCapture}
               </div>
             </div>
-           )
+            :
+            <div className="item">
+              <div className="pic"><p>#{key + 4}</p></div>
+              <div className="name">
+                {val.pseudo}
+              </div>
+              <div className="score">
+                {val.nbCapture}
+              </div>
+            </div>
          })
         }
           </div>
