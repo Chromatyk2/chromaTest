@@ -20,9 +20,9 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/pokedex" element={<Pokedex />} />
-          <Route path="/leaderboard" element={<LaderBoard />} />
+          <Route path="/" element={<HomePage cookies={cookies} />} />
+          <Route path="/pokedex" element={<Pokedex cookies={cookies} />} />
+          <Route path="/leaderboard" element={<LaderBoard cookies={cookies} />} />
         </Routes>
       </BrowserRouter>
     </>

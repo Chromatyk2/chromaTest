@@ -4,9 +4,10 @@ import Axios from 'axios'
 import '../App.css'
 import PkmList from './pkmList.js'
 
-function Pokedex() {
-
+function Pokedex(props) {
 const [list,setList] = useState([]);
+console.log(props.cookies);
+const psuedo = props.cookies;
   useEffect(() => {
     Axios
       .get(`https://chromatyk-pokemon.herokuapp.com/api/getByUser/Chromatyk`)
