@@ -279,6 +279,67 @@ a:hover{
 .top3Mobile .itemTwo:hover .pos {
   opacity: 0.8;
 }
+.top3Mobile .itemThree {
+    align-items: center;
+    background: transparent;
+    border-radius: 4rem;
+    box-shadow: 0 0 4rem 0 rgb(0 0 0 / 10%), 0 1rem 2rem -1rem rgb(0 0 0 / 30%);
+    color: #255748;
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    margin: 30px auto auto;
+    position: relative;
+    transform-origin: left;
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    width: 40%;
+    font-family: 'AldotheApache';
+    border: solid gold 4px;
+}
+.top3Mobile .itemThree .pos {
+  font-weight: 900;
+  position: absolute;
+  left: -2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  color: white;
+  opacity: 0.6;
+  transition: opacity 200ms ease-in-out;
+}
+.top3Mobile .itemThree .picThree {
+    align-items: self-end;
+    background-color: gold;
+    background-image: url(https://pokemon.gameinfo.io/images/tools/badge_lv3.png);
+    background-size: contain;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%), 0 1rem 1rem -0.5rem rgb(0 0 0 / 30%);
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    margin-right: 1rem;
+    width: 4rem;
+    left: -5px;
+    position: inherit;
+}
+.top3Mobile .itemThree .name {
+  flex-grow: 2;
+  flex-basis: 10rem;
+  font-size: 1.1rem;
+}
+.top3Mobile .itemThree .score {
+  margin-right: 1.5rem;
+}
+.top3Mobile .itemThree .score:after {
+  margin-right: 1rem;
+  content: " pokemons";
+}
+.top3Mobile .itemThree:hover {
+  transform: scale(1.05);
+}
+.top3Mobile .itemThree:hover .pos {
+  opacity: 0.8;
+}
 .list {
   padding-left: 2rem;
   margin: 0 auto;
