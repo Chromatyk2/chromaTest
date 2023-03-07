@@ -112,7 +112,7 @@ function LaderBoard(props) {
         <div class="list">
         {others.length > 0 &&
           others.map((val, key) => {
-          return pseudo == val.pseudo ?
+          return pseudo == val.pseudo &&
             <div className="item myItem">
               <div className="pic"><p>#{key + 4}</p></div>
               <div className="name">
@@ -122,7 +122,9 @@ function LaderBoard(props) {
                 {val.nbCapture}
               </div>
             </div>
-            :
+         })
+         others.map((val, key) => {
+           return pseudo != val.pseudo &&
             <div className="item">
               <div className="pic"><p>#{key + 4}</p></div>
               <div className="name">
@@ -132,7 +134,7 @@ function LaderBoard(props) {
                 {val.nbCapture}
               </div>
             </div>
-         })
+        })
         }
           </div>
     </div>
