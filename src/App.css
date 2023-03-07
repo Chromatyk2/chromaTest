@@ -1,6 +1,6 @@
 @font-face {
-font-family: 'Inlanders Demo';
-src: url('../public/Inlanders Demo.otf') format('truetype');
+font-family: 'AldotheApache';
+src: url('../public/AldotheApache.ttf') format('truetype');
 }
 iframe{
   display: block;
@@ -16,7 +16,7 @@ iframe{
   background: none;
   color: #255748;
   font-size: 30px;
-  font-family: "Inlanders Demo";
+  font-family: "AldotheApache";
 }
 .leaderBoardSwitch button:hover{
   color: #0a3a2c;
@@ -34,7 +34,7 @@ iframe{
 a{
   font-size: 50px;
   color: #255748;
-  font-family: "Inlanders Demo";
+  font-family: "AldotheApache";
 }
 a:hover{
   color: #0a3a2c;
