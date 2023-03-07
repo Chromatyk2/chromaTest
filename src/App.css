@@ -41,6 +41,25 @@ iframe{
   align-items: center;
   margin-top: 5%;
 }
+.loginButton{
+  display: flex;
+  background-color: #6441a5;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  line-height: 22px;
+  font-size: 25px;
+}
+.loginButton i{
+  margin-right:25px;
+}
+.loginContainer p {
+  line-height: 20px;
+  font-size: 30px;
+  font-family: "AldotheApache";
+  color: #255748;
+}
 a.socialLink {
   border: 4px solid #255748;
   border-radius: 35px;

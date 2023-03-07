@@ -88,7 +88,7 @@ function AuthService() {
     <div className="loginContainer">
       <p className="welcome">Bienvenue !</p>
       <p className="pleaseLogin">Pour commencer connecte toi avec ton compte Twitch !</p>
-      <button onClick={authentication}><i class="fa-brands fa-twitch"></i>Se connecter avec twitch</button>
+      <button className="loginButton" onClick={authentication}><i class="fa-brands fa-twitch"></i>Se connecter avec twitch</button>
     </div>
   )
 }
