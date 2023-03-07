@@ -59,7 +59,7 @@ function AuthService() {
       )
       .then(
         (result) => {
-            setCookie('token', result.data);          
+            setCookie('token', result.data);
             Axios.get(
               'https://api.twitch.tv/helix/users',
               {
@@ -85,7 +85,9 @@ function AuthService() {
   }, []);
 
   return(
-    <button onClick={authentication}>connexion</button>
+    <div className="loginContainer">
+      <button onClick={authentication}>Se connecter avec twitch</button>
+    </div>
   )
 }
 export default AuthService;
