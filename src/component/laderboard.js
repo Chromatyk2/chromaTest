@@ -36,47 +36,7 @@ function LaderBoard() {
         <div className="center">
         {topThree.length > 0 &&
           <>
-            // <div className="top3Desktop">
-            //   <div className="two item">
-            //     <div className="pos">
-            //       2
-            //     </div>
-            //     <div className="picTwo pic"></div>
-            //     <div className="name">
-            //       {topThree[1].pseudo}
-            //     </div>
-            //     <hr/>
-            //     <div className="score">
-            //       {topThree[1].nbCapture}
-            //     </div>
-            //   </div>
-            //   <div className="one item">
-            //     <div className="pos">
-            //       1
-            //     </div>
-            //     <div className="picOne pic"></div>
-            //     <div className="name">
-            //       {topThree[0].pseudo}
-            //     </div>
-            //     <hr/>
-            //     <div className="score">
-            //       {topThree[0].nbCapture}
-            //     </div>
-            //   </div>
-            //   <div className="three item">
-            //     <div className="pos">
-            //       3
-            //     </div>
-            //     <div className="picThree pic"></div>
-            //     <div className="name">
-            //       {topThree[2].pseudo}
-            //     </div>
-            //     <hr/>
-            //     <div className="score">
-            //       {topThree[2].nbCapture}
-            //     </div>
-            //   </div>
-            // </div>
+
             <div className="top3Mobile">
               <div class="item">
                 <div class="pic picOne"></div>
@@ -94,8 +54,8 @@ function LaderBoard() {
         {others.length > 0 &&
           others.map((val, key) => {
           return (
-            <div class="item">
-              <div class="pic"><p>#{key + 4}</p></div>
+            <div class="itemOne">
+              <div class="picOne"><p>#{key + 4}</p></div>
               <div class="name">
                 {val.pseudo}
               </div>

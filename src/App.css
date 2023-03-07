@@ -156,7 +156,7 @@ a:hover{
   padding-left: 2rem;
   margin: 0 auto;
 }
-.top3Mobile .item {
+.top3Mobile .itemOne {
   align-items: center;
   background: #3c6654;
   border-radius: 4rem;
@@ -175,7 +175,7 @@ a:hover{
   margin: auto;
   margin-top: 30px;
 }
-.top3Mobile .item .pos {
+.top3Mobile .itemOne .pos {
   font-weight: 900;
   position: absolute;
   left: -2rem;
@@ -186,7 +186,7 @@ a:hover{
   opacity: 0.6;
   transition: opacity 200ms ease-in-out;
 }
-.top3Mobile .item .pic {
+.top3Mobile .itemOne .picOne {
   background-position: 50%;
   background-size: cover;
   border-radius: 50%;
@@ -199,15 +199,15 @@ a:hover{
   align-items: self-end;
   justify-content: center;
 }
-.top3Mobile .item .name {
+.top3Mobile .itemOne .name {
   flex-grow: 2;
   flex-basis: 10rem;
   font-size: 1.1rem;
 }
-.top3Mobile .item .score {
+.top3Mobile .itemOne .score {
   margin-right: 1.5rem;
 }
-.top3Mobile .item .score:after {
+.top3Mobile .itemOne .score:after {
   margin-right: 1rem;
   content: "pokemons";
 }
