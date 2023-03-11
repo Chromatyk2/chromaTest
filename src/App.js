@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<HomePage cookies={cookies} />} />
           <Route path="/pokedex" element={<Pokedex cookies={cookies} />} />
           <Route path="/leaderboard" element={<LaderBoard cookies={cookies} />} />
-          <Route path="/pokemon/:id" element={<PokemonPage cookies={cookies} />} />
+          <Route path="/pokemon" element={<PokemonPage cookies={cookies} />} />
         </Routes>
       </BrowserRouter>
     </>
