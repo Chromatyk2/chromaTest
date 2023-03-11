@@ -47,11 +47,8 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
  } else {
    return (
      <>
-     <p className="pkmName">{name[4].name}<img className="shinySpark" src="https://res.cloudinary.com/shiny24/image/upload/v1669396824/pokemon/shiny_symbol_pokemon_tdxjdc.png"></img></p>
-      <span className="pokemonImgSpan">
-        <img className="pokemonImg" src={items.sprites.other.home.front_shiny}></img>
-      </span>
-    </>
+      <img className="pokemonImg" src={pokemon.sprites.other.home.front_shiny}></img>
+     </>
    );
  }
 }
