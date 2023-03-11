@@ -9,7 +9,6 @@ function PokemonPage(props) {
 const [pokemon, setPokemon] = useState([]);
 const [name, setName] = useState([]);
 const { id } = useParams()
-console.log(id);
 useEffect(() => {
  fetch("https://pokeapi.co/api/v2/pokemon/"+id)
    .then(res => res.json())
