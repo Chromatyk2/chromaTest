@@ -40,7 +40,8 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
     }
   )
 }, [])
-
+const firstTypeImage = require(`${pokemon.types[0].type.name}.png`);
+const secondTypeImage = require(`${pokemon.types[1].type.name}.png`);
  if (error) {
    return <div>Error: {error.message}</div>;
  } else if (!isLoaded) {
@@ -52,8 +53,8 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
       <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
       <p className="namePokemonPage">{name[4].name}</p>
       <div className="pokemonTypeContainer">
-        <img src={grass}></img>
-        <img src={"images/"+pokemon.types[1].type.name+".png"}></img>
+        <img src={firstTypeImage}></img>
+        <img src={secondTypeImage}></img>
       </div>
      </>
    );
