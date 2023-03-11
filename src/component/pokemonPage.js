@@ -27,7 +27,7 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
     }
   )
 }, [])
-console.log(pokemon.sprites);
+console.log(pokemon);
     return (
       <>
       {pokemon &&
