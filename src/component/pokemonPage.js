@@ -6,7 +6,7 @@ import Pagination from './paginate.js';
 import '../App.css'
 
 function PokemonPage(props) {
-const [pokemon, setPokemon] = useState([]);
+const [pokemon, setPokemon] = useState(null);
 const [name, setName] = useState([]);
 const { id } = useParams()
 useEffect(() => {
@@ -28,21 +28,15 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
   )
 }, [])
 console.log(pokemon);
-if(pokemon.length > 0){
     return (
-      <>
-        <p>Bonour</p>
-        {pokemon &&
-          <img src={pokemon.sprites.other.home.front_default}></img>
-        }
-      </>
-     )
-   }else{
-       return (
-         <>
-           <p>Non</p>
-         </>
-        )
-   }
+      {pokemon &&
+        <>
+          <p>Bonour</p>
+          {pokemon &&
+            <img src={pokemon.sprites.other.home.front_default}></img>
+          }
+        </>
+      }
+    );
 }
 export default PokemonPage
