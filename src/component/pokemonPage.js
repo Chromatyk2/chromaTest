@@ -11,44 +11,30 @@ const [name, setName] = useState([]);
 const { id } = useParams()
 console.log(id);
 useEffect(() => {
- fetch("https://pokeapi.co/api/v2/pokemon/"+randomNumber)
+ fetch("https://pokeapi.co/api/v2/pokemon/"+id)
    .then(res => res.json())
    .then(
      (result) => {
-       setIsLoaded(true);
        setItems(result);
-     },
-     (error) => {
-       setIsLoaded(true);
-       setError(error);
      }
    )
 }, [])
 useEffect(() => {
-fetch("https://pokeapi.co/api/v2/pokemon-species/"+randomNumber+"/")
+fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
   .then(res => res.json())
   .then(
     (result) => {
-      setIsLoaded(true);
       setName(result.names);
     },
     (error) => {
-      setIsLoaded(true);
       setError(error);
     }
   )
 }, [])
     return (
       <>
-        <div className="stats">
-          <p className="labelStats">Shiny<br/><span className="valueStats">{nbShiny}</span></p>
-          <p className="labelStats">Total<br/><span className="valueStats">{nbTotal}</span></p>
-        </div>
-          <Pagination
-            itemsPerPage={30}
-            items={props.list}
-          />
-        </>
+        <p>Bonjour</p>
+      </>
      );
 }
 export default PokemonPage
