@@ -46,8 +46,6 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
    return <div></div>;
  } else {
    if(name[4] !== undefined && pokemon.sprites !== undefined){
-   const firstTypeImage = require(`${pokemon.types[0].type.name}`);
-   const secondTypeImage = require(`${pokemon.types[1].type.name}`);
    return (
      <>
       <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
