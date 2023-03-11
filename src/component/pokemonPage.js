@@ -47,7 +47,7 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
  } else {
    return (
      <>
-      <img className="pokemonImg" src={pokemon.sprites.other.home.front_shiny}></img>
+      <img src={pokemon.sprites.other.home.front_default}></img>
      </>
    );
  }
