@@ -22,7 +22,7 @@ function Items(props) {
            pkmList.map((val, key) => {
              return (
                <>
-                <Link className="navLink" to={"/pokemon/"val.pkmId}>
+                <Link className="navLink" to={"/pokemon/"+val.pkmId}>
                  <div className="anchorTooltip uniquePokemonContainer" data-tooltip-content={val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}>
                    <div className="infoPkm">
                      {val.nbCapture > 1 ? <div className="infoNbCapture">{val.nbCapture}</div> : <div></div>}
