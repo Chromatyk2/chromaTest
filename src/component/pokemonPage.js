@@ -37,6 +37,12 @@ if(pokemon.length > 0){
         }
       </>
      )
+   }else{
+       return (
+         <>
+           <p>Non</p>
+         </>
+        )
    }
 }
 export default PokemonPage
