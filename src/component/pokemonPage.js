@@ -5,6 +5,7 @@ import Axios from 'axios'
 import Pagination from './paginate.js';
 import '../App.css'
 import grass from './grass.png';
+import poison from './poison.png';
 
 function PokemonPage(props) {
 const [pokemon, setPokemon] = useState([]);
@@ -46,13 +47,15 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
    return <div></div>;
  } else {
    if(name[4] !== undefined && pokemon.sprites !== undefined){
+   const firstTypeImage = require(`${pokemon.types[0].type.name}`);
+   const secondTypeImage = require(`${pokemon.types[1].type.name}`);
    return (
      <>
       <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
       <p className="namePokemonPage">{name[4].name}</p>
       <div className="pokemonTypeContainer">
-        <img src={`${pokemon.types[0].type.name}`}></img>
-        <img src={`${pokemon.types[1].type.name}`}></img>
+        <img src={firstTypeImage}></img>
+        <img src={secondTypeImage}></img>
       </div>
      </>
    );
