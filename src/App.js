@@ -9,7 +9,7 @@ import Pokedex from './component/pokedex.js';
 import LaderBoard from './component/laderboard.js';
 import NavBar from './component/navbar.js';
 import Login from './services/auth.services.js';
-import PokemonPage from './services/pokemonPage.js';
+import PokemonPage from './component/pokemonPage.js';
 function App() {
   const [cookies, setCookie] = useCookies();
   if(Object.keys(cookies).length == 0) {
