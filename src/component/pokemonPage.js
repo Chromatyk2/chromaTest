@@ -31,6 +31,7 @@ console.log(pokemon);
 if(pokemon.length > 0){
     return (
       <>
+        <p>Bonour</p>
         {pokemon &&
           <img src={pokemon.sprites.other.home.front_default}></img>
         }
