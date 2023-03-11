@@ -49,7 +49,11 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
    return (
      <>
       <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
-      <p className="pkmName">{name[4].name}</p>
+      <p className="namePokemonPage">{name[4].name}</p>
+      <div className="pokemonTypeContainer">
+        <img src={pokemon.types[0].type.url}></img>
+        <img src={pokemon.types[1].type.url}></img>
+      </div>
      </>
    );
   }
