@@ -3,7 +3,6 @@ import ReactPaginate from 'react-paginate';
 import Axios from 'axios'
 import Pagination from './paginate.js';
 import '../App.css'
-
 function PkmList(props) {
   const pkmList = props.list;
   const shinys = pkmList.filter(item => item.shiny == 1);
@@ -22,6 +21,4 @@ function PkmList(props) {
         </>
      );
 }
-
-
 export default PkmList
