@@ -30,7 +30,9 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
 }, [])
     return (
       <>
-        <p>Bonjour</p>  
+      {pokemon &&
+        <img src={pokemon.sprites.other.home.front_default}></img>
+      }
       </>
      );
 }
