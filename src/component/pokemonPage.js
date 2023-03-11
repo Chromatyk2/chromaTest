@@ -15,7 +15,7 @@ useEffect(() => {
    .then(res => res.json())
    .then(
      (result) => {
-       setItems(result);
+       setPokemon(result);
      }
    )
 }, [])
@@ -25,9 +25,6 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
   .then(
     (result) => {
       setName(result.names);
-    },
-    (error) => {
-      setError(error);
     }
   )
 }, [])
