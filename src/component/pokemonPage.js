@@ -28,12 +28,14 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
   )
 }, [])
 console.log(pokemon);
+if(pokemon.length > 0){
     return (
       <>
-      {pokemon &&
-        <img src={pokemon.sprites.other.home.front_default}></img>
-      }
+        {pokemon &&
+          <img src={pokemon.sprites.other.home.front_default}></img>
+        }
       </>
-     );
+     )
+   }
 }
 export default PokemonPage
