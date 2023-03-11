@@ -45,7 +45,7 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
  } else if (!isLoaded) {
    return <div></div>;
  } else {
-   if(name[4] !== undefined && items.sprites !== undefined){
+   if(name[4] !== undefined && pokemon.sprites !== undefined){
    return (
      <>
       <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
