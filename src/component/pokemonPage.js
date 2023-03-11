@@ -45,11 +45,14 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
  } else if (!isLoaded) {
    return <div></div>;
  } else {
+   if(name[4] !== undefined && items.sprites !== undefined){
    return (
      <>
-      <img src={pokemon.sprites.other.home.front_default}></img>
+      <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
+      <p className="pkmName">{name[4].name}</p>
      </>
    );
+  }
  }
 }
 export default PokemonPage
