@@ -41,11 +41,13 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
     }
   )
 }, [])
-Axios
-  .get("https://chromatyk-pokemon.herokuapp.com/api/getByUserAndPokemon/"+pseudo+"/"+id)
-  .then(function(response){
-      setCaptures(response.data);
-})
+useEffect(() => {
+  Axios
+    .get("https://chromatyk-pokemon.herokuapp.com/api/getByUserAndPokemon/"+pseudo+"/"+id)
+    .then(function(response){
+        setCaptures(response.data);
+  })
+}, [])
 console.log(captures);
  if (error) {
    return <div>Error: {error.message}</div>;
