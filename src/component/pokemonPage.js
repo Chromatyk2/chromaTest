@@ -42,7 +42,7 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
   )
 }, [])
 Axios
-  .get(`/api/getByUserAndPokemon/${pseudo}/${id}`)
+  .get("/api/getByUserAndPokemon/"+pseudo+"/"+id)
   .then(function(response){
       setCaptures(response.data);
 })
