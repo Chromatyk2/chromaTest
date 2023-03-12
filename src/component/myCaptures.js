@@ -10,14 +10,16 @@ function MyCaptures(props) {
   if(props.captures.length > 0){
     return (
       <>
-        <p className="titleMyCaptures">Vous avez capturé {props.captures.length} fois :</p>
-        {props.captures.map((val, key) => {
-          return (
-            <>
-              <p>{val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
-            </>
-          )
-        })}
+        <div className="myCapturesContainer">
+          <p className="titleMyCaptures">Mes Captures</p>
+          {props.captures.map((val, key) => {
+            return (
+              <>
+                <p className="myCapturesList">{val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+              </>
+            )
+          })}
+        </div>
       </>
     );
   }else{
