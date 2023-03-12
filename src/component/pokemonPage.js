@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import ReactPaginate from 'react-paginate';
 import Axios from 'axios'
 import Pagination from './paginate.js';
+import MyCaptures from './myCaptures.js';
 import '../App.css'
 
 function PokemonPage(props) {
@@ -48,7 +49,6 @@ useEffect(() => {
         setCaptures(response.data);
   })
 }, [])
-console.log(captures);
  if (error) {
    return <div>Error: {error.message}</div>;
  } else if (!isLoaded) {
@@ -57,14 +57,19 @@ console.log(captures);
    if(name[4] !== undefined && pokemon.sprites !== undefined){
    return (
      <>
-      <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
-      <p className="numberPokemonPage"># {pokemon.id}</p>
-      <p className="namePokemonPage">{name[4].name}</p>
-      <div className="pokemonTypeContainer">
-        <img src={`/images/${pokemon.types[0].type.name}.png`}></img>
-        {pokemon.types[1] &&
-          <img src={`/images/${pokemon.types[1].type.name}.png`}></img>
-        }
+     <div className="pokemonPageContainer">
+        <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
+        <p className="numberPokemonPage"># {pokemon.id}</p>
+        <p className="namePokemonPage">{name[4].name}</p>
+        <div className="pokemonTypeContainer">
+          <img src={`/images/${pokemon.types[0].type.name}.png`}></img>
+          {pokemon.types[1] &&
+            <img src={`/images/${pokemon.types[1].type.name}.png`}></img>
+          }
+        </div>
+      </div>
+      <div>
+        <MyCaptures captures={captures} />
       </div>
      </>
    );
