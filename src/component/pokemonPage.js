@@ -46,6 +46,7 @@ Axios
   .then(function(response){
       setCaptures(response.data);
 })
+console.log(captures);
  if (error) {
    return <div>Error: {error.message}</div>;
  } else if (!isLoaded) {
