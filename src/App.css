@@ -629,6 +629,29 @@ p.filterTitle {
 .top3Mobile{
   display: none;
 }
+img.imgPokemonPage {
+    width: 200px;
+}
+p.numberPokemonPage {
+    text-align: center;
+    font-size: 50px;
+    color: #255748;
+    font-family: AldotheApache;
+}
+.pokemonTypeContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.pokemonTypeContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.pokemonTypeContainer img {
+    margin: 0;
+    margin-top: 10px;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
