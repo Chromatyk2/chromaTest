@@ -26,7 +26,7 @@ const pseudo = cookies.user.data[0].login;
           {otherCaptures.map((val, key) => {
             return (
               <>
-                <p className="myCapturesList">{val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+                <p className="myCapturesList">{val.pseudo+" - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
               </>
             )
           })}
