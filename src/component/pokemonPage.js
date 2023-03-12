@@ -69,7 +69,7 @@ useEffect(() => {
           }
         </div>
       </div>
-      <div>
+      <div className="capturesContainer">
         <MyCaptures captures={captures} />
         <OtherCaptures pkmId={id} />
       </div>
