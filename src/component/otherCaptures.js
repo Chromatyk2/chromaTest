@@ -18,12 +18,12 @@ const pseudo = cookies.user.data[0].login;
           setOtherCaptures(response.data);
     })
   }, [])
-  if(props.captures.length > 0){
+  if(otherCaptures.length > 0){
     return (
       <>
         <div className="myCapturesContainer">
           <p className="titleMyCaptures">Mes Captures</p>
-          {props.captures.map((val, key) => {
+          {otherCaptures.map((val, key) => {
             return (
               <>
                 <p className="myCapturesList">{val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
@@ -36,7 +36,7 @@ const pseudo = cookies.user.data[0].login;
   }else{
     return (
       <>
-        <p className="titleMyCaptures">Vous n'avez jamais capturé ce Pokemon</p>
+        <p className="titleMyCaptures">Personnes n'a capturé ce Pokemon</p>
       </>
     );
   }
