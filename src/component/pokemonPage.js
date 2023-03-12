@@ -4,6 +4,7 @@ import ReactPaginate from 'react-paginate';
 import Axios from 'axios'
 import Pagination from './paginate.js';
 import MyCaptures from './myCaptures.js';
+import OtherCaptures from './otherCaptures.js';
 import '../App.css'
 
 function PokemonPage(props) {
@@ -70,6 +71,7 @@ useEffect(() => {
       </div>
       <div>
         <MyCaptures captures={captures} />
+        <OtherCaptures pkmId={id} />
       </div>
      </>
    );
