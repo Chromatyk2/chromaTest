@@ -638,6 +638,13 @@ p.numberPokemonPage {
     color: #255748;
     font-family: AldotheApache;
 }
+p.namePokemonPage {
+    color: #255748;
+    font-family: AldotheApache;
+    font-size: 50px;
+    text-align: center;
+    line-height: 10px;
+}
 .pokemonTypeContainer {
     display: flex;
     justify-content: center;
