@@ -6,8 +6,10 @@ import Pagination from './paginate.js';
 import '../App.css'
 
 function PokemonPage(props) {
+const pseudo = props.cookies.user.data[0].login;
 const [pokemon, setPokemon] = useState([]);
 const [name, setName] = useState([]);
+const [captures, setCaptures] = useState([]);
 const [error, setError] = useState(null);
 const [isLoaded, setIsLoaded] = useState(false);
 const { id } = useParams()
@@ -38,6 +40,20 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
       setError(error);
     }
   )
+}, [])
+useEffect(() => {
+ fetch(`/api/getByUserAndPokemon/${pseudo}/${id}`)
+   .then(res => res.json())
+   .then(
+     (result) => {
+       setIsLoaded(true);
+       setCaptures(result);
+     },
+     (error) => {
+       setIsLoaded(true);
+       setError(error);
+     }
+   )
 }, [])
  if (error) {
    return <div>Error: {error.message}</div>;
