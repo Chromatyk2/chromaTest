@@ -41,20 +41,11 @@ fetch("https://pokeapi.co/api/v2/pokemon-species/"+id+"/")
     }
   )
 }, [])
-useEffect(() => {
- fetch(`/api/getByUserAndPokemon/${pseudo}/${id}`)
-   .then(res => res.json())
-   .then(
-     (result) => {
-       setIsLoaded(true);
-       setCaptures(result);
-     },
-     (error) => {
-       setIsLoaded(true);
-       setError(error);
-     }
-   )
-}, [])
+Axios
+  .get(`/api/getByUserAndPokemon/${pseudo}/${id}`)
+  .then(function(response){
+      setCaptures(response.data);
+})
  if (error) {
    return <div>Error: {error.message}</div>;
  } else if (!isLoaded) {
