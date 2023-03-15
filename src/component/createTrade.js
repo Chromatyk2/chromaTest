@@ -18,9 +18,7 @@ const [capture, setCapture] = useState([]);
   if(capture.length > 0){
     return (
       <>
-        <div className="alreadyTraded">
-          <p>En cours d'echange</p>
-        </div>
+        <p>En cours d'echange</p>
       </>
     );
   }else{
