@@ -24,14 +24,14 @@ useEffect(() => {
         <div className="myCapturesContainer">
           <p className="titleMyCaptures">Les echanges</p>
           {trades.map((val, key) => {
-              return val.shiny == 1 ?
-                <>
-                  <p className="myCapturesList shinyPokemonList">{val.pseudo+" - "+val.pkmName+"(shiny) - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
-                </>
-                :
-                <>
-                  <p className="myCapturesList">{val.pseudo+" - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
-                </>
+            return val.shiny == 1 ?
+              <div className="myCaptureItem">
+                <p className="myCapturesList shinyPokemonList">{val.pkmName+"(shiny) - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+              </div>
+              :
+              <div  className="myCaptureItem">
+                <p className="myCapturesList">{val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+              </div>
               })
           }
         </div>
