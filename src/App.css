@@ -672,6 +672,14 @@ p.titleMyCaptures {
     font-size: 25px;
     margin-top: 20px;
 }
+
+.pokemonPageContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+.myCapturesContainer {
+    text-align: center;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
