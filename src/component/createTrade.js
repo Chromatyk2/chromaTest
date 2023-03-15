@@ -18,8 +18,8 @@ const [loading, setLoading] = useState(false);
     })
   }, [])
   function createTrade(e) {
-    let idMainCapture = parseInt(e.target.value);
-      Axios.post('https://chromatyk-pokemon.herokuapp.com/api/createTrade', {idMainCapture:idMainCapture,idSecondCapture:null,state:1})
+    const idMainCapture = parseInt(e.target.value);
+    return Axios.post('https://chromatyk-pokemon.herokuapp.com/api/createTrade', {idMainCapture:idMainCapture,idSecondCapture:null,state:1})
   }
   if(loading){
     if(capture.length > 0){
