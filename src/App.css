@@ -682,13 +682,20 @@ p.titleMyCaptures {
     color: #255748;
     font-family: AldotheApache;
 }
-p.myCapturesList {
-    font-size: 20px;
+
+.myCaptureItem {
     background: #255748;
-    padding: 10px;
     border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
     letter-spacing: 2px;
-    color:white;
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+p.myCapturesList {
+    margin: 0;
 }
 p.shinyPokemonList{
   color:gold;
