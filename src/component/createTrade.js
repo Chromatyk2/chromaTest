@@ -15,6 +15,9 @@ const [capture, setCapture] = useState([]);
           setCapture(response.data);
     })
   }, [])
+  function createTrade(e) {
+      Axios.post('https://chromatyk-pokemon.herokuapp.com/api/createTrade', {idMainCapture:e,null,1})
+  }
   if(capture.length > 0){
     return (
       <>
@@ -24,7 +27,7 @@ const [capture, setCapture] = useState([]);
   }else{
     return (
       <>
-          <p className="createTradeButton">Echanger</p>
+          <p className="createTradeButton" onClick={createTrade(props.idMainCapture)}>Echanger</p>
       </>
     );
   }
