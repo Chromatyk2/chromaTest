@@ -25,7 +25,7 @@ function MyCaptures(props) {
   }else{
     return (
       <>
-        <p className="titleMyCaptures">Vous n'avez jamais capturé ce Pokemon</p>
+        <p className="titleMyCaptures">Vous n'avez jamais capture ce Pokemon</p>
       </>
     );
   }
