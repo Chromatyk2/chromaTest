@@ -16,7 +16,6 @@ const [capture, setCapture] = useState([]);
     })
   }, [])
   function createTrade(e) {
-    const s
       Axios.post('https://chromatyk-pokemon.herokuapp.com/api/createTrade', {idMainCapture:e,idSecondCapture:null,state:1})
   }
   if(capture.length > 0){
