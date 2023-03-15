@@ -8,13 +8,13 @@ import '../App.css'
 
 function CreateTrade(props) {
 const [capture, setCapture] = useState([]);
-const [loading, setLoading] = useState(true);
+const [loading, setLoading] = useState(false);
   useEffect(() => {
     Axios
       .get("https://chromatyk-pokemon.herokuapp.com/api/getByMainIdCapture/"+props.idMainCapture)
       .then(function(response){
           setCapture(response.data);
-          setLoading(false);
+          setLoading(true);
     })
   }, [])
   function createTrade(e) {
@@ -22,19 +22,19 @@ const [loading, setLoading] = useState(true);
       Axios.post('https://chromatyk-pokemon.herokuapp.com/api/createTrade', {idMainCapture:idMainCapture,idSecondCapture:null,state:1})
   }
   if(loading){
-  if(capture.length > 0){
-    return (
-      <>
-        <p className="alreadyTraded">Echange en cours</p>
-      </>
-    );
-  }else{
-    return (
-      <>
-          <button value={props.idMainCapture} className="createTradeButton" onClick={createTrade}>Echanger</button>
-      </>
-    );
-  }    
+    if(capture.length > 0){
+      return (
+        <>
+          <p className="alreadyTraded">Echange en cours</p>
+        </>
+      );
+    }else{
+      return (
+        <>
+            <button value={props.idMainCapture} className="createTradeButton" onClick={createTrade}>Echanger</button>
+        </>
+      );
+    }
   }
 }
 export default CreateTrade
