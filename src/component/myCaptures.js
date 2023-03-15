@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import ReactPaginate from 'react-paginate';
 import Axios from 'axios'
 import Pagination from './paginate.js';
+import CreateTrade from './createTrade.js';
 import '../App.css'
 import moment from 'moment';
 
@@ -16,15 +17,12 @@ function MyCaptures(props) {
               return val.shiny == 1 ?
                 <>
                   <p className="myCapturesList shinyPokemonList">{val.pkmName+"(shiny) - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
-                  {key == 1 ?
-                    <p>Oui</p>
-                    :
-                    <p>Non</p>
-                  }
+                  <CreateTrade idMainCapture={val.id}/>
                 </>
                 :
                 <>
                   <p className="myCapturesList">{val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+                  <CreateTrade idMainCapture={val.id}/>
                 </>
               })
           }
