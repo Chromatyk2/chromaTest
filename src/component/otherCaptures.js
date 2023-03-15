@@ -8,22 +8,22 @@ import '../App.css'
 import moment from 'moment';
 
 function OtherCaptures(props) {
-const [otherCaptures, setOtherCaptures] = useState([]);
+const [trades, setTrades] = useState([]);
 const [cookies, setCookie] = useCookies();
 const pseudo = cookies.user.data[0].login;
-  useEffect(() => {
-    Axios
-      .get("https://chromatyk-pokemon.herokuapp.com/api/getByPokemon/"+props.pkmId+"/"+pseudo)
-      .then(function(response){
-          setOtherCaptures(response.data);
-    })
-  }, [])
-  if(otherCaptures.length > 0){
+useEffect(() => {
+  Axios
+    .get("https://chromatyk-pokemon.herokuapp.com/api/getTradesByPokemon/"+props.id)
+    .then(function(response){
+        setTrades(response.data);
+  })
+}, [])
+  if(trades.length > 0){
     return (
       <>
         <div className="myCapturesContainer">
           <p className="titleMyCaptures">Les echanges</p>
-          {otherCaptures.map((val, key) => {
+          {trades.map((val, key) => {
             return (
               <>
                 <p className="myCapturesList">{val.pseudo+" - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
