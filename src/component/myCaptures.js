@@ -12,18 +12,17 @@ function MyCaptures(props) {
       <>
         <div className="myCapturesContainer">
           <p className="titleMyCaptures">Mes Captures</p>
-          {props.captures.map((val, key) => {
-              val.shiny == 1 ?
-                  <>
-                    <p className="myCapturesList">{val.pseudo+" - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
-                  </>
+          {trades.map((val, key) => {
+              return val.shiny == 1 ?
+                <>
+                  <p className="myCapturesList shinyPokemonList">{val.pseudo+" - "+val.pkmName+"(shiny) - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+                </>
                 :
                 <>
-                  <p className="myCapturesList shinyPokemonList">{val.pseudo+"(shiny) - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+                  <p className="myCapturesList">{val.pseudo+" - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
                 </>
-              }
-            )
-          })}
+              })
+          }
         </div>
       </>
     );
