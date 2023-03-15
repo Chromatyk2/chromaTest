@@ -696,7 +696,7 @@ p.shinyPokemonList{
 p.titleMyCaptures{
   color: #255748;
     font-family: AldotheApache;
-    font-size: 50px;
+    font-size: 20px;
     text-align: center;
 }
 @media screen and (min-width: 944px) and (max-width: 1659px) {

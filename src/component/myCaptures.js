@@ -16,6 +16,11 @@ function MyCaptures(props) {
               return val.shiny == 1 ?
                 <>
                   <p className="myCapturesList shinyPokemonList">{val.pkmName+"(shiny) - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+                  {val.moment(val.dateCapture).utc().format('DD/MM/YYYY') == "01/032023" ?
+                    <p>Oui</p>
+                    :
+                    <p>Non</p>
+                  }
                 </>
                 :
                 <>

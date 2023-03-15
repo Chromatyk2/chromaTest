@@ -40,7 +40,7 @@ useEffect(() => {
   }else{
     return (
       <>
-        <p className="titleMyCaptures">Personne ne propose ce pokemon a l'échange</p>
+        <p className="titleMyCaptures">Personne ne propose ce pokemon a l'echange</p>
       </>
     );
   }
