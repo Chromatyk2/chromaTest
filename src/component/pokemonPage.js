@@ -59,19 +59,21 @@ useEffect(() => {
    return (
      <>
      <div className="pokemonPageContainer">
-        <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
-        <p className="numberPokemonPage"># {pokemon.id}</p>
-        <p className="namePokemonPage">{name[4].name}</p>
-        <div className="pokemonTypeContainer">
-          <img src={`/images/${pokemon.types[0].type.name}.png`}></img>
-          {pokemon.types[1] &&
-            <img src={`/images/${pokemon.types[1].type.name}.png`}></img>
-          }
+        <div>
+          <img className="imgPokemonPage" src={pokemon.sprites.other.home.front_default}></img>
+          <p className="numberPokemonPage"># {pokemon.id}</p>
+          <p className="namePokemonPage">{name[4].name}</p>
+          <div className="pokemonTypeContainer">
+            <img src={`/images/${pokemon.types[0].type.name}.png`}></img>
+            {pokemon.types[1] &&
+              <img src={`/images/${pokemon.types[1].type.name}.png`}></img>
+            }
+          </div>
+          <MyCaptures captures={captures} />
         </div>
-      </div>
-      <div className="capturesContainer">
-        <MyCaptures captures={captures} />
-        <OtherCaptures pkmId={id} />
+        <div>
+          <OtherCaptures pkmId={id} />
+        </div>
       </div>
      </>
    );
