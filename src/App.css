@@ -659,13 +659,14 @@ p.namePokemonPage {
     margin: 0;
     margin-top: 10px;
 }
-.capturesContainer{
-  display: block;
-  margin: auto;
-  width: 500px;
-  color: #255748;
-  font-family: AldotheApache;
-  text-align: center;
+.capturesContainer {
+    color: #255748;
+    font-family: AldotheApache;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
 }
 p.titleMyCaptures {
     font-size: 25px;
@@ -723,6 +724,15 @@ p.titleMyCaptures {
     }
     .list .item .name {
       flex-grow: 0;
+    }
+
+    .capturesContainer{
+      display: block;
+      margin: auto;
+      width: 300px;
+      color: #255748;
+      font-family: AldotheApache;
+      text-align: center;
     }
 }
 @media screen and (max-width: 379px) {
@@ -800,6 +810,7 @@ p.titleMyCaptures {
       right: 10px;
       position: absolute;
     }
+
     .capturesContainer{
       display: block;
       margin: auto;

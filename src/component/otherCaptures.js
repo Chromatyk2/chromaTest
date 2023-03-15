@@ -22,7 +22,7 @@ const pseudo = cookies.user.data[0].login;
     return (
       <>
         <div className="myCapturesContainer">
-          <p className="titleMyCaptures">Qui possede ce Pokemon ?</p>
+          <p className="titleMyCaptures">Les echanges</p>
           {otherCaptures.map((val, key) => {
             return (
               <>
@@ -36,7 +36,7 @@ const pseudo = cookies.user.data[0].login;
   }else{
     return (
       <>
-        <p className="titleMyCaptures">Personnes n'a capture ce Pokemon</p>
+        <p className="titleMyCaptures">Personne ne propose ce pokemon a l'échange</p>
       </>
     );
   }
