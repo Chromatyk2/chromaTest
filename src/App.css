@@ -706,6 +706,12 @@ p.titleMyCaptures{
     font-size: 20px;
     text-align: center;
 }
+.alreadyTraded{
+  margin: 0;
+  background: #bc3636;
+  padding: 5px;
+  border-radius: 5px;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;

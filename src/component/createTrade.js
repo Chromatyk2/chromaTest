@@ -18,15 +18,13 @@ const [capture, setCapture] = useState([]);
   if(capture.length > 0){
     return (
       <>
-        <p>En cours d'echange</p>
+        <p className="alreadyTraded">Echange en cours</p>
       </>
     );
   }else{
     return (
       <>
-        <div className="createTradeButton">
-          <p>Echanger</p>
-        </div>
+          <p className="createTradeButton">Echanger</p>
       </>
     );
   }
