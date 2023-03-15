@@ -15,15 +15,15 @@ function MyCaptures(props) {
           <p className="titleMyCaptures">Mes Captures</p>
           {props.captures.map((val, key) => {
               return val.shiny == 1 ?
-                <>
+                <div className="myCaptureItem">
                   <p className="myCapturesList shinyPokemonList">{val.pkmName+"(shiny) - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
                   <CreateTrade idMainCapture={val.id}/>
-                </>
+                </div>
                 :
-                <>
+                <div  className="myCaptureItem">
                   <p className="myCapturesList">{val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
                   <CreateTrade idMainCapture={val.id}/>
-                </>
+                </div>
               })
           }
         </div>
