@@ -565,6 +565,7 @@ p.filterTitle {
   height: 25px;
   font-weight: bold;
   text-align: center;
+  font-size: 18px;
 }
 .infoShiny{
     left: 90px;
@@ -683,16 +684,16 @@ p.titleMyCaptures {
     font-family: AldotheApache;
 }
 
-.myCaptureItem {
+.myCaptureItem {align-items: center;
     background: #255748;
     border-radius: 5px;
     color: #fff;
+    display: flex;
     font-size: 20px;
+    gap: 30px;
     letter-spacing: 2px;
     padding: 10px;
-    display: flex;
-    gap: 30px;
-    align-items: center;
+    margin-bottom: 10px;
 }
 p.myCapturesList {
     margin: 0;
