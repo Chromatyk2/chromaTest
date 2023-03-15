@@ -25,9 +25,15 @@ useEffect(() => {
           <p className="titleMyCaptures">Les echanges</p>
           {trades.map((val, key) => {
             return (
-              <>
-                <p className="myCapturesList">{val.pseudo+" - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
-              </>
+              {val.shiny == 1 ?
+                <>
+                  <p className="myCapturesList">{val.pseudo+" - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+                </>
+                :
+                <>
+                  <p className="myCapturesList shinyPokemonList">{val.pseudo+"(shiny) - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+                </>
+              }
             )
           })}
         </div>
