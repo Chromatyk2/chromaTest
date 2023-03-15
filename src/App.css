@@ -684,6 +684,11 @@ p.titleMyCaptures {
 }
 p.myCapturesList {
     font-size: 20px;
+    background: #255748;
+    padding: 10px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    color:white;
 }
 p.shinyPokemonList{
   color:gold;

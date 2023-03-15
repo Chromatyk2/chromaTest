@@ -15,11 +15,11 @@ function MyCaptures(props) {
           {props.captures.map((val, key) => {
               return val.shiny == 1 ?
                 <>
-                  <p className="myCapturesList shinyPokemonList">{val.pseudo+" - "+val.pkmName+"(shiny) - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+                  <p className="myCapturesList shinyPokemonList">{val.pkmName+"(shiny) - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
                 </>
                 :
                 <>
-                  <p className="myCapturesList">{val.pseudo+" - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
+                  <p className="myCapturesList">{val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
                 </>
               })
           }
