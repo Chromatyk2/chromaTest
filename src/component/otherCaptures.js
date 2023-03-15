@@ -24,8 +24,7 @@ useEffect(() => {
         <div className="myCapturesContainer">
           <p className="titleMyCaptures">Les echanges</p>
           {trades.map((val, key) => {
-            return (
-              {val.shiny == 1 ?
+              return val.shiny == 1 ?
                 <>
                   <p className="myCapturesList">{val.pseudo+" - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
                 </>
@@ -34,7 +33,6 @@ useEffect(() => {
                   <p className="myCapturesList shinyPokemonList">{val.pseudo+"(shiny) - "+val.pkmName+" - "+moment(val.dateCapture).utc().format('DD/MM/YYYY')}</p>
                 </>
               }
-            )
           })}
         </div>
       </>
