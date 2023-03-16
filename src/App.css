@@ -719,6 +719,11 @@ p.titleMyCaptures{
   padding: 5px;
   border-radius: 5px;
 }
+.myTradesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
