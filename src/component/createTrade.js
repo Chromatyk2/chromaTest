@@ -10,6 +10,7 @@ function CreateTrade(props) {
 const [capture, setCapture] = useState([]);
 const [loading, setLoading] = useState(false);
 const [disable, setDisable] = useState(false);
+const [tradeDone, setTradeDone] = useState(false);
   useEffect(() => {
     Axios
       .get("https://chromatyk-pokemon.herokuapp.com/api/getByMainIdCapture/"+props.idMainCapture)
@@ -26,7 +27,10 @@ const [disable, setDisable] = useState(false);
       idSecondCapture:null,
       state:1
     }).then((response) => {
-      setDisable(false);
+      if(response){
+        setDisable(false);
+        setTradeDone(true);      
+      }
     })
   }
   if(loading){
