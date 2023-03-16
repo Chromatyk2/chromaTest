@@ -32,13 +32,14 @@ const [tradeDone, setTradeDone] = useState(false);
         setTradeDone(true);
       },
       (error) => {
+        console.log(error);
         setDisable(false);
         setTradeDone(true);
       }
     )
   }
   if(loading){
-    if(capture.length > 0 || setTradeDone === true){
+    if(capture.length > 0 || tradeDone === true){
       return (
         <>
           <p className="alreadyTraded">Echange en cours</p>
