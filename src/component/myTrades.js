@@ -14,14 +14,9 @@ useEffect(() => {
     {
       pseudo:props.pseudo
     }
-  ).then(
-    (result) => {
-      setMyTrades(result.data);
-    },
-    (error) => {
-      setMyTrades(result.data);
-    }
-  )
+  ).then(function(response){
+      setMyTrades(response.data);
+})
 }, [])
 console.log(myTrades);
   return(
