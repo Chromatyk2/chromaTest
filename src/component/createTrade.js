@@ -26,12 +26,16 @@ const [tradeDone, setTradeDone] = useState(false);
       idMainCapture:idMainCapture,
       idSecondCapture:null,
       state:1
-    }).then((response) => {
-      if(response){
+    }).then(
+      (result) => {
         setDisable(false);
-        setTradeDone(true);      
+        setTradeDone(true);
+      },
+      (error) => {
+        setDisable(false);
+        setTradeDone(true);  
       }
-    })
+    )
   }
   if(loading){
     if(capture.length > 0){
