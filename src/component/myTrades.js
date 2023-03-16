@@ -10,7 +10,7 @@ import moment from 'moment';
 function MyTrades(props) {
 const [myTrades, setMyTrades] = useState([]);
 useEffect(() => {
-   Axios.get('https://chromatyk-pokemon.herokuapp.com/myTrades',
+   Axios.get('https://chromatyk-pokemon.herokuapp.com/getMyTrades',
     {
       pseudo:props.pseudo
     }
