@@ -28,7 +28,10 @@ const [tradeDone, setTradeDone] = useState(false);
       idSecondCapture:null,
       state:1
     },{
-      headers: {"Access-Control-Allow-Headers": "*"}
+      headers: {
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Origin": "*"
+      }
     }).then(
       (result) => {
         setDisable(false);
