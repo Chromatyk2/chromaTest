@@ -27,8 +27,6 @@ const [tradeDone, setTradeDone] = useState(false);
       idMainCapture:idMainCapture,
       idSecondCapture:null,
       state:1
-    },{
-      headers: { 'access-control-allow-orgigin': '*' },
     }
     ).then(
       (result) => {
