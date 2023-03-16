@@ -27,9 +27,9 @@ const [tradeDone, setTradeDone] = useState(false);
       idMainCapture:idMainCapture,
       idSecondCapture:null,
       state:1
-    },
-    headers: {"Access-Control-Allow-Origin": "*"}
-  ).then(
+    },{
+      headers: {"Access-Control-Allow-Origin": "*"}
+    }).then(
       (result) => {
         setDisable(false);
         setTradeDone(true);
