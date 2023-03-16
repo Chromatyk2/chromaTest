@@ -32,7 +32,7 @@ const [tradeDone, setTradeDone] = useState(false);
         'Access-Control-Allow-Origin' : '*',
         'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
       }
-    }
+    }c d
     ).then(
       (result) => {
         setDisable(false);
