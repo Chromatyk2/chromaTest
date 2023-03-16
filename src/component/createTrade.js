@@ -39,7 +39,7 @@ const [disable, setDisable] = useState(false);
     }else{
       return (
         <>
-            <button value={props.idMainCapture} className="createTradeButton" onClick={createTrade} disabled={disable}>Echanger</button>
+            <button value={props.idMainCapture} className="createTradeButton" onClick={createTrade} disabled={disable}>{disable ? "Echanger" : "Traitement"}</button>
         </>
       );
     }
