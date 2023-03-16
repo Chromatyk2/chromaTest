@@ -8,16 +8,22 @@ import '../App.css'
 import moment from 'moment';
 
 function MyTrades(props) {
-const [myTrades, setMyTrades] = useState([]);
-useEffect(() => {
-   Axios.get('https://chromatyk-pokemon.herokuapp.com/api/getMyTrades/'+props.pseudo)
-   .then(function(response){
-      setMyTrades(response.data);
-    })
-}, [])
-console.log(myTrades);
-  return(
-    <p>Oui</p>
-  )
+  const [myTrades, setMyTrades] = useState([]);
+  useEffect(() => {
+     Axios.get('https://chromatyk-pokemon.herokuapp.com/api/getMyTrades/'+props.pseudo)
+     .then(function(response){
+        setMyTrades(response.data);
+      })
+  }, [])
+  console.log(myTrades);
+  if(myTrades.length > 0){
+    return(
+        <p>Oui</p>
+    )
+  }else{
+      return(
+        <p>Pas de pokemon en echange</p>
+      )
+    }
 }
 export default MyTrades
