@@ -8,8 +8,23 @@ import '../App.css'
 import moment from 'moment';
 
 function MyTrades(props) {
+const [myTrades, setMyTrades] = useState([]);
+useEffect(() => {
+   Axios.get('https://chromatyk-pokemon.herokuapp.com/myTrades',
+  {
+    pseudo:props.pseudo
+  }
+  ).then(
+    (result) => {
+      setMyTrades(result.data);
+    },
+    (error) => {
+      setMyTrades(result.data);
+    }
+  )
+}, [])
   return(
-    <p>Mes Captures</p>
+    <p>Oui</p>
   )
 }
 export default MyTrades
