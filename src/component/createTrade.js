@@ -27,7 +27,6 @@ const [tradeDone, setTradeDone] = useState(false);
       idMainCapture:idMainCapture,
       idSecondCapture:null,
       state:1
-    }
     }).then(
       (result) => {
         setDisable(false);
