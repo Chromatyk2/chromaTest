@@ -11,7 +11,9 @@ const pseudo = props.cookies.user.data[0].login;
      <>
       <div className="tradePlaceContainer">
         <p>Mes Captures</p>
-        <MyTrades pseudo={pseudo}/>
+        <div className="myTradesContainer">
+          <MyTrades pseudo={pseudo}/>
+        </div>
       </div>
      </>
    );

@@ -18,7 +18,12 @@ function MyTrades(props) {
   console.log(myTrades);
   if(myTrades.length > 0){
     return(
-        <p>Oui</p>
+      <>
+        {myTrades.map((val, key) => {
+            return <p>{val.pkmName}</p>
+            })
+        }
+      </>
     )
   }else{
       return(
