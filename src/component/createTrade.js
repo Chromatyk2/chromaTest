@@ -22,11 +22,14 @@ const [tradeDone, setTradeDone] = useState(false);
   function createTrade(e) {
     const idMainCapture = parseInt(e.target.value);
     setDisable(true);
-    return Axios.post('https://chromatyk-pokemon.herokuapp.com/api/createTrade', {
+    return Axios.post('https://chromatyk-pokemon.herokuapp.com/api/createTrade',
+    {
       idMainCapture:idMainCapture,
       idSecondCapture:null,
       state:1
-    }).then(
+    },
+    headers: {"Access-Control-Allow-Origin": "*"}
+  ).then(
       (result) => {
         setDisable(false);
         setTradeDone(true);
