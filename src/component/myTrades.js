@@ -11,9 +11,9 @@ function MyTrades(props) {
 const [myTrades, setMyTrades] = useState([]);
 useEffect(() => {
    Axios.get('https://chromatyk-pokemon.herokuapp.com/myTrades',
-  {
-    pseudo:props.pseudo
-  }
+    {
+      pseudo:props.pseudo
+    }
   ).then(
     (result) => {
       setMyTrades(result.data);
@@ -23,6 +23,7 @@ useEffect(() => {
     }
   )
 }, [])
+console.log(myTrades);
   return(
     <p>Oui</p>
   )
