@@ -25,7 +25,7 @@ const [tradeDone, setTradeDone] = useState(false);
     return Axios.post('https://chromatyk-pokemon.herokuapp.com/api/createTrade',
     {
       idMainCapture:idMainCapture,
-      idSecondCapture:null,
+      idSecondCapture:idMainCapture,
       state:1
     }
     ).then(
