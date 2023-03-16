@@ -33,12 +33,12 @@ const [tradeDone, setTradeDone] = useState(false);
       },
       (error) => {
         setDisable(false);
-        setTradeDone(true);  
+        setTradeDone(true);
       }
     )
   }
   if(loading){
-    if(capture.length > 0){
+    if(capture.length > 0 || setTradeDone === true){
       return (
         <>
           <p className="alreadyTraded">Echange en cours</p>
