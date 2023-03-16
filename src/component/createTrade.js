@@ -29,7 +29,8 @@ const [tradeDone, setTradeDone] = useState(false);
       state:1
     },{
       headers: {
-        'Access-Control-Allow-Origin' : '*'
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
       }
     }
     ).then(
