@@ -27,11 +27,6 @@ const [tradeDone, setTradeDone] = useState(false);
       idMainCapture:idMainCapture,
       idSecondCapture:null,
       state:1
-    },{
-      headers: {
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-      }
     }
     ).then(
       (result) => {
@@ -39,7 +34,6 @@ const [tradeDone, setTradeDone] = useState(false);
         setTradeDone(true);
       },
       (error) => {
-        console.log(error);
         setDisable(false);
         setTradeDone(true);
       }
