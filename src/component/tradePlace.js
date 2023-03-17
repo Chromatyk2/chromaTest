@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom'
 import ReactPaginate from 'react-paginate';
+import {BrowserRouter, Link} from "react-router-dom";
 import Axios from 'axios'
 import MyTrades from './myTrades.js';
 import '../App.css'
@@ -29,6 +30,7 @@ function TradePlace(props) {
                    <img src={val.pkmImage}></img>
                    <p className="pokemonNameTrade">{val.pkmName}</p>
                    <p className="pokemonNameTrade">({val.pseudo})</p>
+                   <Link className="navLink" to="/guessTrade">Proposer un échange</Link>
                  </div>
               </>
             )
