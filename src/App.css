@@ -46,14 +46,6 @@ iframe{
 .center {
   margin-top: 50px;
 }
-.guessTradeButton{
-  background: #0A3A2C;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 15px;
-  border-radius: 25px;
-}
 .socialContainer {
   display: flex;
   flex-flow: column;
@@ -756,6 +748,18 @@ button.deleteTrade {
     color: white;
     font-family: Charge Vector Black;
     letter-spacing: 2px;
+}
+.guessTradeButton{
+  background: #0a3a2c;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  text-decoration: none;
+}
+.guessTradeButton:hover{
+  background: white;
+  color: #0a3a2c;
 }
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
