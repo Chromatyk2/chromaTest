@@ -724,6 +724,12 @@ p.titleMyCaptures{
     flex-wrap: wrap;
     gap: 10px;
 }
+.pokemonNameTrade{
+  text-align: center;
+  color: #255748;
+  font-family: AldotheApache;
+  font-size: 15px;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;

@@ -24,7 +24,7 @@ function MyTrades(props) {
               <>
               <div className="uniqueTradeContainer">
                 <img src={val.pkmImage}></img>
-                <p>{val.pkmName}</p>
+                <p className="pokemonNameTrade">{val.pkmName}</p>
               </div>
               </>
             )
