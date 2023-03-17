@@ -34,6 +34,7 @@ const [tradeDone, setTradeDone] = useState(false);
         setTradeDone(true);
       },
       (error) => {
+        console.log(error);
         setDisable(false);
         setTradeDone(true);
       }
