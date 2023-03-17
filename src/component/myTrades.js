@@ -29,7 +29,7 @@ function MyTrades(props) {
               <div className="uniqueTradeContainer">
                 <img src={val.pkmImage}></img>
                 <p className="pokemonNameTrade">{val.pkmName}</p>
-                <button value={val.id} className="deleteTrade" onClick={deleteTrade}>Annuler</button>
+                <button value={val.tradeId} className="deleteTrade" onClick={deleteTrade}>Annuler</button>
               </div>
               </>
             )
