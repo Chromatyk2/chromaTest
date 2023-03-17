@@ -26,9 +26,9 @@ function TradePlace(props) {
             return (
               <>
                  <div className="uniqueTradeContainer">
-                 <p className="pokemonNameTrade">{val.pseudo}</p>
                    <img src={val.pkmImage}></img>
                    <p className="pokemonNameTrade">{val.pkmName}</p>
+                   <p className="pokemonNameTrade">({val.pseudo})</p>
                  </div>
               </>
             )
