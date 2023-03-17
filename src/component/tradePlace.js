@@ -25,7 +25,6 @@ function TradePlace(props) {
               <div className="uniqueTradeContainer">
                 <img src={val.pkmImage}></img>
                 <p className="pokemonNameTrade">{val.pkmName}</p>
-                <button value={val.tradeId} className="deleteTrade" onClick={deleteTrade} disabled={disable}>{disable === false ? "Annuler" : "Traitement"}</button>
               </div>
               </>
             )
