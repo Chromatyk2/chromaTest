@@ -22,7 +22,7 @@ function MyTrades(props) {
         {myTrades.map((val, key) => {
             return (
               <>
-                <img src={val.pkmImage}/>>
+                <img src={val.pkmImage}></img>
                 <p>{val.pkmName}</p>
               </>
             )
