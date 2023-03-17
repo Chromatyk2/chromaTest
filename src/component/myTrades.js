@@ -17,7 +17,7 @@ function MyTrades(props) {
   }, [])
 
   function deleteTrade(e) {
-    alerte(e.target.value);
+    alert(e.target.value);
   }
   console.log(myTrades);
   if(myTrades.length > 0){
