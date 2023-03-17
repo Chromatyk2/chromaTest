@@ -11,7 +11,7 @@ function MyTrades(props) {
   const [myTrades, setMyTrades] = useState([]);
   const [disable, setDisable] = useState(false);
   useEffect(() => {
-     Axios.get('https://chromatyk-pokemon.herokuapp.com/api/getMyTrades/'+props.pseudo)
+     Axios.get('/api/getMyTrades/'+props.pseudo)
      .then(function(response){
         setMyTrades(response.data);
       })
@@ -32,7 +32,6 @@ function MyTrades(props) {
       }
     )
   }
-  console.log(myTrades);
   if(myTrades.length > 0){
     return(
       <>
