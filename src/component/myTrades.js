@@ -19,11 +19,8 @@ function MyTrades(props) {
 
   function deleteTrade(e) {
     const id = parseInt(e.target.value);
-    return Axios.delete('/api/deleteTrade',
-    {
-      idTrade:id
-    }
-    ).then(
+    return Axios.delete('/api/deleteTrade/'+id)
+    .then(
       (result) => {
         setDisable(false);
       },
