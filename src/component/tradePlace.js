@@ -20,7 +20,7 @@ function TradePlace(props) {
     return(
       <>
        <div className="tradePlaceContainer">
-         <p className="titleMyCaptures">Mes Echanges</p>
+         <p className="titleMyCaptures">Echanges</p>
          <div className="myTradesContainer">
         {myTrades.map((val, key) => {
             return (
@@ -39,7 +39,10 @@ function TradePlace(props) {
     )
   }else{
       return(
-        <p>Pas de pokemon en echange</p>
+        <>
+          <p className="titleMyCaptures">Echanges</p>
+          <p>Pas de pokemon en echange</p>
+        </>
       )
     }
 }

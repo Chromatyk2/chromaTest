@@ -1,6 +1,6 @@
 @font-face {
-font-family: 'AldotheApache';
-src: url('../public/AldotheApache.ttf') format('truetype');
+font-family: 'Charge Vector Black';
+src: url('../public/Charge Vector Black.otf') format('truetype');
 }
 nav.navbar.navbar-expand-lg.navbar-light {
     background-color: #90E5B5;
@@ -37,7 +37,7 @@ iframe{
   background: none;
   color: #255748;
   font-size: 30px;
-  font-family: "AldotheApache";
+  font-family: "Charge Vector Black";
 }
 .leaderBoardSwitch button:hover{
   color: #0a3a2c;
@@ -73,7 +73,7 @@ iframe{
 }
 .loginContainer p {
   color: #255748;
-  font-family: AldotheApache;
+  font-family: Charge Vector Black;
   font-size: 30px;
   line-height: 33px;
   text-align: center;
@@ -88,14 +88,14 @@ a.socialLink {
 }
 p.myNetworks {
     color: #255748;
-    font-family: "AldotheApache";
+    font-family: "Charge Vector Black";
     font-size: 30px;
     text-align: center;
 }
 a{
   font-size: 50px;
   color: #255748;
-  font-family: "AldotheApache";
+  font-family: "Charge Vector Black";
 }
 a:hover{
   color: #0a3a2c;
@@ -183,7 +183,7 @@ a:hover{
     transform-origin: left;
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
-    font-family: 'AldotheApache';
+    font-family: 'Charge Vector Black';
     border: solid gold 4px;
 }
 .top3Mobile .itemOne .pos {
@@ -245,7 +245,7 @@ a:hover{
     transform-origin: left;
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
-    font-family: 'AldotheApache';
+    font-family: 'Charge Vector Black';
     border: solid silver 4px;
 }
 .top3Mobile .itemTwo .pos {
@@ -306,7 +306,7 @@ a:hover{
     transform-origin: left;
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
-    font-family: 'AldotheApache';
+    font-family: 'Charge Vector Black';
     border : solid #F1AB70 4px;
 }
 .top3Mobile .itemThree .pos {
@@ -534,7 +534,7 @@ p.filterTitle {
   font-weight: 700;
   line-height: 28px;
   text-align: center;
-  font-family: 'AldotheApache';
+  font-family: 'Charge Vector Black';
   color: #255748;
   font-size: 30px;
 }
@@ -637,11 +637,11 @@ p.numberPokemonPage {
     text-align: center;
     font-size: 50px;
     color: #255748;
-    font-family: AldotheApache;
+    font-family: Charge Vector Black;
 }
 p.namePokemonPage {
     color: #255748;
-    font-family: AldotheApache;
+    font-family: Charge Vector Black;
     font-size: 50px;
     text-align: center;
     line-height: 10px;
@@ -662,7 +662,7 @@ p.namePokemonPage {
 }
 .capturesContainer {
     color: #255748;
-    font-family: AldotheApache;
+    font-family: Charge Vector Black;
     text-align: center;
     width: 100%;
     display: flex;
@@ -681,7 +681,7 @@ p.titleMyCaptures {
 .myCapturesContainer {
     text-align: center;
     color: #255748;
-    font-family: AldotheApache;
+    font-family: Charge Vector Black;
 }
 
 .myCaptureItem {align-items: center;
@@ -703,7 +703,7 @@ p.shinyPokemonList{
 }
 p.titleMyCaptures{
   color: #255748;
-    font-family: AldotheApache;
+    font-family: Charge Vector Black;
     font-size: 20px;
     text-align: center;
 }
@@ -728,7 +728,7 @@ p.titleMyCaptures{
 .pokemonNameTrade{
   text-align: center;
   color: #255748;
-  font-family: AldotheApache;
+  font-family: Charge Vector Black;
   font-size: 15px;
   margin-top: 5px;
 }
@@ -746,7 +746,7 @@ button.deleteTrade {
     padding: 8px;
     width: 100%;
     color: white;
-    font-family: AldotheApache;
+    font-family: Charge Vector Black;
     letter-spacing: 2px;
 }
 @media screen and (min-width: 944px) and (max-width: 1659px) {
@@ -808,7 +808,7 @@ button.deleteTrade {
       margin: auto;
       width: 300px;
       color: #255748;
-      font-family: AldotheApache;
+      font-family: Charge Vector Black;
       text-align: center;
     }
 }
@@ -893,7 +893,7 @@ button.deleteTrade {
       margin: auto;
       width: 300px;
       color: #255748;
-      font-family: AldotheApache;
+      font-family: Charge Vector Black;
       text-align: center;
     }
 }
