@@ -722,6 +722,7 @@ p.titleMyCaptures{
   font-size: 15px;
   padding: 10px;
   text-decoration: none;
+  border:none;
 }
 .createTradeButton:hover {
   background: white;
@@ -730,6 +731,7 @@ p.titleMyCaptures{
   font-size: 15px;
   padding: 10px;
   text-decoration: none;
+  border:none;
 }
 .myTradesContainer {
     display: flex;
