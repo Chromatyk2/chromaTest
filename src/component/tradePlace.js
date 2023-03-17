@@ -10,7 +10,7 @@ const pseudo = props.cookies.user.data[0].login;
    return (
      <>
       <div className="tradePlaceContainer">
-        <p>Mes Echanges</p>
+        <p className="titleMyCaptures">Mes Echanges</p>
         <div className="myTradesContainer">
           <MyTrades pseudo={pseudo}/>
         </div>
