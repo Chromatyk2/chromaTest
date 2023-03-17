@@ -19,22 +19,22 @@ function TradePlace(props) {
   if(myTrades.length > 0){
     return(
       <>
+       <div className="tradePlaceContainer">
+         <p className="titleMyCaptures">Mes Echanges</p>
+         <div className="myTradesContainer">
         {myTrades.map((val, key) => {
             return (
               <>
-               <div className="tradePlaceContainer">
-                 <p className="titleMyCaptures">Mes Echanges</p>
-                 <div className="myTradesContainer">
                  <div className="uniqueTradeContainer">
                    <img src={val.pkmImage}></img>
                    <p className="pokemonNameTrade">{val.pkmName}</p>
                  </div>
-                 </div>
-               </div>
               </>
             )
             })
         }
+        </div>
+      </div>
       </>
     )
   }else{
