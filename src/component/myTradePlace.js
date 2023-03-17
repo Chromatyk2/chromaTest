@@ -5,7 +5,7 @@ import Axios from 'axios'
 import MyTrades from './myTrades.js';
 import '../App.css'
 
-function TradePlace(props) {
+function MyTradePlace(props) {
 const pseudo = props.cookies.user.data[0].login;
    return (
      <>
@@ -18,4 +18,4 @@ const pseudo = props.cookies.user.data[0].login;
      </>
    );
 }
-export default TradePlace
+export default MyTradePlace

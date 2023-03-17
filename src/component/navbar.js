@@ -14,7 +14,7 @@ function NavBar() {
             <Link className="navLink" to="/">Accueil</Link>
             <Link className="navLink" to="/pokedex">Pokedex</Link>
             <Link className="navLink" to="/leaderboard">Classement</Link>
-            <Link className="navLink" to="/tradePlace">Place d'echanges</Link>
+            <Link className="navLink" to="/myTrades">Mes Echanges</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
