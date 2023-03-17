@@ -13,7 +13,7 @@ const [disable, setDisable] = useState(false);
 const [tradeDone, setTradeDone] = useState(false);
   useEffect(() => {
     Axios
-      .get("https://chromatyk-pokemon.herokuapp.com/api/getByMainIdCapture/"+props.idMainCapture)
+      .get("/api/getByMainIdCapture/"+props.idMainCapture)
       .then(function(response){
           setCapture(response.data);
           setLoading(true);
