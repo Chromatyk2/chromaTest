@@ -722,13 +722,20 @@ p.titleMyCaptures{
 .myTradesContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 50px;
+    justify-content: center;
 }
 .pokemonNameTrade{
   text-align: center;
   color: #255748;
   font-family: AldotheApache;
   font-size: 15px;
+  margin-top: 5px;
+}
+.uniqueTradeContainer {
+    padding: 20px;
+    background: rgba(37, 87, 95,0.2);
+    border-radius: 25px;
 }
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
