@@ -9,6 +9,7 @@ import moment from 'moment';
 
 function MyTrades(props) {
   const [myTrades, setMyTrades] = useState([]);
+  const [disable, setDisable] = useState(false);
   useEffect(() => {
      Axios.get('https://chromatyk-pokemon.herokuapp.com/api/getMyTrades/'+props.pseudo)
      .then(function(response){
@@ -17,7 +18,19 @@ function MyTrades(props) {
   }, [])
 
   function deleteTrade(e) {
-    alert(e.target.value);
+    const id = parseInt(e.target.value);
+    return Axios.post('https://chromatyk-pokemon.herokuapp.com/api/deleteTrade',
+    {
+      idTrade:is
+    }
+    ).then(
+      (result) => {
+        setDisable(false);
+      },
+      (error) => {
+        setDisable(false);
+      }
+    )
   }
   console.log(myTrades);
   if(myTrades.length > 0){
@@ -29,7 +42,7 @@ function MyTrades(props) {
               <div className="uniqueTradeContainer">
                 <img src={val.pkmImage}></img>
                 <p className="pokemonNameTrade">{val.pkmName}</p>
-                <button value={val.tradeId} className="deleteTrade" onClick={deleteTrade}>Annuler</button>
+                <button value={val.tradeId} className="deleteTrade" onClick={deleteTrade} disabled={disable}>{disable === false ? "Annuler" : "Traitement"}>Annuler</button>
               </div>
               </>
             )

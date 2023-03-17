@@ -737,6 +737,18 @@ p.titleMyCaptures{
     background: rgba(37, 87, 95,0.2);
     border-radius: 25px;
 }
+button.deleteTrade {
+    display: block;
+    margin: auto;
+    border: none;
+    background: red;
+    border-radius: 25px;
+    padding: 8px;
+    width: 100%;
+    color: white;
+    font-family: AldotheApache;
+    letter-spacing: 2px;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
