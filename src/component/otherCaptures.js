@@ -13,7 +13,7 @@ const [cookies, setCookie] = useCookies();
 const pseudo = cookies.user.data[0].login;
 useEffect(() => {
   Axios
-    .get("/api/getTradesByPokemon/"+props.pkmId)
+    .get("https://chromatyk-pokemon.herokuapp.com/api/getTradesByPokemon/"+props.pkmId)
     .then(function(response){
         setTrades(response.data);
   })

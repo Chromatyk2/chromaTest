@@ -11,7 +11,7 @@ function MyTrades(props) {
   const [myTrades, setMyTrades] = useState([]);
   const [disable, setDisable] = useState(false);
   useEffect(() => {
-     Axios.get('/api/getMyTrades/'+props.pseudo)
+     Axios.get('https://chromatyk-pokemon.herokuapp.com/api/getMyTrades/'+props.pseudo)
      .then(function(response){
         setMyTrades(response.data);
       })
@@ -19,7 +19,7 @@ function MyTrades(props) {
 
   function deleteTrade(e) {
     const id = parseInt(e.target.value);
-    return Axios.delete('/api/deleteTrade',
+    return Axios.delete('https://chromatyk-pokemon.herokuapp.com/api/deleteTrade',
     {
       idTrade:id
     }
