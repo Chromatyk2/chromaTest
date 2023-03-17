@@ -19,7 +19,7 @@ function MyTrades(props) {
 
   function deleteTrade(e) {
     const id = parseInt(e.target.value);
-    return Axios.delete('https://chromatyk-pokemon.herokuapp.com/api/deleteTrade',
+    return Axios.delete('/api/deleteTrade',
     {
       idTrade:id
     }
