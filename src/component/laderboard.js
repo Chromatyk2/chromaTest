@@ -11,7 +11,7 @@ function LaderBoard(props) {
     function displayNormalLaderboard(e) {
       let shiny = e.target.value;
         Axios
-          .get(`https://chromatyk-pokemon.herokuapp.com/api/getLaderboard/0`)
+          .get(`/api/getLaderboard/0`)
           .then(function(response){
               setLaderboard(response.data);
               setTopThree(response.data.slice(0,3));
@@ -21,7 +21,7 @@ function LaderBoard(props) {
     function displayShinyLaderboard(e) {
       let shiny = e.target.value;
         Axios
-          .get(`https://chromatyk-pokemon.herokuapp.com/api/getLaderboard/1`)
+          .get(`/api/getLaderboard/1`)
           .then(function(response){
               setLaderboard(response.data);
               setTopThree(response.data.slice(0,3));
