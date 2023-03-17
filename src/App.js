@@ -11,7 +11,7 @@ import NavBar from './component/navbar.js';
 import Login from './services/auth.services.js';
 import PokemonPage from './component/pokemonPage.js';
 import MyTradePlace from './component/myTradePlace.js';
-import TradePlace from './component/TradePlace.js';
+import TradePlace from './component/tradePlace.js';
 function App() {
   const [cookies, setCookie] = useCookies();
   if(Object.keys(cookies).length == 0) {
