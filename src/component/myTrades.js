@@ -17,24 +17,7 @@ function MyTrades(props) {
   }, [])
 
   function deleteTrade(e) {
-    const idMainCapture = parseInt(e.target.value);
-    setDisable(true);
-    return Axios.post('https://chromatyk-pokemon.herokuapp.com/api/createTrade',
-    {
-      idMainCapture:idMainCapture,
-      idSecondCapture:null,
-      state:1
-    }
-    ).then(
-      (result) => {
-        setDisable(false);
-        setTradeDone(true);
-      },
-      (error) => {
-        setDisable(false);
-        setTradeDone(true);
-      }
-    )
+    alerte(e.target.value);
   }
   console.log(myTrades);
   if(myTrades.length > 0){
