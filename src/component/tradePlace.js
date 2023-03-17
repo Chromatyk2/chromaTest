@@ -30,7 +30,7 @@ function TradePlace(props) {
                    <img src={val.pkmImage}></img>
                    <p className="pokemonNameTrade">{val.pkmName}</p>
                    <p className="pokemonNameTrade">({val.pseudo})</p>
-                   <Link className="navLink" to="/guessTrade">Proposer un échange</Link>
+                   <Link className="guessTradeButton" to="/guessTrade">Proposer un échange</Link>
                  </div>
               </>
             )
