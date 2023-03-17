@@ -22,7 +22,10 @@ function MyTrades(props) {
     return Axios.delete('/api/deleteTrade/'+id)
     .then(
       (result) => {
-        setDisable(false);
+           Axios.get('/api/getMyTrades/'+props.pseudo)
+           .then(function(response){
+              setMyTrades(response.data);
+            })
       },
       (error) => {
         setDisable(false);
