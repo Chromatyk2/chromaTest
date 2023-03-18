@@ -8,7 +8,8 @@ import '../App.css'
 import moment from 'moment';
 
 function GuessTrade(props) {
-  console.log(props);
+  const { id } = useParams()
+  console.log(id);
   return(
     <p>Bonjour</p>
   )

@@ -29,7 +29,7 @@ function App() {
           <Route path="/pokemon/:id" element={<PokemonPage cookies={cookies} />} />
           <Route path="/myTrades" element={<MyTradePlace cookies={cookies} />} />
           <Route path="/tradePlace" element={<TradePlace cookies={cookies} />} />
-          <Route path="/guessTrade" element={<GuessTrade cookies={cookies} />} />
+          <Route path="/guessTrade/:id" element={<GuessTrade cookies={cookies} />} />
         </Routes>
       </BrowserRouter>
     </>
