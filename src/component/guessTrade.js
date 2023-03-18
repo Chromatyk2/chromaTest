@@ -8,7 +8,7 @@ import '../App.css'
 import moment from 'moment';
 
 function GuessTrade(props) {
-  consoloe.log(props);
+  console.log(props);
   return(
     <p>Bonjour</p>
   )
