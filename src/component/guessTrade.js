@@ -20,8 +20,12 @@ function GuessTrade(props) {
   if(trade.length > 0){
     return (
       <>
-        <img className="imgPokemonPage" src={trade[0].pkmImage}></img>
-        <p>{trade[0].pkmName}</p>
+        <div className="tradeHub">
+          <div className="mainTrade">
+            <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
+            <p className="pokemonNameTrade">{trade[0].pkmName}</p>
+          </div>
+        </div>
       </>
     )
   }
