@@ -20,7 +20,7 @@ function GuessTrade(props) {
   if(trade.length > 0){
     return (
       <>
-        <p>Bonjour</p>
+        <p>{trade[0].pkmName}</p>
       </>
     )
   }
