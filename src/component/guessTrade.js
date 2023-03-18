@@ -16,12 +16,13 @@ function GuessTrade(props) {
         setTrade(response.data);
       })
   }, [])
-  console.log(trade.length > 0);
-
-  return (
-    <>
-      <p>Bonjour</p>
-    </>
-  )
+  console.log(trade[0]);
+  if(trade.length > 0){
+    return (
+      <>
+        <p>Bonjour</p>
+      </>
+    )
+  }
 }
 export default GuessTrade
