@@ -18,17 +18,15 @@ const [trade, setTrade] = useState([]);
   }, [])
   console.log(trade);
   if(trade.length > 0){
-    {trade.map((val, key) => {
        return (
          <>
             <div className="uniqueTradeContainer">
-              <img src={val.pkmImage}></img>
-              <p className="pokemonNameTrade">{val.pkmName}</p>
-              <p className="pokemonNameTrade">({val.pseudo})</p>
+              <img src={trade[0].pkmImage}></img>
+              <p className="pokemonNameTrade">{trade[0].pkmName}</p>
+              <p className="pokemonNameTrade">({trade[0].pseudo})</p>
             </div>
          </>
        )
-     })
     }
   }
 }
