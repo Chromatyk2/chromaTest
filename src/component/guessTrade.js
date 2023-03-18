@@ -22,6 +22,15 @@ function GuessTrade(props) {
     return (
       <>
         <div className="tradeHub">
+        <label for="browser">Choose your browser from the list:</label>
+        <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
           <div className="guessedPokemon">
             <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
             <p className="guessedPokemonName">{trade[0].pkmName}</p>
