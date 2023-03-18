@@ -16,7 +16,8 @@ function GuessTrade(props) {
         setTrade(response.data);
       })
   }, [])
-  console.log(trade);
+  console.log(trade.length > 0);
+
   return (
     <>
       <p>Bonjour</p>
