@@ -29,6 +29,7 @@ const [trade, setTrade] = useState([]);
          </>
        )
      })
+    }
   }
 }
 export default GuessTrade
