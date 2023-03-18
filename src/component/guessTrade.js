@@ -16,6 +16,7 @@ const [trade, setTrade] = useState([]);
         setTrade(response.data);
       })
   }, [])
+  console.log(trade);
   if(trade.length > 0){
     {trade.map((val, key) => {
        return (
