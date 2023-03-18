@@ -8,10 +8,18 @@ import '../App.css'
 import moment from 'moment';
 
 function GuessTrade(props) {
+const [trade, setTrade] = useState([]);
   const { id } = useParams()
-  console.log(id);
-  return(
-    <p>Bonjour</p>
-  )
+  useEffect(() => {
+     Axios.get('/api/getTradeById/'+id)
+     .then(function(response){
+        setTrade(response.data);
+      })
+  }, [])
+  if(trade.length > 0){
+    return(
+      <img src={val.pkmImage}></img>
+    )
+  }
 }
 export default GuessTrade
