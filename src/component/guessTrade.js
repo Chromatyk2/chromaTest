@@ -37,7 +37,7 @@ function GuessTrade(props) {
                 </>
               :
                 <>
-                  <p>Choisis un Pokemon à proposer</p>
+                  <p>Choisis un Pokemon a echanger</p>
                 </>
             }
           </div>
