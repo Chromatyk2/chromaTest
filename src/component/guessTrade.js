@@ -16,6 +16,7 @@ function GuessTrade(props) {
         setTrade(response.data);
       })
   }, [])
+  console.log(trade);
   return (
     <>
       <div className="uniqueTradeContainer">
