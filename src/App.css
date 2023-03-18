@@ -775,6 +775,26 @@ button.deleteTrade {
   background: white;
   color: #0a3a2c;
 }
+.tradeHub {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-items: center;
+}
+img.imgPokemonTrade {
+    width: 100%;
+}
+.guessedPokemon{
+  width:300px;
+}
+.guessedPokemonName{
+  color: #255748;
+  font-family: Charge Vector Black;
+  font-size: 30px;
+  margin-top: 5px;
+  text-align: center;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;

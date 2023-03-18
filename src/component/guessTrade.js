@@ -21,16 +21,16 @@ function GuessTrade(props) {
     return (
       <>
         <div className="tradeHub">
-          <div className="mainTrade">
+          <div className="guessedPokemon">
             <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
-            <p className="pokemonNameTrade">{trade[0].pkmName}</p>
+            <p className="guessedPokemonName">{trade[0].pkmName}</p>
           </div>
           <div className="arrows">
             <img className="arrowImage" src={`/images/arrows.png`}></img>
           </div>
-          <div className="myGuess">
+          <div className="guessedPokemon">
             <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
-            <p className="pokemonNameTrade">{trade[0].pkmName}</p>
+            <p className="guessedPokemonName">{trade[0].pkmName}</p>
           </div>
         </div>
       </>
