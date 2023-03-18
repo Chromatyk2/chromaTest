@@ -9,6 +9,7 @@ import moment from 'moment';
 
 function GuessTrade(props) {
   const [trade, setTrade] = useState([]);
+  const [guessedPokemon, setGuessedPokemon] = useState([]);
   const { id } = useParams()
   useEffect(() => {
      Axios.get('/api/getTradeById/'+id)
@@ -29,8 +30,16 @@ function GuessTrade(props) {
             <img className="arrowImage" src={`/images/arrows.png`}></img>
           </div>
           <div className="guessedPokemon">
-            <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
-            <p className="guessedPokemonName">{trade[0].pkmName}</p>
+            {guessedPokemon.length > 0 ?
+                <>
+                  <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
+                  <p className="guessedPokemonName">{trade[0].pkmName}</p>
+                </>
+              :
+                <>
+                  <p>Choisis un Pokemon à proposer</p>
+                </>
+            }
           </div>
         </div>
       </>
