@@ -12,4 +12,5 @@ function GuessTrade(props) {
   return(
     <p>Bonjour</p>
   )
+}
 export default GuessTrade
