@@ -17,9 +17,18 @@ const [trade, setTrade] = useState([]);
       })
   }, [])
   if(trade.length > 0){
-    return(
-      <img src={val.pkmImage}></img>
-    )
+    {trade.map((val, key) => {
+       return (
+         <>
+            <div className="uniqueTradeContainer">
+              <img src={val.pkmImage}></img>
+              <p className="pokemonNameTrade">{val.pkmName}</p>
+              <p className="pokemonNameTrade">({val.pseudo})</p>
+              <Link className="guessTradeButton" to={"/guessTrade/"+val.tradeId}>Proposer un échange</Link>
+            </div>
+         </>
+       )
+     })
   }
 }
 export default GuessTrade
