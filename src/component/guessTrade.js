@@ -8,7 +8,7 @@ import '../App.css'
 import moment from 'moment';
 
 function GuessTrade(props) {
-  const [trade, setTrade] = useState([]);
+  const [trade, setTrade] = useState(null);
   const { id } = useParams()
   useEffect(() => {
      Axios.get('/api/getTradeById/'+id)
