@@ -1,8 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom'
 import ReactPaginate from 'react-paginate';
-import TextInput from 'react-autocomplete-input';
-import 'react-autocomplete-input/dist/bundle.css';
 import Axios from 'axios'
 import Pagination from './paginate.js';
 import CreateTrade from './createTrade.js';
@@ -24,7 +22,9 @@ function GuessTrade(props) {
     return (
       <>
           <div className="tradeHub">
-          <TextInput options={["apple", "apricot", "banana", "carrot"]} />
+          <select>
+              <option value="test">test</option>
+          </select>
           <div className="guessedPokemon">
             <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
             <p className="guessedPokemonName">{trade[0].pkmName}</p>
