@@ -123,7 +123,7 @@ console.log(items);
           </div>
         </div>
         { choosingGuess !== null &&
-          <button>Valider la proposition</button>
+          <button className="validateGuessButton">Valider la proposition</button>
         }
       </>
     )

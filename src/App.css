@@ -828,6 +828,18 @@ li:hover{
 li svg{
   display: none;
 }
+.validateGuessButton{
+  background: #0a3a2c;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  text-decoration: none;
+}
+.validateGuessButton:hover{
+  background: white;
+  color: #0a3a2c;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
