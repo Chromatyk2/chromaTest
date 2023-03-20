@@ -817,6 +817,8 @@ li{
   width: 300px;
   color: #255748;
   font-family: Charge Vector Black;
+  display: block;
+  margin: auto;
 }
 li svg{
   display: none;
