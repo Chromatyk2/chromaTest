@@ -107,7 +107,7 @@ console.log(items);
                   <p className="guessedPokemonName">{trade[0].pkmName}</p>
                 </>
               :
-                choosingGuess.length !== null ?
+                choosingGuess !== null ?
                   <>
                     <img className="imgPokemonTrade" src={choosingGuess[0].pkmImage}></img>
                     <p className="guessedPokemonName">{choosingGuess[0].pkmName}</p>
