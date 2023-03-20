@@ -715,6 +715,7 @@ p.titleMyCaptures{
   padding: 5px;
   border-radius: 25px;
   color: white;
+  padding: 10px;
 }
 .createTradeButton {
   background: #0a3a2c;
