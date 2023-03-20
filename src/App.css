@@ -867,6 +867,12 @@ li svg{
   background: white;
   color: #0a3a2c;
 }
+ul.paginateLay {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    text-align: center;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
