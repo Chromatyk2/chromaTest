@@ -28,7 +28,7 @@ function GuessTrade(props) {
             setItems(response.data);
         })
       }, [])
-
+console.log(items);
   const handleOnSearch = (string, results) => {
     // onSearch will have as the first callback parameter
     // the string searched and for the second the results.
@@ -60,17 +60,19 @@ function GuessTrade(props) {
   if(trade.length > 0){
     return (
       <>
-          <div className="autoCompleteSearch">
-            <ReactSearchAutocomplete
-              items={items}
-              onSearch={handleOnSearch}
-              onHover={handleOnHover}
-              onSelect={handleOnSelect}
-              onFocus={handleOnFocus}
-              autoFocus
-              formatResult={formatResult}
-            />
-          </div>
+          {items.length > 0 &&
+              <div className="autoCompleteSearch">
+                <ReactSearchAutocomplete
+                  items={items}
+                  onSearch={handleOnSearch}
+                  onHover={handleOnHover}
+                  onSelect={handleOnSelect}
+                  onFocus={handleOnFocus}
+                  autoFocus
+                  formatResult={formatResult}
+                />
+              </div>
+          }
           <div className="tradeHub">
           <div className="guessedPokemon">
             <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
