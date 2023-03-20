@@ -122,6 +122,7 @@ console.log(items);
             }
           </div>
         </div>
+        <button>Valider la proposition</button>
       </>
     )
   }
