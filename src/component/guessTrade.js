@@ -31,6 +31,7 @@ function GuessTrade(props) {
       }, [])
 
       function createGuess(e) {
+        console.log(trade);
         const idCapture = parseInt(choosingGuess.id);
         const idTrade = parseInt(trade.id);
         return Axios.post('/api/createGuess',
