@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom'
 import ReactPaginate from 'react-paginate';
+import TextInput from 'react-autocomplete-input';
+import 'react-autocomplete-input/dist/bundle.css';
 import Axios from 'axios'
 import Pagination from './paginate.js';
 import CreateTrade from './createTrade.js';
@@ -22,15 +24,7 @@ function GuessTrade(props) {
     return (
       <>
           <div className="tradeHub">
-          <label for="browser">Choose your browser from the list:</label>
-          <input list="browsers" name="browser" id="browser" />
-          <datalist id="browsers">
-            <option value="Edge">
-            <option value="Firefox">
-            <option value="Chrome">
-            <option value="Opera">
-            <option value="Safari">
-          </datalist>
+          <TextInput options={["apple", "apricot", "banana", "carrot"]} />
           <div className="guessedPokemon">
             <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
             <p className="guessedPokemonName">{trade[0].pkmName}</p>
