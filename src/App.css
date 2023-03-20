@@ -809,6 +809,9 @@ img.imgPokemonTrade {
   display: block;
   margin:auto;
   width:300px;
+    font-size: 25px;
+    color: #255748;
+    font-family: Charge Vector Black;
 }
 ul{
   flex-wrap: wrap;
