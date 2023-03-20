@@ -72,7 +72,7 @@ console.log(items);
                   onHover={handleOnHover}
                   onSelect={handleOnSelect}
                   onFocus={handleOnFocus}
-                  autoFocus=true
+                  autoFocus
                   formatResult={formatResult}
                   styling={
                     {
