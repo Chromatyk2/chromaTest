@@ -37,8 +37,8 @@ console.log(items);
   }
 
   const handleOnHover = (result) => {
-    // the item hovered
-    console.log(result)
+    // the item selected
+    setChoosingGuess(item);
   }
 
   const handleOnSelect = (item) => {
@@ -49,7 +49,7 @@ console.log(items);
   const handleOnFocus = () => {
     console.log('Focused')
   }
-
+console.log(choosingGuess);
   const formatResult = (item) => {
     return (
       <>
@@ -108,7 +108,12 @@ console.log(items);
                   <p className="guessedPokemonName">{trade[0].pkmName}</p>
                 </>
               :
-                choosingGuess.length > 0 &&
+                choosingGuess.length > 0 ?
+                  <>
+                    <img className="imgPokemonTrade" src={choosingGuess[0].pkmImage}></img>
+                    <p className="guessedPokemonName">{choosingGuess[0].pkmName}</p>
+                  </>
+                :
                   <>
                     <p>Choisis un Pokemon a echanger</p>
                   </>
