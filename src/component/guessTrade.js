@@ -52,8 +52,7 @@ console.log(items);
   const formatResult = (item) => {
     return (
       <>
-        <span style={{ display: 'block', textAlign: 'center' }}>id: {item.pkmName}</span>
-        <span style={{ display: 'block', textAlign: 'center' }}>name: {item.dateCapture}</span>
+        <span className="autoSearchItem">{item.pkmName} - {item.dateCapture}</span>
       </>
     )
   }
