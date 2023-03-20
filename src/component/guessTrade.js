@@ -29,11 +29,26 @@ function GuessTrade(props) {
             setItems(response.data);
         })
       }, [])
-console.log(items);
+
+      function createGuess(e) {
+        const idCapture = parseInt(choosingGuess.id);
+        const idTrade = parseInt(trade.id);
+        setDisable(true);
+        return Axios.post('/api/createGuess',
+        {
+          idTrade:idTrade,
+          idCapture:idCapture
+        }
+        ).then(
+          (result) => {
+          },
+          (error) => {
+          }
+        )
+      }
   const handleOnSearch = (string, results) => {
     // onSearch will have as the first callback parameter
     // the string searched and for the second the results.
-    console.log(string, results)
   }
 
   const handleOnHover = (result) => {
@@ -47,7 +62,6 @@ console.log(items);
   }
 
   const handleOnFocus = () => {
-    console.log('Focused')
   }
   const formatResult = (item) => {
     return (
@@ -58,7 +72,6 @@ console.log(items);
       </>
     )
   }
-  console.log(choosingGuess);
   if(trade.length > 0){
     return (
       <>
@@ -123,7 +136,7 @@ console.log(items);
           </div>
         </div>
         { choosingGuess !== null &&
-          <button className="validateGuessButton">Valider la proposition</button>
+          <button className="validateGuessButton" onClick={createGuess}>Valider la proposition</button>
         }
       </>
     )
