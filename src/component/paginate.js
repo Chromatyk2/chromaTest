@@ -84,6 +84,7 @@ function Pagination(props) {
       }
       <Items currentItems={currentItems} />
       <ReactPaginate
+      className="paginateLay"
         breakLabel="..."
         nextLabel=">>"
         onPageChange={handlePageClick}
