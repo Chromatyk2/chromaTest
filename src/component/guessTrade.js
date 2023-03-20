@@ -38,7 +38,7 @@ console.log(items);
 
   const handleOnHover = (result) => {
     // the item selected
-    setChoosingGuess(item);
+    setChoosingGuess(result);
   }
 
   const handleOnSelect = (item) => {
