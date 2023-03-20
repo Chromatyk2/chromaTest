@@ -838,6 +838,19 @@ li:hover{
 li svg{
   display: none;
 }
+.allreadyGuessButton{
+  background: red;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  text-decoration: none;
+  border:none;
+  display: block;
+  margin: auto;
+  font-family: Charge Vector Black;
+
+}
 .validateGuessButton{
   background: #0a3a2c;
   border-radius: 25px;
@@ -848,7 +861,7 @@ li svg{
   border:none;
   display: block;
   margin: auto;
-  font-family: Charge Vector Black;  
+  font-family: Charge Vector Black;
 }
 .validateGuessButton:hover{
   background: white;
