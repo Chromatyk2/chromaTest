@@ -799,6 +799,7 @@ img.imgPokemonTrade {
   font-size: 10px;
   display: block;
   text-align: center;
+  margin: auto;
 }
 .autoSearchItemContainer{
   display: flex;
@@ -819,6 +820,10 @@ li{
   width: 300px;
   color: #255748;
   font-family: Charge Vector Black;
+}
+li:hover{
+  cursor: pointer;
+  background-color: #eee;
 }
 li svg{
   display: none;
