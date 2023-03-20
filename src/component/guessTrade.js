@@ -24,7 +24,7 @@ function GuessTrade(props) {
   }, [])
   useEffect(() => {
     Axios
-      .get("/api/getAllreadyGuess/"+pseudo+"/"+trade[0].tradeId)
+      .get("/api/getAllreadyGuess/"+pseudo+"/"+id)
       .then(function(response){
           setAllreadyGuess(response.data);
     })
