@@ -809,6 +809,15 @@ img.imgPokemonTrade {
   margin:auto;
   width:300px;
 }
+ul{
+  flex-wrap: wrap;
+}
+li{
+  font-size: 25px;
+  width: 100%;
+  color: #255748;
+  font-family: Charge Vector Black;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
