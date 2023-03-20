@@ -23,7 +23,7 @@ function GuessTrade(props) {
   const pseudo = props.cookies.user.data[0].login;
     useEffect(() => {
       Axios
-        .get("/api/getByUser/"+pseudo)
+        .get("/api/getByUserAll/"+pseudo)
         .then(function(response){
             setItems(response.data);
         })
