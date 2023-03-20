@@ -108,11 +108,10 @@ console.log(items);
                   <p className="guessedPokemonName">{trade[0].pkmName}</p>
                 </>
               :
-                {choosingGuess.length > 0 &&
+                choosingGuess.length > 0 &&
                   <>
                     <p>Choisis un Pokemon a echanger</p>
                   </>
-                }
             }
           </div>
         </div>
