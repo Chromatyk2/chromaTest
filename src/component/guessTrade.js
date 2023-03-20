@@ -53,7 +53,7 @@ console.log(items);
     return (
       <>
         <div className="autoSearchItemContainer">
-          <span className="autoSearchItem">{item.pkmName} - {moment(item.dateCapture).utc().format('DD/MM/YYYY')}</span>
+          <div className="autoSearchItem">{item.pkmName} - {moment(item.dateCapture).utc().format('DD/MM/YYYY')}</div>
         </div>
       </>
     )
