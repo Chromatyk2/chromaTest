@@ -81,6 +81,7 @@ function GuessTrade(props) {
             onFocus={handleOnFocus}
             autoFocus
             formatResult={formatResult}
+            className="autoCompleteSearch"
           />
           <div className="guessedPokemon">
             <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
