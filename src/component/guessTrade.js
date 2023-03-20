@@ -142,10 +142,10 @@ function GuessTrade(props) {
           </div>
         </div>
         {allreadyGuess.length > 0 ?
+          <button className="validateGuessButton" disabled>Tu as déjà fais une proposition pour cet échange</button>
+          :
             choosingGuess !== null &&
             <button className="validateGuessButton" onClick={createGuess}>Valider la proposition</button>
-          :
-            <button className="validateGuessButton" disabled>Tu as déjà fais une proposition pour cet échange</button>
         }
         {
 
