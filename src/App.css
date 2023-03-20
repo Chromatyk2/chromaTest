@@ -818,6 +818,9 @@ li{
   color: #255748;
   font-family: Charge Vector Black;
 }
+li svg{
+  display: none;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;
