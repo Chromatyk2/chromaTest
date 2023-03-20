@@ -64,6 +64,8 @@ console.log(items);
               <div className="autoCompleteSearch">
                 <ReactSearchAutocomplete
                   items={items}
+                  fuseOptions={{ keys: ["pkmName"] }}
+                  resultStringKeyName="pkmName"
                   onSearch={handleOnSearch}
                   onHover={handleOnHover}
                   onSelect={handleOnSelect}
