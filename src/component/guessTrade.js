@@ -72,7 +72,7 @@ function GuessTrade(props) {
   if(trade.length > 0){
     return (
       <>
-          <div>
+          <div className="autoCompleteSearch">
             <ReactSearchAutocomplete
               items={items}
               onSearch={handleOnSearch}
@@ -81,7 +81,6 @@ function GuessTrade(props) {
               onFocus={handleOnFocus}
               autoFocus
               formatResult={formatResult}
-              className="autoCompleteSearch"
             />
           </div>
           <div className="tradeHub">
