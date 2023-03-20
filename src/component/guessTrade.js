@@ -52,7 +52,7 @@ console.log(items);
   const formatResult = (item) => {
     return (
       <>
-        <span className="autoSearchItem">{item.pkmName} - {item.dateCapture}</span>
+        <span className="autoSearchItem">{item.pkmName} - {moment(item.dateCapture).utc().format('DD/MM/YYYY')}</span>
       </>
     )
   }
