@@ -815,6 +815,11 @@ img.imgPokemonTrade {
     color: #255748;
     font-family: Charge Vector Black;
 }
+.autoCompleteSearch input{
+  font-size: 25px;
+  color: #255748;
+  font-family: Charge Vector Black;
+}
 ul{
   flex-wrap: wrap;
   display: block;
@@ -843,6 +848,7 @@ li svg{
   border:none;
   display: block;
   margin: auto;
+  font-family: Charge Vector Black;  
 }
 .validateGuessButton:hover{
   background: white;
