@@ -11,6 +11,7 @@ import moment from 'moment';
 function GuessTrade(props) {
   const [trade, setTrade] = useState([]);
   const [guessedPokemon, setGuessedPokemon] = useState([]);
+  const [items, setItems] = useState([]);
   const { id } = useParams()
   useEffect(() => {
      Axios.get('/api/getTradeById/'+id)
@@ -18,28 +19,15 @@ function GuessTrade(props) {
         setTrade(response.data);
       })
   }, [])
-  const items = [
-    {
-      id: 0,
-      name: 'Cobol'
-    },
-    {
-      id: 1,
-      name: 'JavaScript'
-    },
-    {
-      id: 2,
-      name: 'Basic'
-    },
-    {
-      id: 3,
-      name: 'PHP'
-    },
-    {
-      id: 4,
-      name: 'Java'
-    }
-  ]
+
+  const pseudo = props.cookies.user.data[0].login;
+    useEffect(() => {
+      Axios
+        .get("/api/getByUser/"+pseudo)
+        .then(function(response){
+            setItems(response.data);
+        })
+      }, [])
 
   const handleOnSearch = (string, results) => {
     // onSearch will have as the first callback parameter
