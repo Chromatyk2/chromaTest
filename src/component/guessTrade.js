@@ -52,9 +52,7 @@ console.log(items);
   const formatResult = (item) => {
     return (
       <>
-        <div className="autoSearchItemContainer">
-          <div className="autoSearchItem">{item.pkmName} - {moment(item.dateCapture).utc().format('DD/MM/YYYY')}</div>
-        </div>
+          <p className="autoSearchItem">{item.pkmName} - {moment(item.dateCapture).utc().format('DD/MM/YYYY')}</p>
       </>
     )
   }
@@ -80,7 +78,6 @@ console.log(items);
                        borderRadius: "24px",
                        backgroundColor: "white",
                        boxShadow: "rgba(32, 33, 36, 0.28) 0px 1px 6px 0px",
-                       hoverBackgroundColor: "#eee",
                        color: "#212121",
                        fontSize: "16px",
                        fontFamily: "Arial",
@@ -88,7 +85,8 @@ console.log(items);
                        lineColor: "rgb(232, 234, 237)",
                        placeholderColor: "grey",
                        clearIconMargin: '3px 14px 0 0',
-                       searchIconMargin: '0 0 0 16px'
+                       searchIconMargin: '0 0 0 16px',
+
                      }
                   }
                 />
