@@ -811,14 +811,14 @@ img.imgPokemonTrade {
 }
 ul{
   flex-wrap: wrap;
+  display: block;
+  margin: auto;
 }
 li{
   font-size: 25px;
   width: 300px;
   color: #255748;
   font-family: Charge Vector Black;
-  display: block;
-  margin: auto;
 }
 li svg{
   display: none;
