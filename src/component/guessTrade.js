@@ -12,26 +12,33 @@ function GuessTrade(props) {
   const [trade, setTrade] = useState([]);
   const [guessedPokemon, setGuessedPokemon] = useState([]);
   const [items, setItems] = useState([]);
+  const [allreadyGuess, setAllreadyGuess] = useState([]);
   const [choosingGuess, setChoosingGuess] = useState(null);
   const { id } = useParams()
+  const pseudo = props.cookies.user.data[0].login;
   useEffect(() => {
      Axios.get('/api/getTradeById/'+id)
      .then(function(response){
         setTrade(response.data);
       })
   }, [])
-
-  const pseudo = props.cookies.user.data[0].login;
-    useEffect(() => {
-      Axios
-        .get("/api/getByUserAll/"+pseudo)
-        .then(function(response){
-            setItems(response.data);
-        })
-      }, [])
+  useEffect(() => {
+    Axios
+      .get("/api/getAllreadyGuess/"+pseudo+"/"+trade[0].tradeId)
+      .then(function(response){
+          setAllreadyGuess(response.data);
+          setLoading(true);
+    })
+  }, [])
+  useEffect(() => {
+    Axios
+      .get("/api/getByUserAll/"+pseudo)
+      .then(function(response){
+          setItems(response.data);
+      })
+    }, [])
 
       function createGuess(e) {
-        console.log(trade);
         const idCapture = parseInt(choosingGuess.id);
         const idTrade = parseInt(trade[0].tradeId);
         return Axios.post('/api/createGuess',
@@ -135,8 +142,14 @@ function GuessTrade(props) {
             }
           </div>
         </div>
-        { choosingGuess !== null &&
-          <button className="validateGuessButton" onClick={createGuess}>Valider la proposition</button>
+        {allreadyGuess.length > 0 ?
+            choosingGuess !== null &&
+            <button className="validateGuessButton" onClick={createGuess}>Valider la proposition</button>
+          :
+            <button className="validateGuessButton" disabled>Tu as déjà fais une proposition pour cet échange</button>
+        }
+        {
+
         }
       </>
     )
