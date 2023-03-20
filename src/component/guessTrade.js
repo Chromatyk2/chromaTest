@@ -73,6 +73,11 @@ console.log(items);
                   onFocus={handleOnFocus}
                   autoFocus
                   formatResult={formatResult}
+                  styling={
+                    {
+                      backgroundColor: "black"
+                    }
+                  }
                 />
               </div>
           }
