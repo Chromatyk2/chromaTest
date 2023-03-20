@@ -27,7 +27,6 @@ function GuessTrade(props) {
       .get("/api/getAllreadyGuess/"+pseudo+"/"+trade[0].tradeId)
       .then(function(response){
           setAllreadyGuess(response.data);
-          setLoading(true);
     })
   }, [])
   useEffect(() => {
