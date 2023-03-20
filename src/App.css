@@ -797,6 +797,8 @@ img.imgPokemonTrade {
 }
 .autoSearchItem{
   font-size: 10px;
+  display: block;
+  text-align: center;
 }
 .autoSearchItemContainer{
   display: flex;
