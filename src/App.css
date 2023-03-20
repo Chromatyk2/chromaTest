@@ -835,6 +835,9 @@ li svg{
   font-size: 15px;
   padding: 10px;
   text-decoration: none;
+  border:none;
+  display: block;
+  margin: auto;
 }
 .validateGuessButton:hover{
   background: white;
