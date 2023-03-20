@@ -56,7 +56,7 @@ console.log(items);
       </>
     )
   }
-  console.log()
+  console.log(choosingGuess);
   if(trade.length > 0){
     return (
       <>
