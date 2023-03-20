@@ -122,7 +122,9 @@ console.log(items);
             }
           </div>
         </div>
-        <button>Valider la proposition</button>
+        { choosingGuess !== null &&
+          <button>Valider la proposition</button>
+        }
       </>
     )
   }
