@@ -72,17 +72,19 @@ function GuessTrade(props) {
   if(trade.length > 0){
     return (
       <>
+          <div>
+            <ReactSearchAutocomplete
+              items={items}
+              onSearch={handleOnSearch}
+              onHover={handleOnHover}
+              onSelect={handleOnSelect}
+              onFocus={handleOnFocus}
+              autoFocus
+              formatResult={formatResult}
+              className="autoCompleteSearch"
+            />
+          </div>
           <div className="tradeHub">
-          <ReactSearchAutocomplete
-            items={items}
-            onSearch={handleOnSearch}
-            onHover={handleOnHover}
-            onSelect={handleOnSelect}
-            onFocus={handleOnFocus}
-            autoFocus
-            formatResult={formatResult}
-            className="autoCompleteSearch"
-          />
           <div className="guessedPokemon">
             <img className="imgPokemonTrade" src={trade[0].pkmImage}></img>
             <p className="guessedPokemonName">{trade[0].pkmName}</p>
