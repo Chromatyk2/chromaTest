@@ -12,6 +12,7 @@ function GuessTrade(props) {
   const [trade, setTrade] = useState([]);
   const [guessedPokemon, setGuessedPokemon] = useState([]);
   const [items, setItems] = useState([]);
+  const [choosingGuess, setChoosingGuess] = useState([]);
   const { id } = useParams()
   useEffect(() => {
      Axios.get('/api/getTradeById/'+id)
@@ -42,7 +43,7 @@ console.log(items);
 
   const handleOnSelect = (item) => {
     // the item selected
-    console.log(item)
+    setChoosingGuess(item);
   }
 
   const handleOnFocus = () => {
@@ -107,9 +108,11 @@ console.log(items);
                   <p className="guessedPokemonName">{trade[0].pkmName}</p>
                 </>
               :
-                <>
-                  <p>Choisis un Pokemon a echanger</p>
-                </>
+                {choosingGuess.length > 0 &&
+                  <>
+                    <p>Choisis un Pokemon a echanger</p>
+                  </>
+                }
             }
           </div>
         </div>
