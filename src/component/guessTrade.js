@@ -75,7 +75,9 @@ console.log(items);
                   formatResult={formatResult}
                   styling={
                     {
-                      backgroundColor: "black"
+                      backgroundColor: "black",
+                      display:"flex",
+                      flexFlow:"column"
                     }
                   }
                 />
