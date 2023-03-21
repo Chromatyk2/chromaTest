@@ -10,6 +10,7 @@ import moment from 'moment';
 function MyTrades(props) {
   const [myTrades, setMyTrades] = useState([]);
   const [disable, setDisable] = useState(false);
+  const [count, setCount] = useState(0);
   useEffect(() => {
      Axios.get('/api/getMyTrades/'+props.pseudo)
      .then(function(response){
@@ -36,6 +37,13 @@ function MyTrades(props) {
     return(
       <>
         {myTrades.map((val, key) => {
+          useEffect(() => {
+            Axios
+              .get("/api/getCountPropositionByTrade/"+val.id)
+              .then(function(response){
+                  setCount(response.data[0].count);
+            })
+          }, [])
             return (
               <>
               <div className="uniqueTradeContainer">
