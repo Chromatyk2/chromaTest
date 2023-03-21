@@ -14,9 +14,10 @@ const [count, setCount] = useState(0);
     Axios
       .get("/api/getCountProposition/"+pseudo)
       .then(function(response){
-          setCount(response.data.count);
+          setCount(response.data[0].count);
     })
   }, [])
+  console.log(count);
   return (
     <Navbar expand="lg">
       <Container>
