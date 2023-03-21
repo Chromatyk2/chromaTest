@@ -876,6 +876,21 @@ ul.paginateLay {
 .paginateLay li:hover {
     background: none;
 }
+span.myCountProposition {
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    border-radius: 25px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 26px;
+}
+.myTradesLink{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
   .pokemonGlobalContainer {
     display: flex;

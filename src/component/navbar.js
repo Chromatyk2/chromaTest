@@ -26,7 +26,7 @@ const [count, setCount] = useState(0);
             <Link className="navLink" to="/">Accueil</Link>
             <Link className="navLink" to="/pokedex">Pokedex</Link>
             <Link className="navLink" to="/leaderboard">Classement</Link>
-            <Link className="navLink" to="/myTrades">Mes Echanges {count > 0 && <span className="myCountProposition">{count}</span>}</Link>
+            <Link className="navLink myTradesLink" to="/myTrades">Mes Echanges {count > 0 && <span className="myCountProposition">{count}</span>}</Link>
             <Link className="navLink" to="/tradePlace">Place aux echanges</Link>
           </Nav>
         </Navbar.Collapse>
