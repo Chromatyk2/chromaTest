@@ -873,7 +873,7 @@ ul.paginateLay {
     flex-flow: row;
     text-align: center;
 }
-paginateLay li:hover {
+.paginateLay li:hover {
     background: none;
 }
 @media screen and (min-width: 944px) and (max-width: 1659px) {
