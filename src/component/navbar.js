@@ -5,6 +5,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 
 function NavBar() {
+const pseudo = props.cookies.user.data[0].login;
+const [count, setCount] = useState(0);
+  useEffect(() => {
+    Axios
+      .get("/api/getCountProposition/"+pseudo)
+      .then(function(response){
+          setCount(response.data.count);
+    })
+  }, [])
   return (
     <Navbar expand="lg">
       <Container>
