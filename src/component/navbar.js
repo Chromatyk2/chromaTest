@@ -1,10 +1,13 @@
+import React,{useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
+import Axios from 'axios'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 
-function NavBar() {
+function NavBar(props) {
 const pseudo = props.cookies.user.data[0].login;
 const [count, setCount] = useState(0);
   useEffect(() => {
