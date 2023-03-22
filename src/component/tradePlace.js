@@ -7,14 +7,17 @@ import MyTrades from './myTrades.js';
 import '../App.css'
 
 function TradePlace(props) {
+  const MINUTE_MS = 1000;
   const pseudo = props.cookies.user.data[0].login;
   const [myTrades, setMyTrades] = useState([]);
   const [disable, setDisable] = useState(false);
   useEffect(() => {
+    const interval = setInterval(() => {
      Axios.get('/api/getAllTrades/'+props.pseudo)
      .then(function(response){
         setMyTrades(response.data);
       })
+    }, MINUTE_MS);
   }, [])
 
   if(myTrades.length > 0){
