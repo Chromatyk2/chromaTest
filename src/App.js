@@ -15,7 +15,7 @@ import TradePlace from './component/tradePlace.js';
 import GuessTrade from './component/guessTrade.js';
 function App() {
   const [cookies, setCookie] = useCookies();
-  if(Object.keys(cookies).length == 0) {
+  if(Object.keys(cookies).length == 0 || cookies.user === undefined) {
     return <Login />
   }
   return(
