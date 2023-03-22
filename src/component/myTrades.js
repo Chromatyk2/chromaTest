@@ -4,18 +4,22 @@ import ReactPaginate from 'react-paginate';
 import Axios from 'axios'
 import Pagination from './paginate.js';
 import CreateTrade from './createTrade.js';
+import NbProposition from './nbProposition.js';
 import '../App.css'
 import moment from 'moment';
 
 function MyTrades(props) {
+  const MINUTE_MS = 1000;
   const [myTrades, setMyTrades] = useState([]);
   const [disable, setDisable] = useState(false);
   const [count, setCount] = useState(0);
   useEffect(() => {
+    const interval = setInterval(() => {
      Axios.get('/api/getMyTrades/'+props.pseudo)
      .then(function(response){
         setMyTrades(response.data);
       })
+    }, MINUTE_MS);
   }, [])
 
   function deleteTrade(e) {
@@ -50,6 +54,7 @@ function MyTrades(props) {
                 <img src={val.pkmImage}></img>
                 <p className="pokemonNameTrade">{val.pkmName}</p>
                 <button value={val.tradeId} className="deleteTrade" onClick={deleteTrade} disabled={disable}>{disable === false ? "Annuler" : "Traitement"}</button>
+                <NbProposition id={val.tradeId} />
               </div>
               </>
             )
