@@ -9,6 +9,7 @@ import {BrowserRouter, Link} from "react-router-dom";
 
 function NavBar(props) {
   const MINUTE_MS = 100;
+  const [count, setCount] = useState(0);
   useEffect(() => {
     const pseudo = props.cookies.user.data[0].login;
     const interval = setInterval(() => {
@@ -19,9 +20,6 @@ function NavBar(props) {
       })
     }, MINUTE_MS); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
   }, [])
-const [count, setCount] = useState(0);
-  useEffect(() => {
-  }, [pseudo !== 'undefined'])
   return (
     <Navbar expand="lg">
       <Container>
