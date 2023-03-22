@@ -13,7 +13,7 @@ function NavBar(props) {
   const [pseudo, setPseudo] = useState(null);
   console.log(props.cookies.user);
   if(props.cookies.user !== 'undefined'){
-    setpseudo(props.cookies.user.data[0].login);
+    setPseudo(props.cookies.user.data[0].login);
   }
   useEffect(() => {
     const interval = setInterval(() => {
