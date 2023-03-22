@@ -8,16 +8,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 
 function NavBar(props) {
-  console.log(props);
-const pseudo = props.cookies.user.data[0].login;
+// const pseudo = props.cookies.user.data[0].login;
 const [count, setCount] = useState(0);
-  useEffect(() => {
-    Axios
-      .get("/api/getCountProposition/"+pseudo)
-      .then(function(response){
-          setCount(response.data[0].count);
-    })
-  }, [])
+  // useEffect(() => {
+  //   Axios
+  //     .get("/api/getCountProposition/"+pseudo)
+  //     .then(function(response){
+  //         setCount(response.data[0].count);
+  //   })
+  // }, [])
   return (
     <Navbar expand="lg">
       <Container>
