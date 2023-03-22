@@ -9,22 +9,22 @@ import {BrowserRouter, Link} from "react-router-dom";
 
 function NavBar(props) {
   console.log(props);
-  // const MINUTE_MS = 15000;
+  const MINUTE_MS = 15000;
   const [count, setCount] = useState(0);
-  // const [pseudo, setPseudo] = useState('');
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if(props.cookies.user.length !== undefined){
-  //       setPseudo(props.cookies.user.data[0].login);
-  //       console.log(props.cookies.user);
-  //     }
-  //     Axios
-  //       .get("/api/getCountProposition/"+pseudo)
-  //       .then(function(response){
-  //           setCount(response.data[0].count);
-  //     })
-  //   }, MINUTE_MS); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-  // }, [])
+  const [pseudo, setPseudo] = useState('');
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if(props.cookies.length > 2){
+        setPseudo(props.cookies.user.data[0].login);
+        console.log(props.cookies.user);
+      }
+      Axios
+        .get("/api/getCountProposition/"+pseudo)
+        .then(function(response){
+            setCount(response.data[0].count);
+      })
+    }, MINUTE_MS); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+  }, [])
   return (
     <Navbar expand="lg">
       <Container>
