@@ -23,7 +23,7 @@ function NavBar(props) {
             setCount(response.data[0].count);
       })
     }, MINUTE_MS); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-  }, [pseudo !== null])
+  }, [])
   return (
     <Navbar expand="lg">
       <Container>
