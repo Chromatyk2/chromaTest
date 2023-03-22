@@ -12,14 +12,16 @@ function NavBar(props) {
   const [count, setCount] = useState(0);
   const [pseudo, setPseudo] = useState(null);
   useEffect(() => {
-      if(props.cookies.user !== undefined){
-        setPseudo(props.cookies.user.data[0].login);
-      }
+    if(props.cookies.user !== undefined){
+      setPseudo(props.cookies.user.data[0].login);
+    }
+    const interval = setInterval(() => {
       Axios
         .get("/api/getCountProposition/"+pseudo)
         .then(function(response){
             setCount(response.data[0].count);
-      }) // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+      })
+    }, MINUTE_MS); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
   }, [])
   return (
     <Navbar expand="lg">
