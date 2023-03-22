@@ -16,7 +16,7 @@ const [count, setCount] = useState(0);
       .then(function(response){
           setCount(response.data[0].count);
     })
-  }, [])
+  }, [pseudo])
   return (
     <Navbar expand="lg">
       <Container>
