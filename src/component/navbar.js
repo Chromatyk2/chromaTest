@@ -14,7 +14,7 @@ function NavBar(props) {
   useEffect(() => {
     setPseudo(props.cookies.user.data[0].login);
       Axios
-        .get("/api/getCountProposition/"+pseudo)
+        .get("/api/getCountProposition/Chromatyk")
         .then(function(response){
             setCount(response.data[0].count);
       })// This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
