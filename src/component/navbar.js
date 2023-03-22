@@ -9,8 +9,8 @@ import {BrowserRouter, Link} from "react-router-dom";
 
 function NavBar(props) {
 if(props.cookies.user !== 'undefined'){
-  const pseudo = props.cookies.user.data[0].login;
-}
+    const pseudo = props.cookies.user.data[0].login;
+  }
 const [count, setCount] = useState(0);
   useEffect(() => {
     Axios
@@ -18,7 +18,7 @@ const [count, setCount] = useState(0);
       .then(function(response){
           setCount(response.data[0].count);
     })
-  }, [pseudo])
+  }, [pseudo !== 'undefined'])
   return (
     <Navbar expand="lg">
       <Container>
