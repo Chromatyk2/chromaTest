@@ -8,7 +8,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 
 function NavBar(props) {
-const pseudo = props.cookies.user.data[0].login;
+if(props.cookies.user !== 'undefined'){
+  const pseudo = props.cookies.user.data[0].login;
+}
 const [count, setCount] = useState(0);
   useEffect(() => {
     Axios
