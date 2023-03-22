@@ -18,11 +18,12 @@ function App() {
   if(Object.keys(cookies).length == 0) {
     return <Login />
   }
-  if(cookies.user !== 'undefined'){
   return(
     <>
       <BrowserRouter>
-        <NavBar cookies={cookies} />
+        {cookies.user !== 'undefined' &&
+          <NavBar cookies={cookies} />
+        }
         <Routes>
           <Route path="/" element={<HomePage cookies={cookies} />} />
           <Route path="/pokedex" element={<Pokedex cookies={cookies} />} />
@@ -35,7 +36,6 @@ function App() {
       </BrowserRouter>
     </>
   );
-  }
 }
 
 export default App;
