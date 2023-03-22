@@ -8,9 +8,21 @@ import '../App.css'
 import moment from 'moment';
 
 function NbProposition(props) {
+  const MINUTE_MS = 1000;
+  const [disable, setDisable] = useState(false);
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      Axios
+        .get("/api/getCountPropositionByTrade/"+props.id)
+        .then(function(response){
+            setCount(response.data[0].count);
+      })
+    }, MINUTE_MS);
+  }, [])
     return(
       <>
-        <p>Oui</p>
+        <p>{count}</p>
       </>
     )
 }

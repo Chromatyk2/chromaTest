@@ -40,14 +40,7 @@ function MyTrades(props) {
   if(myTrades.length > 0){
     return(
       <>
-        {myTrades.map((val, key) => {
-          // useEffect(() => {
-          //   Axios
-          //     .get("/api/getCountPropositionByTrade/"+val.id)
-          //     .then(function(response){
-          //         setCount(response.data[0].count);
-          //   })
-          // }, [])
+        {myTrades.map((val, key) => {          
             return (
               <>
               <div className="uniqueTradeContainer">
