@@ -37,13 +37,13 @@ function MyTrades(props) {
     return(
       <>
         {myTrades.map((val, key) => {
-          useEffect(() => {
-            Axios
-              .get("/api/getCountPropositionByTrade/"+val.id)
-              .then(function(response){
-                  setCount(response.data[0].count);
-            })
-          }, [])
+          // useEffect(() => {
+          //   Axios
+          //     .get("/api/getCountPropositionByTrade/"+val.id)
+          //     .then(function(response){
+          //         setCount(response.data[0].count);
+          //   })
+          // }, [])
             return (
               <>
               <div className="uniqueTradeContainer">
