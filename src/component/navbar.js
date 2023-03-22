@@ -8,7 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 
 function NavBar(props) {
-  const MINUTE_MS = 60000;
+  const MINUTE_MS = 10;
   const [count, setCount] = useState(0);
   const [pseudo, setPseudo] = useState(null);
   useEffect(() => {
