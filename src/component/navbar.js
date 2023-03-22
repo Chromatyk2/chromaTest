@@ -12,7 +12,7 @@ function NavBar(props) {
   const [count, setCount] = useState(0);
   const [pseudo, setPseudo] = useState(null);
   console.log(props.cookies.user);
-  if(props.cookies.user !== 'undefined'){
+  if(props.cookies.user !== undefined){
     setPseudo(props.cookies.user.data[0].login);
   }
   useEffect(() => {
