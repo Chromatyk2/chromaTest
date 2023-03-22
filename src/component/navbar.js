@@ -10,10 +10,10 @@ import {BrowserRouter, Link} from "react-router-dom";
 function NavBar(props) {
   const MINUTE_MS = 10;
   const [count, setCount] = useState(0);
-  const [pseudo, setPseudo] = useState(null);
+  const [pseudo, setPseudo] = useState('');
   useEffect(() => {
     const interval = setInterval(() => {
-      if(props.cookies.user.length > 0){
+      if(props.cookies.user.length !== undefined){
         setPseudo(props.cookies.user.data[0].login);
         console.log(props.cookies.user);
       }
