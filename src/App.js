@@ -18,6 +18,7 @@ function App() {
   if(Object.keys(cookies).length == 0) {
     return <Login />
   }
+  if(cookies.user !== 'undefined'){
   return(
     <>
       <BrowserRouter>
@@ -34,6 +35,7 @@ function App() {
       </BrowserRouter>
     </>
   );
+  }
 }
 
 export default App;
