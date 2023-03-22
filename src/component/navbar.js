@@ -8,10 +8,12 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 
 function NavBar(props) {
-  const MINUTE_MS = 100;
+  const MINUTE_MS = 60000;
   const [count, setCount] = useState(0);
+  if(props.cookies.user !== 'undefined'){
+    const pseudo = props.cookies.user.data[0].login;    
+  }
   useEffect(() => {
-    const pseudo = props.cookies.user.data[0].login;
     const interval = setInterval(() => {
       Axios
         .get("/api/getCountProposition/"+pseudo)
@@ -19,7 +21,7 @@ function NavBar(props) {
             setCount(response.data[0].count);
       })
     }, MINUTE_MS); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-  }, [])
+  }, [pseudo])
   return (
     <Navbar expand="lg">
       <Container>
