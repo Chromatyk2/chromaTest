@@ -8,16 +8,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 
 function NavBar(props) {
-  const MINUTE_MS = 15000;
+  const MINUTE_MS = 1000;
   const [count, setCount] = useState(0);
   const [pseudo, setPseudo] = useState('');
   useEffect(() => {
     setPseudo(props.cookies.user.data[0].login);
+    const interval = setInterval(() => {
       Axios
-        .get("/api/getCountProposition/Chromatyk")
+        .get("/api/getCountProposition/"+pseudo)
         .then(function(response){
             setCount(response.data[0].count);
-      })// This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+      })
+    }, MINUTE_MS); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
   }, [])
   return (
     <Navbar expand="lg">
