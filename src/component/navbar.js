@@ -13,9 +13,7 @@ function NavBar(props) {
   const [pseudo, setPseudo] = useState(null);
   useEffect(() => {
     const interval = setInterval(() => {
-      if(props.cookies.user !== undefined){
-        setPseudo(props.cookies.user.data[0].login);
-      }
+      setPseudo(props.cookies.user.data[0].login);
       Axios
         .get("/api/getCountProposition/"+pseudo)
         .then(function(response){
