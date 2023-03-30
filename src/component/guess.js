@@ -18,13 +18,13 @@ function Guess(props) {
       })
   }, [])
   function deleteGuess(e) {
-    const id = parseInt(e.target.value);
-    return Axios.delete('/api/deleteGuess/'+id)
+    const idGuess = parseInt(e.target.value);
+    return Axios.delete('/api/deleteGuess/'+idGuess)
     .then(
       (result) => {
-           Axios.get('/api/getMyTrades/'+props.pseudo)
+           Axios.get('/api/getGuess/'+id)
            .then(function(response){
-              setMyTrades(response.data);
+              setAllGuess(response.data);
             })
       },
       (error) => {
