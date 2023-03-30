@@ -42,7 +42,7 @@ function Guess(props) {
     )
   }
   function accepteGuess(e) {
-    const guess = JSON.stringify({ e.target.value });
+    const guess = { e.target.value };
     console.log(guess);
     return
       Axios.post('/api/capture', {pseudo: pseudo, pkmName: guess.pkmName, pkmImage:guess.pkmImage,pkmId:guess.pkmId, shiny:guess.shiny, dateCapture:new Date()})
