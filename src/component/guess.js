@@ -10,6 +10,7 @@ import moment from 'moment';
 
 function Guess(props) {
   const [allGuess, setAllGuess] = useState([]);
+  const [disable, setDisable] = useState(false);
   const { id } = useParams()
   useEffect(() => {
      Axios.get('/api/getGuess/'+id)
@@ -45,7 +46,7 @@ function Guess(props) {
                       <p className="pokemonNameTrade">{val.pseudo}</p>
                       <img src={val.pkmImage}></img>
                       <p className="pokemonNameTrade">{val.pkmName}</p>
-                      <button value={val.id} onClick={deleteGuess} className="deleteTrade">Refuser</button>
+                      <button value={val.id} onClick={deleteGuess} className="deleteTrade" disabled={disable}>{disable === false ? "Refuser" : "Traitement"}</button>
                       <button value={val.id} className="guessTradeButton">Accepter</button>
                     </div>
                   </div>
