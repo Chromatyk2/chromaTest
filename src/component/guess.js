@@ -52,13 +52,13 @@ function Guess(props) {
     return Axios.post('/api/capture', {pseudo: pseudo, pkmName: pkmName, pkmImage:pkmImage,pkmId:pkmId, shiny:shiny, dateCapture:new Date()})
       .then(
         (result) => {
-             Axios.post('/api/capture', {pseudo: pseudoGuess, pkmName: trade[0].pkmName, pkmImage:trade[0].pkmImage,pkmId:trade[0].pkmId, shiny:trade[0].shiny, dateCapture:new Date()})
+             Axios.post('/api/capture', {pseudo: pseudoGuess, pkmName: trade[0].pkmName, pkmImage:trade[0].pkmImage, pkmId:trade[0].pkmId, shiny:trade[0].shiny, dateCapture:new Date()})
              .then(
                (result) => {
-                Axios.delete('/api/deleteGuess/'+idGuess)
+                Axios.delete('/api/deleteCapture/'+idGuess)
                 .then(
                   (result) => {
-                   Axios.delete('/api/deleteGuess/'+id)
+                   Axios.delete('/api/deleteCapture/'+id)
                  })
               })
         },
