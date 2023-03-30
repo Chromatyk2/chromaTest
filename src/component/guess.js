@@ -45,22 +45,6 @@ function Guess(props) {
     const guess = parseInt(e.target.value);
     return
       Axios.post('/api/capture', {pseudo: pseudo, pkmName: guess.pkmName, pkmImage:guess.pkmImage,pkmId:guess.pkmId, shiny:guess.shiny, dateCapture:new Date()})
-    .then(
-      (result) => {
-           Axios.post('/api/capture', {pseudo: guess.pseudo, pkmName: trade.pkmName, pkmImage:trade.pkmImage,pkmId:trade.pkmId, shiny:trade.shiny, dateCapture:new Date()})
-           .then(
-             (result) => {
-              Axios.delete('/api/deleteGuess/'+guess.id)
-              .then(
-                (result) => {
-                 Axios.delete('/api/deleteGuess/'+id)
-               })
-            })
-      },
-      (error) => {
-        setDisable(false);
-      }
-    )
   }
   if(allGuess.length > 0){
     return(
