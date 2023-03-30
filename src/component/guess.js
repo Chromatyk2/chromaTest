@@ -48,24 +48,26 @@ function Guess(props) {
     const pkmId=parseInt(e.target.pkmId);
     const shiny=parseInt(e.target.shiny);
     const idGuess=parseInt(e.target.shiny);
+    console.log(e.target);
+    console.log(trade);
     return
       Axios.post('/api/capture', {pseudo: pseudo, pkmName: pkmName, pkmImage:pkmImage,pkmId:pkmId, shiny:shiny, dateCapture:new Date()})
-    .then(
-      (result) => {
-           Axios.post('/api/capture', {pseudo: pseudoGuess, pkmName: trade.pkmName, pkmImage:trade.pkmImage,pkmId:trade.pkmId, shiny:trade.shiny, dateCapture:new Date()})
-           .then(
-             (result) => {
-              Axios.delete('/api/deleteGuess/'+idGuess)
-              .then(
-                (result) => {
-                 Axios.delete('/api/deleteGuess/'+id)
-               })
-            })
-      },
-      (error) => {
-        setDisable(false);
-      }
-    )
+      .then(
+        (result) => {
+             Axios.post('/api/capture', {pseudo: pseudoGuess, pkmName: trade.pkmName, pkmImage:trade.pkmImage,pkmId:trade.pkmId, shiny:trade.shiny, dateCapture:new Date()})
+             .then(
+               (result) => {
+                Axios.delete('/api/deleteGuess/'+idGuess)
+                .then(
+                  (result) => {
+                   Axios.delete('/api/deleteGuess/'+id)
+                 })
+              })
+        },
+        (error) => {
+          setDisable(false);
+        }
+      )
   }
   if(allGuess.length > 0){
     return(
