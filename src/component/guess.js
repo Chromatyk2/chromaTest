@@ -75,8 +75,8 @@ function Guess(props) {
                       <p className="pokemonNameTrade">{val.pseudo}</p>
                       <img src={val.pkmImage}></img>
                       <p className="pokemonNameTrade">{val.pkmName}</p>
-                      <button value={val} onClick={deleteGuess} className="deleteTrade" disabled={disable}>{disable === false ? "Refuser" : "Traitement"}</button>
-                      <button value={val.id} onClick={accepteGuess} className="guessTradeButton" disabled={disable}>{disable === false ? "Accepter" : "Traitement"}</button>
+                      <button value={val.id} onClick={deleteGuess} className="deleteTrade" disabled={disable}>{disable === false ? "Refuser" : "Traitement"}</button>
+                      <button value={val} onClick={accepteGuess} className="guessTradeButton" disabled={disable}>{disable === false ? "Accepter" : "Traitement"}</button>
                     </div>
                   </div>
                 </div>
