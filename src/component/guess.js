@@ -24,13 +24,18 @@ function Guess(props) {
         {allGuess.map((val, key) => {
             return (
               <>
-              <div className="uniqueTradeContainer">
-                <p className="pokemonNameTrade">{val.pseudo}</p>
-                <img src={val.pkmImage}></img>
-                <p className="pokemonNameTrade">{val.pkmName}</p>
-                <button value={val.id} className="deleteTrade">Refuser</button>
-                <button value={val.id}  className="guessTradeButton">Accepter</button>
-              </div>
+               <div className="tradePlaceContainer">
+                 <p className="titleMyCaptures">Mes Echanges</p>
+                 <div className="myTradesContainer">
+                    <div className="uniqueTradeContainer">
+                      <p className="pokemonNameTrade">{val.pseudo}</p>
+                      <img src={val.pkmImage}></img>
+                      <p className="pokemonNameTrade">{val.pkmName}</p>
+                      <button value={val.id} className="deleteTrade">Refuser</button>
+                      <button value={val.id}  className="guessTradeButton">Accepter</button>
+                    </div>
+                  </div>
+                </div>
               </>
             )
             })
