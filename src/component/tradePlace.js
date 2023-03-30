@@ -45,7 +45,7 @@ function TradePlace(props) {
       return(
         <>
           <p className="titleMyCaptures">Echanges</p>
-          <p style="text-align:center">Pas de pokemon en echange</p>
+          <p className="noTrade">Pas de pokemon en echange</p>
         </>
       )
     }
