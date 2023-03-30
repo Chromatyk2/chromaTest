@@ -58,7 +58,7 @@ function Guess(props) {
                 Axios.delete('/api/deleteCapture/'+idGuess)
                 .then(
                   (result) => {
-                   Axios.delete('/api/deleteCapture/'+id)
+                   Axios.delete('/api/deleteCapture/'+trade[0].captureId)
                  })
               })
         },
