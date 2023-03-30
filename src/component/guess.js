@@ -42,13 +42,13 @@ function Guess(props) {
     )
   }
   function accepteGuess(e) {
-    const pseudoGuess= e.target.pseudo;
-    const pkmName= e.target.pkmName;
-    const pkmImage=e.target.pkmImage;
-    const pkmId=parseInt(e.target.pkmId);
-    const shiny=parseInt(e.target.shiny);
-    const idGuess=parseInt(e.target.shiny);
-    console.log(e.target.value);
+    const pseudoGuess= e.pseudo;
+    const pkmName= e.pkmName;
+    const pkmImage=e.pkmImage;
+    const pkmId=parseInt(e.pkmId);
+    const shiny=parseInt(e.shiny);
+    const idGuess=parseInt(e.idGuess);
+    console.log(e);
     console.log(trade);
     return
       Axios.post('/api/capture', {pseudo: pseudo, pkmName: pkmName, pkmImage:pkmImage,pkmId:pkmId, shiny:shiny, dateCapture:new Date()})
