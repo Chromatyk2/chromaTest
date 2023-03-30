@@ -47,6 +47,7 @@ function Guess(props) {
     const pkmImage=e.target.pkmImage;
     const pkmId=parseInt(e.target.pkmId);
     const shiny=parseInt(e.target.shiny);
+    const idGuess=parseInt(e.target.shiny);
     return
       Axios.post('/api/capture', {pseudo: pseudo, pkmName: pkmName, pkmImage:pkmImage,pkmId:pkmId, shiny:shiny, dateCapture:new Date()})
     .then(
@@ -54,7 +55,7 @@ function Guess(props) {
            Axios.post('/api/capture', {pseudo: pseudoGuess, pkmName: trade.pkmName, pkmImage:trade.pkmImage,pkmId:trade.pkmId, shiny:trade.shiny, dateCapture:new Date()})
            .then(
              (result) => {
-              Axios.delete('/api/deleteGuess/'+guess.id)
+              Axios.delete('/api/deleteGuess/'+idGuess)
               .then(
                 (result) => {
                  Axios.delete('/api/deleteGuess/'+id)
@@ -80,7 +81,7 @@ function Guess(props) {
                       <img src={val.pkmImage}></img>
                       <p className="pokemonNameTrade">{val.pkmName}</p>
                       <button value={val.id} onClick={deleteGuess} className="deleteTrade" disabled={disable}>{disable === false ? "Refuser" : "Traitement"}</button>
-                      <button pseudo={val.pseudo} pkmName={val.pkmName} pkmImage={val.pkmImage} pkmId={val.pkmId} shiny={val.shiny} onClick={accepteGuess} className="guessTradeButton" disabled={disable}>{disable === false ? "Accepter" : "Traitement"}</button>
+                      <button idGuess={val.id} pseudo={val.pseudo} pkmName={val.pkmName} pkmImage={val.pkmImage} pkmId={val.pkmId} shiny={val.shiny} onClick={accepteGuess} className="guessTradeButton" disabled={disable}>{disable === false ? "Accepter" : "Traitement"}</button>
                     </div>
                   </div>
                 </div>
