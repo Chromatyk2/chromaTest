@@ -38,19 +38,21 @@ function LaderBoard(props) {
         {topThree.length > 0 &&
           <>
           <div className="top3Desktop">
-            <div className="two item">
-              <div className="pos">
-                2
+            {topThree.length > 1 &&
+              <div className="two item">
+                <div className="pos">
+                  2
+                </div>
+                <div className="picTwo pic"></div>
+                <div className="name">
+                  {topThree[1].pseudo}
+                </div>
+                <hr/>
+                <div className="score">
+                  {topThree[1].nbCapture}
+                </div>
               </div>
-              <div className="picTwo pic"></div>
-              <div className="name">
-                {topThree[1].pseudo}
-              </div>
-              <hr/>
-              <div className="score">
-                {topThree[1].nbCapture}
-              </div>
-            </div>
+            }
             <div className="one item">
               <div className="pos">
                 1
@@ -64,6 +66,7 @@ function LaderBoard(props) {
                 {topThree[0].nbCapture}
               </div>
             </div>
+            {topThree.length > 2 &&
             <div className="three item">
               <div className="pos">
                 3
@@ -77,6 +80,7 @@ function LaderBoard(props) {
                 {topThree[2].nbCapture}
               </div>
             </div>
+            }
           </div>
             <div className="top3Mobile">
               <div class="itemOne">
