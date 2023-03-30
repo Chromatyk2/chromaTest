@@ -9,13 +9,21 @@ import '../App.css'
 import moment from 'moment';
 
 function Guess(props) {
+  const [trade, setTrade] = useState([]);
   const [allGuess, setAllGuess] = useState([]);
   const [disable, setDisable] = useState(false);
   const { id } = useParams()
+  const pseudo = props.cookies.user.data[0].login;
   useEffect(() => {
      Axios.get('/api/getGuess/'+id)
      .then(function(response){
         setAllGuess(response.data);
+      })
+  }, [])
+  useEffect(() => {
+     Axios.get('/api/getTradeById/'+id)
+     .then(function(response){
+        setTrade(response.data);
       })
   }, [])
   function deleteGuess(e) {
@@ -26,6 +34,27 @@ function Guess(props) {
            Axios.get('/api/getGuess/'+id)
            .then(function(response){
               setAllGuess(response.data);
+            })
+      },
+      (error) => {
+        setDisable(false);
+      }
+    )
+  }
+  function accepteGuess(e) {
+    const guess = parseInt(e.target.value);
+    return
+      Axios.post('/api/capture', {pseudo: pseudo, pkmName: guess.pkmName, pkmImage:guess.pkmImage,pkmId:guess.pkmId, shiny:guess.shiny, dateCapture:new Date()})
+    .then(
+      (result) => {
+           Axios.post('/api/capture', {pseudo: guess.pseudo, pkmName: trade.pkmName, pkmImage:trade.pkmImage,pkmId:trade.pkmId, shiny:trade.shiny, dateCapture:new Date()})
+           .then(
+             (result) => {
+              Axios.delete('/api/deleteGuess/'+guess.id)
+              then(
+                (result) => {
+                 Axios.delete('/api/deleteGuess/'+id)
+               })
             })
       },
       (error) => {
@@ -46,8 +75,8 @@ function Guess(props) {
                       <p className="pokemonNameTrade">{val.pseudo}</p>
                       <img src={val.pkmImage}></img>
                       <p className="pokemonNameTrade">{val.pkmName}</p>
-                      <button value={val.id} onClick={deleteGuess} className="deleteTrade" disabled={disable}>{disable === false ? "Refuser" : "Traitement"}</button>
-                      <button value={val.id} className="guessTradeButton">Accepter</button>
+                      <button value={val} onClick={deleteGuess} className="deleteTrade" disabled={disable}>{disable === false ? "Refuser" : "Traitement"}</button>
+                      <button value={val.id} onClick={accepteGuess} className="guessTradeButton" disabled={disable}>{disable === false ? "Accepter" : "Traitement"}</button>
                     </div>
                   </div>
                 </div>
