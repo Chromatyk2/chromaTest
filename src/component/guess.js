@@ -17,7 +17,21 @@ function Guess(props) {
         setAllGuess(response.data);
       })
   }, [])
-
+  function deleteGuess(e) {
+    const id = parseInt(e.target.value);
+    return Axios.delete('/api/deleteGuess/'+id)
+    .then(
+      (result) => {
+           Axios.get('/api/getMyTrades/'+props.pseudo)
+           .then(function(response){
+              setMyTrades(response.data);
+            })
+      },
+      (error) => {
+        setDisable(false);
+      }
+    )
+  }
   if(allGuess.length > 0){
     return(
       <>
@@ -31,7 +45,7 @@ function Guess(props) {
                       <p className="pokemonNameTrade">{val.pseudo}</p>
                       <img src={val.pkmImage}></img>
                       <p className="pokemonNameTrade">{val.pkmName}</p>
-                      <button value={val.id} className="deleteTrade">Refuser</button>
+                      <button value={val.id} onClick={deleteGuess} className="deleteTrade">Refuser</button>
                       <button value={val.id} className="guessTradeButton">Accepter</button>
                     </div>
                   </div>
