@@ -92,24 +92,28 @@ function LaderBoard(props) {
                   {topThree[0].nbCapture}
                 </div>
               </div>
-              <div class="itemTwo">
-                <div class="pic picTwo"></div>
-                <div class="name">
-                  {topThree[1].pseudo}
+              {topThree.length > 1 &&
+                <div class="itemTwo">
+                  <div class="pic picTwo"></div>
+                  <div class="name">
+                    {topThree[1].pseudo}
+                  </div>
+                  <div class="score">
+                    {topThree[1].nbCapture}
+                  </div>
                 </div>
-                <div class="score">
-                  {topThree[1].nbCapture}
+              }
+              {topThree.length > 2 &&
+                <div class="itemThree">
+                  <div class="pic picThree"></div>
+                  <div class="name">
+                    {topThree[2].pseudo}
+                  </div>
+                  <div class="score">
+                    {topThree[2].nbCapture}
+                  </div>
                 </div>
-              </div>
-              <div class="itemThree">
-                <div class="pic picThree"></div>
-                <div class="name">
-                  {topThree[2].pseudo}
-                </div>
-                <div class="score">
-                  {topThree[2].nbCapture}
-                </div>
-              </div>
+              }
             </div>
           </>
         }
