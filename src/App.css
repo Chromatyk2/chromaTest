@@ -765,13 +765,16 @@ button.deleteTrade {
     font-family: Charge Vector Black;
     letter-spacing: 2px;
 }
-.guessTradeButton{
-  background: #0a3a2c;
-  border-radius: 25px;
-  color: #fff;
-  font-size: 15px;
-  padding: 10px;
-  text-decoration: none;
+.guessTradeButton {
+    background: #0a3a2c;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    display: block;
+    margin-top: 10px;
 }
 .guessTradeButton:hover{
   background: white;

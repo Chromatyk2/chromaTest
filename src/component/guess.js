@@ -32,7 +32,7 @@ function Guess(props) {
                       <img src={val.pkmImage}></img>
                       <p className="pokemonNameTrade">{val.pkmName}</p>
                       <button value={val.id} className="deleteTrade">Refuser</button>
-                      <button value={val.id}  className="guessTradeButton">Accepter</button>
+                      <button value={val.id} className="guessTradeButton">Accepter</button>
                     </div>
                   </div>
                 </div>
