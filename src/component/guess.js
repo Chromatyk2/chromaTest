@@ -42,16 +42,16 @@ function Guess(props) {
     )
   }
   function accepteGuess(e) {
-    const pseudo= e.target.pseudo;
+    const pseudoGuess= e.target.pseudo;
     const pkmName= e.target.pkmName;
     const pkmImage=e.target.pkmImage;
     const pkmId=parseInt(e.target.pkmId);
     const shiny=parseInt(e.target.shiny);
     return
-      Axios.post('/api/capture', {pseudo: pseudo, pkmName: guess.pkmName, pkmImage:guess.pkmImage,pkmId:guess.pkmId, shiny:guess.shiny, dateCapture:new Date()})
+      Axios.post('/api/capture', {pseudo: pseudo, pkmName: pkmName, pkmImage:pkmImage,pkmId:pkmId, shiny:shiny, dateCapture:new Date()})
     .then(
       (result) => {
-           Axios.post('/api/capture', {pseudo: guess.pseudo, pkmName: trade.pkmName, pkmImage:trade.pkmImage,pkmId:trade.pkmId, shiny:trade.shiny, dateCapture:new Date()})
+           Axios.post('/api/capture', {pseudo: pseudoGuess, pkmName: trade.pkmName, pkmImage:trade.pkmImage,pkmId:trade.pkmId, shiny:trade.shiny, dateCapture:new Date()})
            .then(
              (result) => {
               Axios.delete('/api/deleteGuess/'+guess.id)
