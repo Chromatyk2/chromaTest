@@ -12,12 +12,10 @@ function TradePlace(props) {
   const [myTrades, setMyTrades] = useState([]);
   const [disable, setDisable] = useState(false);
   useEffect(() => {
-    const interval = setInterval(() => {
      Axios.get('/api/getAllTrades/'+props.pseudo)
      .then(function(response){
         setMyTrades(response.data);
       })
-    }, MINUTE_MS);
   }, [])
 
   if(myTrades.length > 0){

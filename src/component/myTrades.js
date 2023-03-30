@@ -9,17 +9,14 @@ import '../App.css'
 import moment from 'moment';
 
 function MyTrades(props) {
-  const MINUTE_MS = 1000;
   const [myTrades, setMyTrades] = useState([]);
   const [disable, setDisable] = useState(false);
   const [count, setCount] = useState(0);
   useEffect(() => {
-    const interval = setInterval(() => {
      Axios.get('/api/getMyTrades/'+props.pseudo)
      .then(function(response){
         setMyTrades(response.data);
       })
-    }, MINUTE_MS);
   }, [])
 
   function deleteTrade(e) {
@@ -40,7 +37,7 @@ function MyTrades(props) {
   if(myTrades.length > 0){
     return(
       <>
-        {myTrades.map((val, key) => {          
+        {myTrades.map((val, key) => {
             return (
               <>
               <div className="uniqueTradeContainer">
