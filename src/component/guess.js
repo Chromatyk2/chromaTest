@@ -49,7 +49,7 @@ function Guess(props) {
     const shiny=parseInt(e.shiny);
     const idGuess=parseInt(e.idGuess);
     console.log(e);
-    console.log(trade);
+    console.log(trade[0].pkmName);
     return
       Axios.post('/api/capture', {pseudo: pseudo, pkmName: pkmName, pkmImage:pkmImage,pkmId:pkmId, shiny:shiny, dateCapture:new Date()})
       .then(
