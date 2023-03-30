@@ -51,7 +51,7 @@ function Guess(props) {
            .then(
              (result) => {
               Axios.delete('/api/deleteGuess/'+guess.id)
-              then(
+              .then(
                 (result) => {
                  Axios.delete('/api/deleteGuess/'+id)
                })
