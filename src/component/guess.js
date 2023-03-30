@@ -81,7 +81,7 @@ function Guess(props) {
                       <img src={val.pkmImage}></img>
                       <p className="pokemonNameTrade">{val.pkmName}</p>
                       <button value={val.id} onClick={deleteGuess} className="deleteTrade" disabled={disable}>{disable === false ? "Refuser" : "Traitement"}</button>
-                      <button onClick={accepteGuess({idGuess:val.id,pseudo:val.pseudo,pkmName:val.pkmName,pkmImage:val.pkmImage,pkmId:val.pkmId,shiny:val.shiny})} className="guessTradeButton" disabled={disable}>{disable === false ? "Accepter" : "Traitement"}</button>
+                      <button onClick={() => accepteGuess({idGuess:val.id,pseudo:val.pseudo,pkmName:val.pkmName,pkmImage:val.pkmImage,pkmId:val.pkmId,shiny:val.shiny})} className="guessTradeButton" disabled={disable}>{disable === false ? "Accepter" : "Traitement"}</button>
                     </div>
                   </div>
                 </div>
