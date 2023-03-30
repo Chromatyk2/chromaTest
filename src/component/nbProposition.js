@@ -19,7 +19,7 @@ function NbProposition(props) {
   }, [])
     return(
       <>
-        <Link className="showPropositions" to={"/guess/"+props.id}>{count} propositions(s)</Link>
+        <Link className="guessTradeButton" to={"/guess/"+props.id}>{count} propositions(s)</Link>
       </>
     )
 }
