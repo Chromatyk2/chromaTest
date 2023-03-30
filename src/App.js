@@ -13,6 +13,7 @@ import PokemonPage from './component/pokemonPage.js';
 import MyTradePlace from './component/myTradePlace.js';
 import TradePlace from './component/tradePlace.js';
 import GuessTrade from './component/guessTrade.js';
+import Guess from './component/guess.js';
 function App() {
   const [cookies, setCookie] = useCookies();
   if(Object.keys(cookies).length == 0) {
@@ -32,7 +33,7 @@ function App() {
           <Route path="/myTrades" element={<MyTradePlace cookies={cookies} />} />
           <Route path="/tradePlace" element={<TradePlace cookies={cookies} />} />
           <Route path="/guessTrade/:id" element={<GuessTrade cookies={cookies} />} />
-          <Route path="/guess/:id" element={<GuessTrade cookies={cookies} />} />
+          <Route path="/guess/:id" element={<Guess cookies={cookies} />} />
         </Routes>
       </BrowserRouter>
     </>
