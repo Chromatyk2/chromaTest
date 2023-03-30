@@ -12,7 +12,7 @@ function TradePlace(props) {
   const [myTrades, setMyTrades] = useState([]);
   const [disable, setDisable] = useState(false);
   useEffect(() => {
-     Axios.get('/api/getAllTrades/'+props.pseudo)
+     Axios.get('/api/getAllTrades/'+pseudo)
      .then(function(response){
         setMyTrades(response.data);
       })
