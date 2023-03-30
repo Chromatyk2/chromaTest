@@ -47,7 +47,10 @@ function GuessTrade(props) {
         }
         ).then(
           (result) => {
-            window.location.replace('https://chromatest.netlify.app/tradePlace');
+            Axios.get('/api/getTradeById/'+id)
+            .then(function(response){
+               setTrade(response.data);
+             })
           },
           (error) => {
           }
