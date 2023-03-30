@@ -61,10 +61,7 @@ function Guess(props) {
                    Axios.delete('/api/deleteCapture/'+trade[0].captureId)
                    .then(
                      (result) => {
-                          Axios.get('/api/getGuess/'+id)
-                          .then(function(response){
-                             setAllGuess(response.data);
-                           })
+                       window.location.replace('https://chromatest.netlify.app/pokedex');
                     })
                  })
               })
