@@ -42,7 +42,7 @@ function Guess(props) {
     )
   }
   function accepteGuess(e) {
-    const guess = parseInt(e.target.value);
+    const guess = e.target.value;
     console.log(guess);
     return
       Axios.post('/api/capture',
