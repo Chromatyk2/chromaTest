@@ -48,7 +48,7 @@ function Guess(props) {
     const pkmId=parseInt(e.target.pkmId);
     const shiny=parseInt(e.target.shiny);
     const idGuess=parseInt(e.target.shiny);
-    console.log(e.target);
+    console.log(pseudoGuess);
     console.log(trade);
     return
       Axios.post('/api/capture', {pseudo: pseudo, pkmName: pkmName, pkmImage:pkmImage,pkmId:pkmId, shiny:shiny, dateCapture:new Date()})
