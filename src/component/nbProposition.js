@@ -19,7 +19,7 @@ function NbProposition(props) {
   }, [])
     return(
       <>
-        <p>{count}</p>
+        <Link className="showPropositions" to={"/guess/"+props.id}>{count} propositions(s)</Link>
       </>
     )
 }
