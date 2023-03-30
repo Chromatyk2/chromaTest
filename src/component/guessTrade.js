@@ -47,6 +47,7 @@ function GuessTrade(props) {
         }
         ).then(
           (result) => {
+            window.location.replace('https://chromatest.netlify.app/tradePlace');
           },
           (error) => {
           }
