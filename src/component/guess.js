@@ -25,7 +25,7 @@ function Guess(props) {
             return (
               <>
                <div className="tradePlaceContainer">
-                 <p className="titleMyCaptures">Mes Echanges</p>
+                 <p className="titleMyCaptures">Propostions</p>
                  <div className="myTradesContainer">
                     <div className="uniqueTradeContainer">
                       <p className="pokemonNameTrade">{val.pseudo}</p>
